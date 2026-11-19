@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="cccache" name="inema-course"/>
+<title>cccache — Prompt Caching en Claude Code | INEMA.CLUB</title>
+<!-- ============================================================
+       1) ANTI-FOUC — script BLOQUEANTE, PRIMEIRO no <head>, ACIMA do Tailwind.
+       Aplica .dark + data-theme + prefs de leitura ANTES do 1o paint.
+       try/catch total: qualquer erro => default dark (marca preservada).
+       ============================================================ -->
+<script>
+    (function () {
+      try {
+        var p = JSON.parse(localStorage.getItem('inema.prefs') || '{}');
+        var d = document.documentElement;
+        var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
+        if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
+        if (p.theme && p.theme !== 'inema-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.font) { d.setAttribute('data-font', p.font); }
+        if (p.accent) { d.setAttribute('data-accent', p.accent); }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--inema-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
+        if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
+        d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
+      } catch (e) { document.documentElement.classList.add('dark'); }
+    })();
+  </script>
+<!-- 2) MANIFESTO do curso (erro #28) — DADO, colar IDENTICO no <head> de TODA pagina.
+        (course/tracks/modules/id/title/topics/href — forma que o learn.js consome). -->
+<script data-inema-manifest="" type="application/json">
+{
+  "course": { "id": "cccache", "title": "cccache — Prompt Caching no Claude Code" },
+  "tracks": [
+    {
+      "id": "trilha1", "title": "Fundamentos e termos",
+      "modules": [
+        { "id": "modulo-1-1", "title": "O que é prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
+        { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
+      ]
+    },
+    {
+      "id": "trilha2", "title": "Técnico",
+      "modules": [
+        { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
+        { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
+        { "id": "modulo-2-3", "title": "Invalidação a fundo", "href": "curso/trilha2/modulo-2-3.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
+      ]
+    },
+    {
+      "id": "trilha3", "title": "Boas práticas avançadas",
+      "modules": [
+        { "id": "modulo-3-1", "title": "Cache vs Compactação", "href": "curso/trilha3/modulo-3-1.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
+        { "id": "modulo-3-2", "title": "Arquitetura pró-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
+        { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
+          "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
+      ]
+    }
+  ]
+}
+  </script>
+<!-- 3) Tailwind via CDN (unico externo — offline-first no resto) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FACC15',
+            dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+          }
+        }
+      }
+    }
+  </script>
+<!-- 4) CSS base do curso -->
+<style>
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    /* ------ Light mode overrides (base) ------ */
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* ------ Light mode — cores de acento das 3 trilhas + amber do curso ------ */
+    /* T1 Emerald */
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5, 150, 105, 0.12); }
+    html:not(.dark) .bg-emerald-500\/10 { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5, 150, 105, 0.25); }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5, 150, 105, 0.08); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .group:hover .group-hover\:text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:border-emerald-500\/30:hover { border-color: rgba(5, 150, 105, 0.25); }
+    /* T2 Blue */
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37, 99, 235, 0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37, 99, 235, 0.25); }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37, 99, 235, 0.08); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .group:hover .group-hover\:text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:border-blue-500\/30:hover { border-color: rgba(37, 99, 235, 0.25); }
+    /* T3 Purple */
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .bg-purple-500\/20 { background-color: rgba(124, 58, 237, 0.12); }
+    html:not(.dark) .bg-purple-500\/10 { background-color: rgba(124, 58, 237, 0.08); }
+    html:not(.dark) .border-purple-500\/30 { border-color: rgba(124, 58, 237, 0.25); }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124, 58, 237, 0.08); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .group:hover .group-hover\:text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:border-purple-500\/30:hover { border-color: rgba(124, 58, 237, 0.25); }
+    /* Amber (tema do curso) — texto de acento cai para amber-700 no claro (#23) */
+    html:not(.dark) .text-amber-400 { color: #b45309; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217, 119, 6, 0.14); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217, 119, 6, 0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217, 119, 6, 0.28); }
+
+    /* ------ Light mode — remove gradientes + cores especiais ------ */
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161, 98, 7, 0.08); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161, 98, 7, 0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+
+    /* ------ Light mode — navbar ------ */
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255, 255, 255, 0.95); }
+
+    /* ------ Dark mode — bordas e divisorias mais suaves ------ */
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+
+    /* ------ Diagramas SVG — suavizar neon fora do dark saturado ------ */
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+
+    /* ------ Hero SVG — pulso dos "reads" (so sem reduced-motion) ------ */
+    @keyframes ccp-pulse { 0%, 100% { opacity: .5 } 50% { opacity: 1 } }
+    @media (prefers-reduced-motion: no-preference) {
+      .ccp-a { animation: ccp-pulse 2.6s ease-in-out infinite; }
+      .ccp-a:nth-of-type(2) { animation-delay: .25s }
+      .ccp-a:nth-of-type(3) { animation-delay: .5s }
+      .ccp-a:nth-of-type(4) { animation-delay: .75s }
+    }
+
+    /* nav com painel de aparencia ancorado */
+    .nav-appearance-wrap { position: relative; }
+  </style>
+<!-- 5) learn.css (depois do CSS base) -->
+<link href="../assets/learn.css" rel="stylesheet"/>
+<link href="https://inematds.github.io/cccache/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/cccache/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/cccache/es/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<a class="inema-skip" href="#conteudo">Saltar al contenido</a>
+<!-- ================= NAVIGATION (erro #13 — completo) ================= -->
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<!-- Logo + INEMA.CLUB -->
+<div class="flex items-center space-x-3 sm:space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="index.html">
+<span aria-hidden="true" class="text-2xl">🧠</span>
+<span class="font-bold text-lg hidden sm:inline">cccache</span>
+</a>
+<span aria-hidden="true" class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+</div>
+<!-- Trilhas + controles v2 + theme toggle -->
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="curso/trilha1/index.html">
+<span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="curso/trilha2/index.html">
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">Técnico</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="curso/trilha3/index.html">
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prácticas</span>
+</a>
+<!-- Minha jornada -->
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-journey-open="" type="button">
+<span aria-hidden="true">◷</span>
+<span>Mi recorrido</span>
+<span class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
+</button>
+<!-- Seletor de aparencia -->
+<div class="nav-appearance-wrap">
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-appearance-toggle="[data-inema-appearance]" type="button">
+<span aria-hidden="true">◑</span>
+<span class="hidden sm:inline">Apariencia</span>
+</button>
+<div aria-label="Apariencia y lectura" class="inema-appearance-pop" data-inema-appearance="" role="group">
+<p class="inema-seg-label">Tema</p>
+<div class="inema-segment">
+<button data-inema-set-theme="inema-dark" type="button">Oscuro</button>
+<button data-inema-set-theme="claro" type="button">Claro</button>
+<button data-inema-set-theme="sepia" type="button">Sepia</button>
+<button data-inema-set-theme="foco" type="button">Enfoque</button>
+<button data-inema-set-theme="contraste" type="button">Alto contraste</button>
+</div>
+<p class="inema-seg-label">Fuente</p>
+<div class="inema-segment">
+<button data-inema-set-font="inter" type="button">Inter</button>
+<button data-inema-set-font="system" type="button">Sistema</button>
+<button data-inema-set-font="leitura" type="button">Lectura</button>
+</div>
+<p class="inema-seg-label">Tamaño</p>
+<div class="inema-segment">
+<button data-inema-set-fontscale="100" type="button">A</button>
+<button data-inema-set-fontscale="112" type="button">A+</button>
+<button data-inema-set-fontscale="125" type="button">A++</button>
+</div>
+<p class="inema-seg-label">Ancho de línea</p>
+<div class="inema-segment">
+<button data-inema-set-linewidth="60" type="button">Estrecho</button>
+<button data-inema-set-linewidth="68" type="button">Medio</button>
+<button data-inema-set-linewidth="75" type="button">Ancho</button>
+</div>
+<p class="inema-seg-label">Interlineado</p>
+<div class="inema-segment">
+<button data-inema-set-leading="1.45" type="button">Compacto</button>
+<button data-inema-set-leading="1.7" type="button">Cómodo</button>
+</div>
+<p class="inema-seg-label">Acento</p>
+<div aria-label="Color de acento" class="inema-accent-grid" role="group">
+<button aria-label="Esmeralda" data-inema-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-inema-set-accent="blue" type="button"></button>
+<button aria-label="Morado" data-inema-set-accent="purple" type="button"></button>
+<button aria-label="Ámbar" data-inema-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-inema-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-inema-set-accent="rose" type="button"></button>
+</div>
+</div>
+</div>
+<!-- Theme toggle sol/lua (v1, absorvido pela camada v2) -->
+<button aria-label="Alternar entre claro y oscuro" class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-1" id="theme-toggle">
+<svg aria-hidden="true" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20">
+<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+</svg>
+<svg aria-hidden="true" class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="conteudo">
+<!-- ======================= HERO ======================= -->
+<header class="bg-gradient-to-br from-amber-900/30 via-dark-900 to-dark-900 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-5">
+          CURSO INEMA · PROMPT CACHING
+        </span>
+<h1 class="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
+          🧠 cccache — Prompt Caching en Claude Code
+        </h1>
+<p class="text-lg text-neutral-300 max-w-3xl mb-8">
+          Entiende de verdad el caché que funciona en segundo plano cuando conversas con Claude Code: qué reutiliza, qué lo rompe y cómo pagar
+          <strong class="text-amber-400">10% en lugar de 100%</strong> por el contexto.
+        </p>
+<!-- Hero SVG futurista: reaproveitamento de prefixo (amber) + reads baratos (ciano) -->
+<div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-5 mb-8 overflow-hidden">
+<svg aria-label="El prefijo estable (herramientas, sistema e historial) se procesa una vez y se guarda en la caché; en cada nuevo turno, Claude Code vuelve a leer ese prefijo desde la caché por aproximadamente una décima parte del precio y guarda solo la parte nueva." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
+<defs>
+<lineargradient id="ccp-grad" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#fbbf24"></stop><stop offset="1" stop-color="#f59e0b"></stop>
+</lineargradient>
+<filter height="180%" id="ccp-glow" width="180%" x="-40%" y="-40%">
+<fegaussianblur result="b" stddeviation="1.8"></fegaussianblur>
+<femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge>
+</filter>
+<pattern height="32" id="ccp-grid" patternunits="userSpaceOnUse" width="32">
+<circle cx="1.3" cy="1.3" fill="#f59e0b" opacity="0.12" r="1.3"></circle>
+</pattern>
+<marker id="ccp-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5">
+<path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#fbbf24"></path>
+</marker>
+<marker id="ccp-ahc" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5">
+<path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path>
+</marker>
+</defs>
+<rect fill="url(#ccp-grid)" height="300" width="1000" x="0" y="0"></rect>
+<!-- Prefixo estavel: tools -> system -> messages (ordem de montagem) -->
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="40">Prefijo estable (tools → system → historial)</text>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<rect fill="#1f1604" height="40" rx="10" stroke="#fbbf24" stroke-width="2" width="210" x="40" y="56"></rect>
+<text fill="#fbbf24" text-anchor="middle" x="145" y="81">tools</text>
+<rect fill="#1f1604" height="40" rx="10" stroke="#fbbf24" stroke-width="2" width="210" x="40" y="104"></rect>
+<text fill="#fbbf24" text-anchor="middle" x="145" y="129">system</text>
+<rect fill="#1f1604" height="40" rx="10" stroke="#fbbf24" stroke-width="2" width="210" x="40" y="152"></rect>
+<text fill="#fbbf24" text-anchor="middle" x="145" y="177">historial</text>
+</g>
+<!-- Seta grava (1a vez) para o cache -->
+<path d="M250,124 L392,124" fill="none" marker-end="url(#ccp-ah)" opacity="0.7" stroke="#fbbf24" stroke-width="2"></path>
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="320" y="114">guarda 1×</text>
+<!-- Cache (caixa-foco com glow) -->
+<g filter="url(#ccp-glow)">
+<rect fill="#1f1604" height="80" rx="16" stroke="url(#ccp-grad)" stroke-width="2.5" width="168" x="396" y="84"></rect>
+</g>
+<text fill="#fbbf24" font-family="Inter,sans-serif" font-size="20" font-weight="700" text-anchor="middle" x="480" y="120">CACHÉ</text>
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="480" y="142">prefijo procesado</text>
+<!-- Reads baratos por turno (ciano, pulsando) -->
+<g fill="none" opacity="0.55" stroke="#38bdf8" stroke-width="2">
+<path class="ccp-a" d="M564,110 C680,110 700,58  800,58" marker-end="url(#ccp-ahc)"></path>
+<path class="ccp-a" d="M564,120 C680,120 700,112 800,112" marker-end="url(#ccp-ahc)"></path>
+<path class="ccp-a" d="M564,132 C680,132 700,166 800,166" marker-end="url(#ccp-ahc)"></path>
+<path class="ccp-a" d="M564,142 C680,142 700,220 800,220" marker-end="url(#ccp-ahc)"></path>
+</g>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="40"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="62">turno 1 · lee</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="95"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="117">turno 2 · lee</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="150"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="172">turno 3 · lee</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="205"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="227">turno N · lee</text>
+</g>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="700" y="272">cada lectura ≈ 0,1× del precio de input</text>
+</svg>
+</div>
+<!-- CTA + Continuar de onde parei + medidor de curso -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-4">
+<a class="inline-flex justify-center items-center px-6 py-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-semibold transition-colors" href="curso/trilha1/index.html">
+            Empezar por la Ruta 1 →
+          </a>
+<button class="hidden justify-center items-center px-6 py-3 rounded-lg bg-dark-700 hover:bg-dark-600 text-neutral-200 font-semibold transition-colors" data-inema-resume="" id="continuar-btn" type="button">
+            ⏱ Continuar desde donde me quedé
+          </button>
+<div aria-label="Progreso del curso" class="inema-meter sm:ml-auto w-full sm:w-72" data-inema-meter="curso">
+<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<div class="text-right leading-tight">
+<div class="text-amber-400 font-bold" data-inema-meter-pct="">0%</div>
+<div class="text-xs text-neutral-400" data-inema-meter-frac="">0 de 0</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ======================= O QUE É ======================= -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+<h2 class="text-2xl font-bold mb-6">Lo que entenderás aquí</h2>
+<div class="inema-prose text-neutral-300 mb-8" style="margin-inline:0">
+<p data-inema-block="landing-oque-p1">
+          La API de Claude es <strong class="text-amber-400">stateless</strong>: en cada mensaje, se vuelve a enviar
+          toda la conversación (herramientas + prompt del sistema + historial). El
+          <strong class="text-amber-400">prompt caching</strong> guarda ese inicio ya procesado y lo
+          reutiliza, en vez de volver a procesarlo todo desde cero en cada turno. Es un
+          <strong class="text-amber-400">coincidencia de prefijo</strong>: la clave del caché son los bytes
+          exactos hasta un punto de corte; un solo byte distinto en el medio invalida todo a partir de ahí.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div aria-hidden="true" class="text-3xl mb-3">📖</div>
+<h3 class="text-lg font-semibold mb-2 text-amber-400">Los términos, sin misterio</h3>
+<p class="text-sm text-neutral-400">Hit, miss, write, TTL, breakpoint, <code class="font-mono text-xs">cache_read_input_tokens</code> — cada uno definido en su 1.ª aparición.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div aria-hidden="true" class="text-3xl mb-3">🔧</div>
+<h3 class="text-lg font-semibold mb-2 text-amber-400">Lo que rompe la caché</h3>
+<p class="text-sm text-neutral-400">Cambiar la lista de <code class="font-mono text-xs">tools</code>, fechas en el system, orden no determinista: los silent invalidators y cómo encontrarlos.</p>
+</div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div aria-hidden="true" class="text-3xl mb-3">💸</div>
+<h3 class="text-lg font-semibold mb-2 text-amber-400">El ahorro real</h3>
+<p class="text-sm text-neutral-400">Read ~0,1× · write ~1,25× · sin caché 1×. Cuándo compensa el caché y cuándo conviene más compactar.</p>
+</div>
+</div>
+</section>
+<!-- ======================= AS 3 TRILHAS ======================= -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
+<h2 class="text-2xl font-bold mb-6">Las 3 rutas</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Trilha 1 — Emerald -->
+<a class="group bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl border border-emerald-500/30 hover:border-emerald-500/30 p-6 transition-all" href="curso/trilha1/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">RUTA 1</span>
+<span class="text-xs text-neutral-500">2 módulos</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">Fundamentos y términos</h3>
+<p class="text-sm text-neutral-400 mb-4">El problema de volver a procesar, la idea del prefijo, hit/miss/write, breakpoint y los campos de verificación. Cada término se define la primera vez que aparece.</p>
+<div aria-label="Progreso de la ruta 1" class="inema-meter" data-inema-meter="trilha:1">
+<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-emerald-400 font-semibold" data-inema-meter-pct="">0%</span>
+</div>
+<span class="inline-flex items-center mt-4 text-emerald-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir ruta →</span>
+</a>
+<!-- Trilha 2 — Blue -->
+<a class="group bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-2xl border border-blue-500/30 hover:border-blue-500/30 p-6 transition-all" href="curso/trilha2/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">RUTA 2</span>
+<span class="text-xs text-neutral-500">3 módulos</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">Técnico</h3>
+<p class="text-sm text-neutral-400 mb-4">La caché dentro de una conversación que crece, las skills y las herramientas (añadir frente a romper), y la invalidación a fondo, con ejemplos copy-run.</p>
+<div aria-label="Progreso de la ruta 2" class="inema-meter" data-inema-meter="trilha:2">
+<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-blue-400 font-semibold" data-inema-meter-pct="">0%</span>
+</div>
+<span class="inline-flex items-center mt-4 text-blue-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir ruta →</span>
+</a>
+<!-- Trilha 3 — Purple -->
+<a class="group bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-2xl border border-purple-500/30 hover:border-purple-500/30 p-6 transition-all" href="curso/trilha3/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full">RUTA 3</span>
+<span class="text-xs text-neutral-500">3 módulos</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Buenas prácticas avanzadas</h3>
+<p class="text-sm text-neutral-400 mb-4">Caché vs. compactación, arquitectura a favor de la caché y auditoría, y un módulo de prompts listos para copiar y ejecutar en Claude Code hoy.</p>
+<div aria-label="Progreso de la ruta 3" class="inema-meter" data-inema-meter="trilha:3">
+<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<span class="text-xs text-purple-400 font-semibold" data-inema-meter-pct="">0%</span>
+</div>
+<span class="inline-flex items-center mt-4 text-purple-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir ruta →</span>
+</a>
+</div>
+</section>
+<!-- ======================= COMO USAR / CTA ======================= -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+<div class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 rounded-2xl border border-amber-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6">Cómo usar este curso</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">✓</span><span><strong>Marca cada tema como leído</strong> — las barras de progreso del módulo, la ruta y el curso avanzan juntas.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">✓</span><span><strong>Resalta y anota en el propio texto</strong> — selecciona un fragmento para resaltarlo, anotarlo o marcarlo como duda.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">✓</span><span><strong>Abre «Mi recorrido»</strong> — consulta el progreso, las dudas y las notas, y continúa desde donde lo dejaste.</span></li>
+</ul>
+<ul class="space-y-3 text-neutral-300">
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">✓</span><span><strong>Ajusta la apariencia</strong> — tema (oscuro/claro/sepia/enfoque/alto contraste), fuente, tamaño, ancho e interlineado.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">✓</span><span><strong>Exporta tu recorrido</strong> — descarga un <code class="font-mono text-xs">.json</code> con tu progreso e impórtalo en otro dispositivo.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">✓</span><span><strong>100% sin conexión</strong> — se abre directamente desde el archivo, sin servidor. Tu progreso queda solo en tu navegador.</span></li>
+</ul>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-semibold transition-colors" href="curso/trilha1/index.html">Empezar ahora →</a>
+<button class="flex-1 text-center px-6 py-3 bg-dark-700 hover:bg-dark-600 text-neutral-200 rounded-lg font-semibold transition-colors" data-inema-journey-open="" type="button">Abrir mi recorrido</button>
+</div>
+</div>
+</section>
+</main>
+<!-- ======================= FOOTER ======================= -->
+<footer class="border-t border-dark-600 py-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>cccache — Prompt Caching en Claude Code · Curso <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a> · 2026</p>
+</div>
+</footer>
+<!-- ======================= SCRIPTS ======================= -->
+<script src="../assets/learn.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.INEMA && typeof INEMA.init === 'function') {
+        INEMA.init();
+        // "Continuar de onde parei": so aparece se ha uma ultima pagina de modulo.
+        try {
+          var meta = INEMA._internal.storageGet('inema.' + INEMA._internal.courseId() + '.meta', {});
+          var btn = document.getElementById('continuar-btn');
+          if (btn && meta && meta.lastModuleHref && /modulo-/.test(meta.lastModuleHref)) {
+            var href = 'curso/';
+            // reconstruir caminho relativo a partir do href salvo (nome do arquivo)
+            var file = String(meta.lastModuleHref);
+            var m = /modulo-(\d)-(\d)/.exec(file);
+            if (m) { href = 'curso/trilha' + m[1] + '/' + file.split('/').pop(); }
+            btn.classList.remove('hidden');
+            btn.classList.add('inline-flex');
+            btn.removeAttribute('data-inema-resume');
+            btn.addEventListener('click', function () { window.location.href = href; });
+          }
+        } catch (e) { /* no-op */ }
+      }
+    });
+  </script>
+</body>
+</html>
