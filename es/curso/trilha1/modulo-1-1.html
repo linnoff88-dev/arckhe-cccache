@@ -4,57 +4,57 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="inema-course"/>
-<title>Módulo 1.1 · Qué es el prompt caching | cccache — Prompt Caching en Claude Code</title>
+<meta content="cccache" name="ARCKHÉ-course"/>
+<title>MÃ³dulo 1.1 Â· QuÃ© es el prompt caching | cccache â€” Prompt Caching en Claude Code</title>
 <!-- 1) ANTI-FOUC (espelhado da landing, erro #18) -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('inema.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'inema-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--inema-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
       } catch (e) { document.documentElement.classList.add('dark'); }
     })();
   </script>
-<!-- 2) MANIFESTO do curso (erro #28) — VERBATIM da landing -->
-<script data-inema-manifest="" type="application/json">
+<!-- 2) MANIFESTO do curso (erro #28) â€” VERBATIM da landing -->
+<script data-ARCKHÉ-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache — Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que é prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "Técnico",
+      "id": "trilha2", "title": "TÃ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "Invalidação a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas práticas avançadas",
+      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs Compactação", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura pró-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -134,79 +134,79 @@
     pre { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; }
   </style>
 <link href="../../../assets/learn.css" rel="stylesheet"/>
-<link href="https://inematds.github.io/cccache/curso/trilha1/modulo-1-1.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/cccache/en/curso/trilha1/modulo-1-1.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/cccache/es/curso/trilha1/modulo-1-1.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha1/modulo-1-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha1/modulo-1-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-1-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
-<a class="inema-skip" href="#conteudo">Saltar al contenido</a>
+<link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha1/modulo-1-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha1/modulo-1-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-1-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<a class="ARCKHÉ-skip" href="#conteudo">Saltar al contenido</a>
 <!-- ================= NAVIGATION (erro #13) ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
-<span aria-hidden="true" class="text-2xl">🧠</span>
+<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="../trilha1/index.html">
 <span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">Técnico</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">TÃ©cnico</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prácticas</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prÃ¡cticas</span>
 </a>
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>Mi recorrido</span>
-<span class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
+<span aria-hidden="true">â—·</span><span>Mi recorrido</span>
+<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
 </button>
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-appearance-toggle="[data-inema-appearance]" type="button">
-<span aria-hidden="true">◑</span><span class="hidden sm:inline">Apariencia</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
+<span aria-hidden="true">â—‘</span><span class="hidden sm:inline">Apariencia</span>
 </button>
-<div aria-label="Apariencia y lectura" class="inema-appearance-pop" data-inema-appearance="" role="group">
-<p class="inema-seg-label">Tema</p>
-<div class="inema-segment">
-<button data-inema-set-theme="inema-dark" type="button">Oscuro</button>
-<button data-inema-set-theme="claro" type="button">Claro</button>
-<button data-inema-set-theme="sepia" type="button">Sepia</button>
-<button data-inema-set-theme="foco" type="button">Enfoque</button>
-<button data-inema-set-theme="contraste" type="button">Alto contraste</button>
+<div aria-label="Apariencia y lectura" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
+<p class="ARCKHÉ-seg-label">Tema</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Oscuro</button>
+<button data-ARCKHÉ-set-theme="claro" type="button">Claro</button>
+<button data-ARCKHÉ-set-theme="sepia" type="button">Sepia</button>
+<button data-ARCKHÉ-set-theme="foco" type="button">Enfoque</button>
+<button data-ARCKHÉ-set-theme="contraste" type="button">Alto contraste</button>
 </div>
-<p class="inema-seg-label">Fuente</p>
-<div class="inema-segment">
-<button data-inema-set-font="inter" type="button">Inter</button>
-<button data-inema-set-font="system" type="button">Sistema</button>
-<button data-inema-set-font="leitura" type="button">Lectura</button>
+<p class="ARCKHÉ-seg-label">Fuente</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
+<button data-ARCKHÉ-set-font="system" type="button">Sistema</button>
+<button data-ARCKHÉ-set-font="leitura" type="button">Lectura</button>
 </div>
-<p class="inema-seg-label">Tamaño</p>
-<div class="inema-segment">
-<button data-inema-set-fontscale="100" type="button">A</button>
-<button data-inema-set-fontscale="112" type="button">A+</button>
-<button data-inema-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHÉ-seg-label">TamaÃ±o</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
+<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="inema-seg-label">Ancho de línea</p>
-<div class="inema-segment">
-<button data-inema-set-linewidth="60" type="button">Estrecho</button>
-<button data-inema-set-linewidth="68" type="button">Medio</button>
-<button data-inema-set-linewidth="75" type="button">Ancho</button>
+<p class="ARCKHÉ-seg-label">Ancho de lÃ­nea</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-linewidth="60" type="button">Estrecho</button>
+<button data-ARCKHÉ-set-linewidth="68" type="button">Medio</button>
+<button data-ARCKHÉ-set-linewidth="75" type="button">Ancho</button>
 </div>
-<p class="inema-seg-label">Interlineado</p>
-<div class="inema-segment">
-<button data-inema-set-leading="1.45" type="button">Compacto</button>
-<button data-inema-set-leading="1.7" type="button">Cómodo</button>
+<p class="ARCKHÉ-seg-label">Interlineado</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-leading="1.45" type="button">Compacto</button>
+<button data-ARCKHÉ-set-leading="1.7" type="button">CÃ³modo</button>
 </div>
-<p class="inema-seg-label">Acento</p>
-<div aria-label="Color de acento" class="inema-accent-grid" role="group">
-<button aria-label="Esmeralda" data-inema-set-accent="emerald" type="button"></button>
-<button aria-label="Azul" data-inema-set-accent="blue" type="button"></button>
-<button aria-label="Morado" data-inema-set-accent="purple" type="button"></button>
-<button aria-label="Ámbar" data-inema-set-accent="amber" type="button"></button>
-<button aria-label="Turquesa" data-inema-set-accent="teal" type="button"></button>
-<button aria-label="Rosa" data-inema-set-accent="rose" type="button"></button>
+<p class="ARCKHÉ-seg-label">Acento</p>
+<div aria-label="Color de acento" class="ARCKHÉ-accent-grid" role="group">
+<button aria-label="Esmeralda" data-ARCKHÉ-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-ARCKHÉ-set-accent="blue" type="button"></button>
+<button aria-label="Morado" data-ARCKHÉ-set-accent="purple" type="button"></button>
+<button aria-label="Ãmbar" data-ARCKHÉ-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-ARCKHÉ-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-ARCKHÉ-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -219,84 +219,84 @@
 </div>
 </nav>
 <!-- Breadcrumb -->
-<nav aria-label="Ruta de navegación" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Ruta de navegaciÃ³n" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center gap-2 text-sm text-neutral-400">
 <a class="hover:text-emerald-400" href="../../index.html">Inicio</a><span aria-hidden="true">/</span>
 <a class="hover:text-emerald-400" href="index.html">Trilha 1</a><span aria-hidden="true">/</span>
-<span class="text-emerald-400">Módulo 1.1</span>
+<span class="text-emerald-400">MÃ³dulo 1.1</span>
 </div>
 </nav>
 <main id="conteudo">
-<!-- ======================= HEADER DO MÓDULO ======================= -->
+<!-- ======================= HEADER DO MÃ“DULO ======================= -->
 <header class="bg-gradient-to-br from-emerald-900/30 via-dark-900 to-dark-900 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÓDULO 1.1</span>
-<h1 class="text-2xl sm:text-4xl font-bold mb-4">🧩 Qué es el prompt caching</h1>
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 1.1</span>
+<h1 class="text-2xl sm:text-4xl font-bold mb-4">ðŸ§© QuÃ© es el prompt caching</h1>
 <p class="text-lg text-neutral-300 max-w-3xl mb-8">
           Una sola idea, armada pieza por pieza: la API vuelve a procesarlo todo cada vez, el cache guarda el comienzo estable,
-          y el comienzo se reconoce por <strong class="text-emerald-400">coincidencia de prefijo</strong> — los bytes exactos
-          hasta un punto de corte. Cada término se define la primera vez que aparece.
+          y el comienzo se reconoce por <strong class="text-emerald-400">coincidencia de prefijo</strong> â€” los bytes exactos
+          hasta un punto de corte. Cada tÃ©rmino se define la primera vez que aparece.
         </p>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
 <div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">Temas</div></div>
 <div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~18</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nivel</div></div>
-<div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Teoría</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">BÃ¡sico</div><div class="text-xs text-neutral-400">Nivel</div></div>
+<div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">TeorÃ­a</div><div class="text-xs text-neutral-400">Tipo</div></div>
 </div>
 <div class="mt-6 max-w-md">
-<div aria-label="Progreso del módulo 1.1" class="inema-meter" data-inema-meter="modulo-1-1">
-<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
-<span class="text-sm text-emerald-400 font-semibold" data-inema-meter-pct="">0%</span>
-<span class="text-xs text-neutral-400" data-inema-meter-frac="">0 de 0</span>
+<div aria-label="Progreso del mÃ³dulo 1.1" class="ARCKHÉ-meter" data-ARCKHÉ-meter="modulo-1-1">
+<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
+<span class="text-sm text-emerald-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<span class="text-xs text-neutral-400" data-ARCKHÉ-meter-frac="">0 de 0</span>
 </div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:flex lg:gap-10">
 <!-- TOC sticky + scrollspy -->
-<nav aria-label="Índice del módulo" class="hidden lg:block w-56 flex-shrink-0 sticky top-20 self-start" data-inema-toc="">
-<p class="text-xs uppercase tracking-wide text-neutral-500 mb-2">En este módulo</p>
-<p class="text-sm text-neutral-400 mb-3" data-inema-section-counter="">Sección 1 de 6</p>
+<nav aria-label="Ãndice del mÃ³dulo" class="hidden lg:block w-56 flex-shrink-0 sticky top-20 self-start" data-ARCKHÉ-toc="">
+<p class="text-xs uppercase tracking-wide text-neutral-500 mb-2">En este mÃ³dulo</p>
+<p class="text-sm text-neutral-400 mb-3" data-ARCKHÉ-section-counter="">SecciÃ³n 1 de 6</p>
 <ul class="space-y-1 text-sm">
-<li><a class="inema-toc-link" href="#topico-1">1. Volver a procesar todo</a></li>
-<li><a class="inema-toc-link" href="#topico-2">2. Reutilizar el prefijo</a></li>
-<li><a class="inema-toc-link" href="#topico-3">3. Coincidencia de prefijo</a></li>
-<li><a class="inema-toc-link" href="#topico-4">4. tools → system → messages</a></li>
-<li><a class="inema-toc-link" href="#topico-5">5. Acierto, fallo y escritura</a></li>
-<li><a class="inema-toc-link" href="#topico-6">6. Punto de ruptura</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-1">1. Volver a procesar todo</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-2">2. Reutilizar el prefijo</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-3">3. Coincidencia de prefijo</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-4">4. tools â†’ system â†’ messages</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-5">5. Acierto, fallo y escritura</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-6">6. Punto de ruptura</a></li>
 </ul>
 </nav>
 <div class="flex-1 min-w-0">
-<!-- ============ TÓPICO 1 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-1#topico-1" id="topico-1">
+<!-- ============ TÃ“PICO 1 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-1#topico-1" id="topico-1">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">1</span>
-<h2 class="text-2xl font-bold">🔁 El problema: reprocesar todo cada vez</h2>
+<h2 class="text-2xl font-bold">ðŸ” El problema: reprocesar todo cada vez</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span>Tengo una duda</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-1-t1-p1">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-1-t1-p1">
             Todo el ahorro del prompt caching empieza por entender un problema: la API de Claude es
-            <strong class="text-emerald-400">stateless</strong>. Cada mensaje que envías hace que el modelo reciba la
-            conversación <em>completa</em> de nuevo — y procesa todo desde cero. En una conversación larga, esto es caro y lento.
+            <strong class="text-emerald-400">stateless</strong>. Cada mensaje que envÃ­as hace que el modelo reciba la
+            conversaciÃ³n <em>completa</em> de nuevo â€” y procesa todo desde cero. En una conversaciÃ³n larga, esto es caro y lento.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> ¿Nuevo por aquí? Primero, dos términos</h3>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> Â¿Nuevo por aquÃ­? Primero, dos tÃ©rminos</h3>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li><strong class="text-emerald-400">stateless</strong> — «sin estado». La API no guarda la conversación entre llamadas; quien conserva el historial es el cliente (Claude Code), que lo vuelve a enviar todo en cada turno.</li>
-<li><strong class="text-emerald-400">prompt de sistema</strong> — el texto de instrucciones que viene <em>antes</em> de la conversación (quién es el modelo, qué puede hacer). Es estable y siempre va al principio.</li>
+<li><strong class="text-emerald-400">stateless</strong> â€” Â«sin estadoÂ». La API no guarda la conversaciÃ³n entre llamadas; quien conserva el historial es el cliente (Claude Code), que lo vuelve a enviar todo en cada turno.</li>
+<li><strong class="text-emerald-400">prompt de sistema</strong> â€” el texto de instrucciones que viene <em>antes</em> de la conversaciÃ³n (quiÃ©n es el modelo, quÃ© puede hacer). Es estable y siempre va al principio.</li>
 </ul>
 </div>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Sin caché, en cada turno se vuelve a enviar y procesar desde cero toda la conversación (sistema, herramientas e historial); el costo crece en cada turno." class="w-full h-auto" role="img" viewbox="0 0 900 240">
+<svg aria-label="Sin cachÃ©, en cada turno se vuelve a enviar y procesar desde cero toda la conversaciÃ³n (sistema, herramientas e historial); el costo crece en cada turno." class="w-full h-auto" role="img" viewbox="0 0 900 240">
 <defs>
 <pattern height="30" id="m11a-grid" patternunits="userSpaceOnUse" width="30"><circle cx="1.2" cy="1.2" fill="#10b981" opacity="0.12" r="1.2"></circle></pattern>
 </defs>
 <rect fill="url(#m11a-grid)" height="240" width="900" x="0" y="0"></rect>
-<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="34">Sin caché: en cada turno se vuelve a procesar TODO desde cero</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="34">Sin cachÃ©: en cada turno se vuelve a procesar TODO desde cero</text>
 <g font-family="Inter,sans-serif" font-size="12" font-weight="600">
 <rect fill="#0e2018" height="52" rx="10" stroke="#34d399" stroke-width="2" width="240" x="30" y="60"></rect>
 <text fill="#34d399" text-anchor="middle" x="150" y="82">turno 1</text>
@@ -306,139 +306,139 @@
 <text fill="#a7f3d0" text-anchor="middle" x="195" y="160">todo del turno 1 + mensaje nuevo</text>
 <rect fill="#0e2018" height="52" rx="10" stroke="#34d399" stroke-width="2" width="420" x="30" y="180"></rect>
 <text fill="#34d399" text-anchor="middle" x="240" y="202">turno 3</text>
-<text fill="#a7f3d0" text-anchor="middle" x="240" y="220">todo otra vez + un mensaje más</text>
+<text fill="#a7f3d0" text-anchor="middle" x="240" y="220">todo otra vez + un mensaje mÃ¡s</text>
 </g>
 <g fill="#f87171" font-family="Inter,sans-serif" font-size="20" font-weight="700" text-anchor="end">
 <text x="620" y="92">$</text>
 <text x="640" y="152">$$</text>
 <text x="660" y="212">$$$</text>
 </g>
-<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="640" y="34">costo por turno →</text>
+<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="640" y="34">costo por turno â†’</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Ilustración:</strong> la barra crece en cada turno porque se vuelve a enviar todo lo que ya se dijo. Ese trabajo repetido es lo que elimina el caché.</p>
+<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">IlustraciÃ³n:</strong> la barra crece en cada turno porque se vuelve a enviar todo lo que ya se dijo. Ese trabajo repetido es lo que elimina el cachÃ©.</p>
 </div>
 <div class="space-y-4 mb-6">
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Qué es</h3>
-<p class="text-neutral-300 text-sm leading-relaxed" data-inema-block="m1-1-t1-p2">Como la API no guarda la conversación, el cliente reenvía el paquete completo —el prompt del sistema, la definición de las herramientas y todo el historial— en cada solicitud. Luego, el modelo vuelve a procesar todo ese paquete antes de responder.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">QuÃ© es</h3>
+<p class="text-neutral-300 text-sm leading-relaxed" data-ARCKHÉ-block="m1-1-t1-p2">Como la API no guarda la conversaciÃ³n, el cliente reenvÃ­a el paquete completo â€”el prompt del sistema, la definiciÃ³n de las herramientas y todo el historialâ€” en cada solicitud. Luego, el modelo vuelve a procesar todo ese paquete antes de responder.</p>
 </div>
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Por qué aprenderlo</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Sin sentir ese dolor, el caché parece magia sin propósito. Después de entender el reprocesamiento, cada pieza del curso se convierte en «ah, esto es lo que evita».</p>
+<h3 class="text-emerald-400 font-semibold mb-1">Por quÃ© aprenderlo</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Sin sentir ese dolor, el cachÃ© parece magia sin propÃ³sito. DespuÃ©s de entender el reprocesamiento, cada pieza del curso se convierte en Â«ah, esto es lo que evitaÂ».</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Conceptos clave</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">stateless</div><div class="text-xs text-neutral-400 mt-1">la API no guarda la conversación</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">reenvío total</div><div class="text-xs text-neutral-400 mt-1">todo se envía en cada turno</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">stateless</div><div class="text-xs text-neutral-400 mt-1">la API no guarda la conversaciÃ³n</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">reenvÃ­o total</div><div class="text-xs text-neutral-400 mt-1">todo se envÃ­a en cada turno</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">reprocesa</div><div class="text-xs text-neutral-400 mt-1">desde cero, cada turno</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">caro + lento</div><div class="text-xs text-neutral-400 mt-1">el costo crece por turno</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Marcar como leído</span><span class="inema-label-done">Leído</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 2 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-1#topico-2" id="topico-2">
+<!-- ============ TÃ“PICO 2 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-1#topico-2" id="topico-2">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">2</span>
-<h2 class="text-2xl font-bold">♻️ La idea: reutilizar el prefijo</h2>
+<h2 class="text-2xl font-bold">â™»ï¸ La idea: reutilizar el prefijo</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span>Tengo una duda</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-1-t2-p1">
-            Fíjate en algo: el comienzo de la conversación casi no cambia. El prompt de sistema es el mismo, las herramientas siguen
-            siendo las mismas y el historial ya escrito continúa exactamente igual. Solo el <em>fin</em> crece, con el mensaje nuevo.
-            El prompt caching aprovecha esto: guarda ese comienzo estable — el <strong class="text-emerald-400">prefijo</strong> —
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-1-t2-p1">
+            FÃ­jate en algo: el comienzo de la conversaciÃ³n casi no cambia. El prompt de sistema es el mismo, las herramientas siguen
+            siendo las mismas y el historial ya escrito continÃºa exactamente igual. Solo el <em>fin</em> crece, con el mensaje nuevo.
+            El prompt caching aprovecha esto: guarda ese comienzo estable â€” el <strong class="text-emerald-400">prefijo</strong> â€”
             ya procesado, y lo reutiliza en vez de reprocesarlo.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> ¿Nuevo por aquí? ¿Qué es un «prefijo»?</h3>
-<p class="text-sm text-neutral-300"><strong class="text-emerald-400">prefijo</strong> = el fragmento del inicio del prompt que se repite igual en cada turno. Piensa en la conversación como un texto que solo crece al final: el prefijo es la parte de arriba que ya está congelada.</p>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> Â¿Nuevo por aquÃ­? Â¿QuÃ© es un Â«prefijoÂ»?</h3>
+<p class="text-sm text-neutral-300"><strong class="text-emerald-400">prefijo</strong> = el fragmento del inicio del prompt que se repite igual en cada turno. Piensa en la conversaciÃ³n como un texto que solo crece al final: el prefijo es la parte de arriba que ya estÃ¡ congelada.</p>
 </div>
-<!-- Timeline: primeira grava, próximas leem -->
-<h3 class="text-lg font-semibold mb-4 text-neutral-100">Cómo funciona la reutilización</h3>
+<!-- Timeline: primeira grava, prÃ³ximas leem -->
+<h3 class="text-lg font-semibold mb-4 text-neutral-100">CÃ³mo funciona la reutilizaciÃ³n</h3>
 <div class="space-y-5 mb-6">
 <div class="flex items-start gap-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Turno 1 — el prefijo se procesa y se guarda</h4>
-<p class="text-sm text-neutral-300">La primera vez no hay nada que reutilizar: el modelo procesa el prefijo y el <em>guarda</em> en el caché (pagas un poco más por eso).</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Turno 1 â€” el prefijo se procesa y se guarda</h4>
+<p class="text-sm text-neutral-300">La primera vez no hay nada que reutilizar: el modelo procesa el prefijo y el <em>guarda</em> en el cachÃ© (pagas un poco mÃ¡s por eso).</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">2</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Turno 2 — se reutiliza el prefijo</h4>
-<p class="text-sm text-neutral-300">El comienzo es idéntico, así que el modelo <em>lee</em> el prefijo ya procesado del caché (barato) y solo procesa el mensaje nuevo del final.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Turno 2 â€” se reutiliza el prefijo</h4>
+<p class="text-sm text-neutral-300">El comienzo es idÃ©ntico, asÃ­ que el modelo <em>lee</em> el prefijo ya procesado del cachÃ© (barato) y solo procesa el mensaje nuevo del final.</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">N</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Turno N — el prefijo solo crece y sigue siendo barato</h4>
-<p class="text-sm text-neutral-300">En cada turno, el prefijo reutilizado es más grande (la respuesta anterior también se incluye), pero se sigue leyendo del caché a bajo costo.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Turno N â€” el prefijo solo crece y sigue siendo barato</h4>
+<p class="text-sm text-neutral-300">En cada turno, el prefijo reutilizado es mÃ¡s grande (la respuesta anterior tambiÃ©n se incluye), pero se sigue leyendo del cachÃ© a bajo costo.</p>
 </div>
 </div>
 </div>
 <div class="space-y-4 mb-6">
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Qué es</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">El prompt caching consiste en guardar el inicio estable de la conversación ya procesado y reutilizarlo en cada turno, en lugar de volver a procesarlo desde cero.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">QuÃ© es</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">El prompt caching consiste en guardar el inicio estable de la conversaciÃ³n ya procesado y reutilizarlo en cada turno, en lugar de volver a procesarlo desde cero.</p>
 </div>
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Por qué aprenderlo</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Es el cambio clave para ahorrar: pagas una vez por lo que no cambia y, después, solo una fracción por volver a leerlo.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">Por quÃ© aprenderlo</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Es el cambio clave para ahorrar: pagas una vez por lo que no cambia y, despuÃ©s, solo una fracciÃ³n por volver a leerlo.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Conceptos clave</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">prefijo estable</div><div class="text-xs text-neutral-400 mt-1">el comienzo que se repite</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">procesa 1×</div><div class="text-xs text-neutral-400 mt-1">y guarda el resultado</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">procesa 1Ã—</div><div class="text-xs text-neutral-400 mt-1">y guarda el resultado</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">reutiliza</div><div class="text-xs text-neutral-400 mt-1">lee en lugar de volver a procesar</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">cambia al final</div><div class="text-xs text-neutral-400 mt-1">solo se procesa lo nuevo</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Marcar como leído</span><span class="inema-label-done">Leído</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 3 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-1#topico-3" id="topico-3">
+<!-- ============ TÃ“PICO 3 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-1#topico-3" id="topico-3">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">3</span>
-<h2 class="text-2xl font-bold">🧩 El invariante: coincidencia de prefijo</h2>
+<h2 class="text-2xl font-bold">ðŸ§© El invariante: coincidencia de prefijo</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span>Tengo una duda</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-1-t3-p1">
-            Aquí está el invariante que explica <em>todo</em> en el resto del curso. El caché reconoce el prefijo por
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-1-t3-p1">
+            AquÃ­ estÃ¡ el invariante que explica <em>todo</em> en el resto del curso. El cachÃ© reconoce el prefijo por
             <strong class="text-emerald-400">coincidencia de prefijo</strong>: la clave son los <strong class="text-emerald-400">bytes
-            exactos</strong> del prompt hasta un punto de corte. Un solo byte diferente en medio invalida el caché a partir de ahí.
+            exactos</strong> del prompt hasta un punto de corte. Un solo byte diferente en medio invalida el cachÃ© a partir de ahÃ­.
           </p>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Una barra de bloques idénticos coincide con el cache y se lee a bajo costo; si cambia un byte en medio de la barra, el cache coincide solo hasta ahí y todo lo que viene después del byte que cambió se vuelve a procesar desde cero." class="w-full h-auto" role="img" viewbox="0 0 900 250">
+<svg aria-label="Una barra de bloques idÃ©nticos coincide con el cache y se lee a bajo costo; si cambia un byte en medio de la barra, el cache coincide solo hasta ahÃ­ y todo lo que viene despuÃ©s del byte que cambiÃ³ se vuelve a procesar desde cero." class="w-full h-auto" role="img" viewbox="0 0 900 250">
 <defs>
 <pattern height="30" id="m11b-grid" patternunits="userSpaceOnUse" width="30"><circle cx="1.2" cy="1.2" fill="#10b981" opacity="0.12" r="1.2"></circle></pattern>
 <filter height="180%" id="m11b-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
 </defs>
 <rect fill="url(#m11b-grid)" height="250" width="900" x="0" y="0"></rect>
-<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="40">Prefijo idéntico → coincide por completo (lectura barata)</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="40">Prefijo idÃ©ntico â†’ coincide por completo (lectura barata)</text>
 <g>
 <rect fill="#0e2018" height="40" rx="8" stroke="#34d399" stroke-width="2" width="120" x="30" y="54"></rect>
 <rect fill="#0e2018" height="40" rx="8" stroke="#34d399" stroke-width="2" width="120" x="156" y="54"></rect>
@@ -446,8 +446,8 @@
 <rect fill="#0e2018" height="40" rx="8" stroke="#34d399" stroke-width="2" width="120" x="408" y="54"></rect>
 <rect fill="#0e2018" height="40" rx="8" stroke="#34d399" stroke-width="2" width="120" x="534" y="54"></rect>
 </g>
-<text fill="#34d399" font-family="Inter,sans-serif" font-size="13" font-weight="700" x="660" y="79">✓ hit</text>
-<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="150">1 byte cambia en medio → coincide solo hasta ahí</text>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="13" font-weight="700" x="660" y="79">âœ“ hit</text>
+<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="150">1 byte cambia en medio â†’ coincide solo hasta ahÃ­</text>
 <g>
 <rect fill="#0e2018" height="40" rx="8" stroke="#34d399" stroke-width="2" width="120" x="30" y="164"></rect>
 <rect fill="#0e2018" height="40" rx="8" stroke="#34d399" stroke-width="2" width="120" x="156" y="164"></rect>
@@ -456,39 +456,39 @@
 <rect fill="#2a0f16" height="40" rx="8" stroke="#f87171" stroke-dasharray="5 5" stroke-width="2" width="120" x="408" y="164"></rect>
 <rect fill="#2a0f16" height="40" rx="8" stroke="#f87171" stroke-dasharray="5 5" stroke-width="2" width="120" x="534" y="164"></rect>
 </g>
-<text fill="#34d399" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="150" y="230">coincidencia (leída)</text>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="150" y="230">coincidencia (leÃ­da)</text>
 <text fill="#fca5a5" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="530" y="230">reprocesado desde cero</text>
-<text fill="#f87171" font-family="Inter,sans-serif" font-size="13" font-weight="700" x="700" y="189">✗ miss de ahí en adelante</text>
+<text fill="#f87171" font-family="Inter,sans-serif" font-size="13" font-weight="700" x="700" y="189">âœ— miss de ahÃ­ en adelante</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Ilustración:</strong> el caché es una coincidencia por prefijo, no por «parecido». Coincide mientras los bytes sean idénticos; ante el primer byte diferente, todo lo que sigue pasa a procesarse por completo.</p>
+<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">IlustraciÃ³n:</strong> el cachÃ© es una coincidencia por prefijo, no por Â«parecidoÂ». Coincide mientras los bytes sean idÃ©nticos; ante el primer byte diferente, todo lo que sigue pasa a procesarse por completo.</p>
 </div>
-<!-- ✓/✗ grid -->
+<!-- âœ“/âœ— grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5">
-<h4 class="font-bold text-emerald-400 mb-3">✓ Mantiene el prefijo (coincide)</h4>
+<h4 class="font-bold text-emerald-400 mb-3">âœ“ Mantiene el prefijo (coincide)</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Prompt de sistema idéntico, byte por byte</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>La misma lista de herramientas, en el mismo orden</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Solo agregar contenido nuevo al final</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Prompt de sistema idÃ©ntico, byte por byte</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>La misma lista de herramientas, en el mismo orden</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Solo agregar contenido nuevo al final</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5">
-<h4 class="font-bold text-red-400 mb-3">✗ Rompe el prefijo (lo invalida)</h4>
+<h4 class="font-bold text-red-400 mb-3">âœ— Rompe el prefijo (lo invalida)</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Cambiar una palabra en medio del system</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Inyectar fecha/hora o un id que cambia cada vez</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Reordenar las herramientas entre solicitudes</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Cambiar una palabra en medio del system</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Inyectar fecha/hora o un id que cambia cada vez</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Reordenar las herramientas entre solicitudes</span></li>
 </ul>
 </div>
 </div>
 <div class="space-y-4 mb-6">
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Qué es</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">La clave del caché es la secuencia exacta de bytes del prompt hasta el punto de corte. Mientras los bytes coincidan, es un hit; ante el primer byte diferente, el resto se vuelve a procesar.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">QuÃ© es</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">La clave del cachÃ© es la secuencia exacta de bytes del prompt hasta el punto de corte. Mientras los bytes coincidan, es un hit; ante el primer byte diferente, el resto se vuelve a procesar.</p>
 </div>
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Por qué aprenderlo</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Porque casi todo "¿por qué no funcionó mi caché?" se debe a que cambió un byte del prefijo. Este invariante es la lente para diagnosticar todo lo demás.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">Por quÃ© aprenderlo</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Porque casi todo "Â¿por quÃ© no funcionÃ³ mi cachÃ©?" se debe a que cambiÃ³ un byte del prefijo. Este invariante es la lente para diagnosticar todo lo demÃ¡s.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Conceptos clave</h3>
@@ -501,49 +501,49 @@
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Marcar como leído</span><span class="inema-label-done">Leído</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 4 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-1#topico-4" id="topico-4">
+<!-- ============ TÃ“PICO 4 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-1#topico-4" id="topico-4">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">4</span>
-<h2 class="text-2xl font-bold">📚 El orden: tools → system → messages</h2>
+<h2 class="text-2xl font-bold">ðŸ“š El orden: tools â†’ system â†’ messages</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span>Tengo una duda</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-1-t4-p1">
-            Si el caché es un emparejamiento de prefijos, entonces <em>dónde</em> cada cosa que queda en el prompt importa mucho. El prompt siempre se
-            monta en este orden: <strong class="text-emerald-400">tools</strong> (las herramientas), después
-            <strong class="text-emerald-400">system</strong> (el prompt de sistema), después
-            <strong class="text-emerald-400">messages</strong> (el historial de la conversación). Lo estable va al comienzo;
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-1-t4-p1">
+            Si el cachÃ© es un emparejamiento de prefijos, entonces <em>dÃ³nde</em> cada cosa que queda en el prompt importa mucho. El prompt siempre se
+            monta en este orden: <strong class="text-emerald-400">tools</strong> (las herramientas), despuÃ©s
+            <strong class="text-emerald-400">system</strong> (el prompt de sistema), despuÃ©s
+            <strong class="text-emerald-400">messages</strong> (el historial de la conversaciÃ³n). Lo estable va al comienzo;
             lo que cambia en cada solicitud va al final.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> ¿Nuevo por aquí? «posición 0» y «breakpoint»</h3>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> Â¿Nuevo por aquÃ­? Â«posiciÃ³n 0Â» y Â«breakpointÂ»</h3>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li><strong class="text-emerald-400">posición 0</strong> — el comienzo absoluto del prompt. Las herramientas están ahí; por eso, modificarlas es lo que más rompe la caché.</li>
-<li><strong class="text-emerald-400">breakpoint</strong> — la marca que indica «la caché llega hasta aquí». Un punto de corte al final del <code class="font-mono text-xs">system</code> guarda tools + system juntos.</li>
+<li><strong class="text-emerald-400">posiciÃ³n 0</strong> â€” el comienzo absoluto del prompt. Las herramientas estÃ¡n ahÃ­; por eso, modificarlas es lo que mÃ¡s rompe la cachÃ©.</li>
+<li><strong class="text-emerald-400">breakpoint</strong> â€” la marca que indica Â«la cachÃ© llega hasta aquÃ­Â». Un punto de corte al final del <code class="font-mono text-xs">system</code> guarda tools + system juntos.</li>
 </ul>
 </div>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="El prompt se construye de izquierda a derecha, en este orden: herramientas, luego sistema y después mensajes; un breakpoint al final del sistema guarda juntos las herramientas y el sistema en la caché, y los mensajes nuevos quedan después del corte." class="w-full h-auto" role="img" viewbox="0 0 900 210">
+<svg aria-label="El prompt se construye de izquierda a derecha, en este orden: herramientas, luego sistema y despuÃ©s mensajes; un breakpoint al final del sistema guarda juntos las herramientas y el sistema en la cachÃ©, y los mensajes nuevos quedan despuÃ©s del corte." class="w-full h-auto" role="img" viewbox="0 0 900 210">
 <defs>
 <pattern height="30" id="m11c-grid" patternunits="userSpaceOnUse" width="30"><circle cx="1.2" cy="1.2" fill="#10b981" opacity="0.12" r="1.2"></circle></pattern>
 <marker id="m11c-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"></path></marker>
 </defs>
 <rect fill="url(#m11c-grid)" height="210" width="900" x="0" y="0"></rect>
-<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="34">Orden de montaje →</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="34">Orden de montaje â†’</text>
 <g font-family="Inter,sans-serif" font-size="14" font-weight="600">
 <rect fill="#0e2018" height="60" rx="12" stroke="#34d399" stroke-width="2" width="170" x="30" y="70"></rect>
 <text fill="#34d399" text-anchor="middle" x="115" y="98">tools</text>
-<text fill="#a7f3d0" font-size="11" text-anchor="middle" x="115" y="118">posición 0</text>
+<text fill="#a7f3d0" font-size="11" text-anchor="middle" x="115" y="118">posiciÃ³n 0</text>
 <rect fill="#0e2018" height="60" rx="12" stroke="#34d399" stroke-width="2" width="170" x="216" y="70"></rect>
 <text fill="#34d399" text-anchor="middle" x="301" y="98">system</text>
 <text fill="#a7f3d0" font-size="11" text-anchor="middle" x="301" y="118">estable</text>
@@ -556,65 +556,65 @@
 <!-- breakpoint no fim do system -->
 <line stroke="#facc15" stroke-dasharray="6 5" stroke-width="2.5" x1="428" x2="428" y1="52" y2="150"></line>
 <text fill="#facc15" font-family="Inter,sans-serif" font-size="12" font-weight="700" text-anchor="middle" x="428" y="46">breakpoint</text>
-<text fill="#34d399" font-family="Inter,sans-serif" font-size="12" font-weight="600" x="228" y="172">↤ en caché: tools + system</text>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="570" y="172">después del corte ↦</text>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="12" font-weight="600" x="228" y="172">â†¤ en cachÃ©: tools + system</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="570" y="172">despuÃ©s del corte â†¦</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Ilustración:</strong> cómo <code class="font-mono">tools</code> e <code class="font-mono">system</code> quedan antes del corte, son la parte más barata de mantener caliente. Los mensajes, que cambian siempre, quedan después, donde variar no cuesta el caché.</p>
+<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">IlustraciÃ³n:</strong> cÃ³mo <code class="font-mono">tools</code> e <code class="font-mono">system</code> quedan antes del corte, son la parte mÃ¡s barata de mantener caliente. Los mensajes, que cambian siempre, quedan despuÃ©s, donde variar no cuesta el cachÃ©.</p>
 </div>
 <!-- code box: ordem montada -->
 <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
-<div class="px-4 py-2 bg-dark-700/50 border-b border-dark-600 text-xs text-neutral-400 font-mono">composición del prompt (conceptual)</div>
-<pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>[1] tools      → definição das ferramentas   (posição 0, estável)
-[2] system     → prompt de sistema            (estável)
-   ── cache_control (breakpoint) ──           ← cacheia [1]+[2]
-[3] messages   → histórico + mensagem nova    (cresce no fim)</code></pre>
+<div class="px-4 py-2 bg-dark-700/50 border-b border-dark-600 text-xs text-neutral-400 font-mono">composiciÃ³n del prompt (conceptual)</div>
+<pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>[1] tools      â†’ definiÃ§Ã£o das ferramentas   (posiÃ§Ã£o 0, estÃ¡vel)
+[2] system     â†’ prompt de sistema            (estÃ¡vel)
+   â”€â”€ cache_control (breakpoint) â”€â”€           â† cacheia [1]+[2]
+[3] messages   â†’ histÃ³rico + mensagem nova    (cresce no fim)</code></pre>
 </div>
 <div class="space-y-4 mb-6">
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Qué es</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">La regla para armar el prompt: primero las herramientas, luego el sistema y después los mensajes. Un breakpoint al final del sistema cachea todo lo que vino antes.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">QuÃ© es</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">La regla para armar el prompt: primero las herramientas, luego el sistema y despuÃ©s los mensajes. Un breakpoint al final del sistema cachea todo lo que vino antes.</p>
 </div>
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Por qué aprenderlo</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Saber el orden indica dónde poner lo que es estable (al principio) y lo que varía (al final): la decisión de arquitectura que más protege el caché.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">Por quÃ© aprenderlo</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Saber el orden indica dÃ³nde poner lo que es estable (al principio) y lo que varÃ­a (al final): la decisiÃ³n de arquitectura que mÃ¡s protege el cachÃ©.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Conceptos clave</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">orden fijo</div><div class="text-xs text-neutral-400 mt-1">tools → system → messages</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">posición 0</div><div class="text-xs text-neutral-400 mt-1">las herramientas</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">orden fijo</div><div class="text-xs text-neutral-400 mt-1">tools â†’ system â†’ messages</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">posiciÃ³n 0</div><div class="text-xs text-neutral-400 mt-1">las herramientas</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">estable al frente</div><div class="text-xs text-neutral-400 mt-1">system y tools</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">volátil al final</div><div class="text-xs text-neutral-400 mt-1">los mensajes</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">volÃ¡til al final</div><div class="text-xs text-neutral-400 mt-1">los mensajes</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Marcar como leído</span><span class="inema-label-done">Leído</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 5 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-1#topico-5" id="topico-5">
+<!-- ============ TÃ“PICO 5 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-1#topico-5" id="topico-5">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">5</span>
-<h2 class="text-2xl font-bold">🎯 Hit, miss y write</h2>
+<h2 class="text-2xl font-bold">ðŸŽ¯ Hit, miss y write</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span>Tengo una duda</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-1-t5-p1">
-            Tres palabras aparecen todo el tiempo — incluso en los números que vas a leer en el próximo módulo.
-            <strong class="text-emerald-400">Hit</strong> es cuando se leyó desde la caché (barato).
-            <strong class="text-emerald-400">Write</strong> es cuando se guardó en la caché (un pequeño costo adicional).
-            <strong class="text-emerald-400">Miss</strong> es cuando no encontró nada y procesó todo desde cero.
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-1-t5-p1">
+            Tres palabras aparecen todo el tiempo â€” incluso en los nÃºmeros que vas a leer en el prÃ³ximo mÃ³dulo.
+            <strong class="text-emerald-400">Hit</strong> es cuando se leyÃ³ desde la cachÃ© (barato).
+            <strong class="text-emerald-400">Write</strong> es cuando se guardÃ³ en la cachÃ© (un pequeÃ±o costo adicional).
+            <strong class="text-emerald-400">Miss</strong> es cuando no encontrÃ³ nada y procesÃ³ todo desde cero.
             El primer mensaje se guarda; los siguientes lo leen.
           </p>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Tres estados del cache: write guarda el prefijo por primera vez con un pequeño descuento, hit vuelve a leer el prefijo del cache a bajo costo, y miss no encuentra nada y procesa todo al precio completo." class="w-full h-auto" role="img" viewbox="0 0 900 200">
+<svg aria-label="Tres estados del cache: write guarda el prefijo por primera vez con un pequeÃ±o descuento, hit vuelve a leer el prefijo del cache a bajo costo, y miss no encuentra nada y procesa todo al precio completo." class="w-full h-auto" role="img" viewbox="0 0 900 200">
 <defs>
 <pattern height="30" id="m11d-grid" patternunits="userSpaceOnUse" width="30"><circle cx="1.2" cy="1.2" fill="#10b981" opacity="0.12" r="1.2"></circle></pattern>
 <filter height="180%" id="m11d-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -623,150 +623,150 @@
 <g font-family="Inter,sans-serif">
 <rect fill="#0e2018" height="100" rx="14" stroke="#34d399" stroke-width="2" width="240" x="40" y="50"></rect>
 <text fill="#34d399" font-size="18" font-weight="700" text-anchor="middle" x="160" y="86">write</text>
-<text fill="#a7f3d0" font-size="12" text-anchor="middle" x="160" y="112">guarda el prefijo (1.ª vez)</text>
+<text fill="#a7f3d0" font-size="12" text-anchor="middle" x="160" y="112">guarda el prefijo (1.Âª vez)</text>
 <text fill="#a7f3d0" font-size="12" text-anchor="middle" x="160" y="132">ligera ventaja</text>
 <g filter="url(#m11d-glow)"><rect fill="#0e2018" height="100" rx="14" stroke="#10b981" stroke-width="2.5" width="240" x="330" y="50"></rect></g>
 <text fill="#34d399" font-size="18" font-weight="700" text-anchor="middle" x="450" y="86">hit</text>
-<text fill="#a7f3d0" font-size="12" text-anchor="middle" x="450" y="112">lee de nuevo desde la caché</text>
-<text fill="#a7f3d0" font-size="12" text-anchor="middle" x="450" y="132">≈ 0,1× (barato)</text>
+<text fill="#a7f3d0" font-size="12" text-anchor="middle" x="450" y="112">lee de nuevo desde la cachÃ©</text>
+<text fill="#a7f3d0" font-size="12" text-anchor="middle" x="450" y="132">â‰ˆ 0,1Ã— (barato)</text>
 <rect fill="#2a0f16" height="100" rx="14" stroke="#f87171" stroke-width="2" width="240" x="620" y="50"></rect>
 <text fill="#fca5a5" font-size="18" font-weight="700" text-anchor="middle" x="740" y="86">miss</text>
-<text fill="#fecaca" font-size="12" text-anchor="middle" x="740" y="112">no encontró nada</text>
-<text fill="#fecaca" font-size="12" text-anchor="middle" x="740" y="132">precio completo (1×)</text>
+<text fill="#fecaca" font-size="12" text-anchor="middle" x="740" y="112">no encontrÃ³ nada</text>
+<text fill="#fecaca" font-size="12" text-anchor="middle" x="740" y="132">precio completo (1Ã—)</text>
 </g>
 </svg>
-<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Ilustración:</strong> el camino ideal es escribir una vez y obtener un hit en todos los turnos siguientes. Un miss es el estado que quieres evitar — y el próximo módulo muestra cómo detectarlo en los números.</p>
+<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">IlustraciÃ³n:</strong> el camino ideal es escribir una vez y obtener un hit en todos los turnos siguientes. Un miss es el estado que quieres evitar â€” y el prÃ³ximo mÃ³dulo muestra cÃ³mo detectarlo en los nÃºmeros.</p>
 </div>
-<!-- ✓/✗ grid: quando é hit vs quando é miss -->
+<!-- âœ“/âœ— grid: quando Ã© hit vs quando Ã© miss -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5">
-<h4 class="font-bold text-emerald-400 mb-3">✓ Genera un hit</h4>
+<h4 class="font-bold text-emerald-400 mb-3">âœ“ Genera un hit</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Continuar la misma conversación dentro de la ventana del caché</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Prefijo idéntico al de un turno anterior</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Continuar la misma conversaciÃ³n dentro de la ventana del cachÃ©</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Prefijo idÃ©ntico al de un turno anterior</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5">
-<h4 class="font-bold text-red-400 mb-3">✗ Genera un miss / write en frío</h4>
+<h4 class="font-bold text-red-400 mb-3">âœ— Genera un miss / write en frÃ­o</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Primer turno de una conversación nueva (no hay nada que leer)</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Prefijo alterado: el caché anterior ya no coincide</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Primer turno de una conversaciÃ³n nueva (no hay nada que leer)</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Prefijo alterado: el cachÃ© anterior ya no coincide</span></li>
 </ul>
 </div>
 </div>
 <div class="space-y-4 mb-6">
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Qué es</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Los tres desenlaces de una solicitud en relación con la caché: leyó (hit), guardó (write) o procesó todo (miss).</p>
+<h3 class="text-emerald-400 font-semibold mb-1">QuÃ© es</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Los tres desenlaces de una solicitud en relaciÃ³n con la cachÃ©: leyÃ³ (hit), guardÃ³ (write) o procesÃ³ todo (miss).</p>
 </div>
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Por qué aprenderlo</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Es el vocabulario que verás en los campos de <code class="font-mono text-xs">usage</code> y usar para diagnosticar si se está logrando el ahorro.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">Por quÃ© aprenderlo</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Es el vocabulario que verÃ¡s en los campos de <code class="font-mono text-xs">usage</code> y usar para diagnosticar si se estÃ¡ logrando el ahorro.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Conceptos clave</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">hit</div><div class="text-xs text-neutral-400 mt-1">leyó de la caché (barato)</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">write</div><div class="text-xs text-neutral-400 mt-1">guardó (pequeño beneficio)</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">miss</div><div class="text-xs text-neutral-400 mt-1">procesó completo</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">1.ª grabación</div><div class="text-xs text-neutral-400 mt-1">las siguientes leen</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">hit</div><div class="text-xs text-neutral-400 mt-1">leyÃ³ de la cachÃ© (barato)</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">write</div><div class="text-xs text-neutral-400 mt-1">guardÃ³ (pequeÃ±o beneficio)</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">miss</div><div class="text-xs text-neutral-400 mt-1">procesÃ³ completo</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">1.Âª grabaciÃ³n</div><div class="text-xs text-neutral-400 mt-1">las siguientes leen</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Marcar como leído</span><span class="inema-label-done">Leído</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 6 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-1#topico-6" id="topico-6">
+<!-- ============ TÃ“PICO 6 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-1#topico-6" id="topico-6">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">6</span>
-<h2 class="text-2xl font-bold">✂️ Punto de corte (cache_control)</h2>
+<h2 class="text-2xl font-bold">âœ‚ï¸ Punto de corte (cache_control)</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span>Tengo una duda</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-1-t6-p1">
-            Falta una pieza: ¿cómo sabe el sistema hasta dónde usar el caché? Por la marca <code class="font-mono text-sm text-emerald-400">cache_control</code>,
-            o <strong class="text-emerald-400">breakpoint</strong> — que dice «guarda en caché hasta aquí». En Claude Code esto es
-            automático: no lo marcas manualmente, pero entender el concepto explica por qué los fragmentos cortos no se guardan en caché.
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-1-t6-p1">
+            Falta una pieza: Â¿cÃ³mo sabe el sistema hasta dÃ³nde usar el cachÃ©? Por la marca <code class="font-mono text-sm text-emerald-400">cache_control</code>,
+            o <strong class="text-emerald-400">breakpoint</strong> â€” que dice Â«guarda en cachÃ© hasta aquÃ­Â». En Claude Code esto es
+            automÃ¡tico: no lo marcas manualmente, pero entender el concepto explica por quÃ© los fragmentos cortos no se guardan en cachÃ©.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> ¿Nuevo por aquí? «token» y «TTL»</h3>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> Â¿Nuevo por aquÃ­? Â«tokenÂ» y Â«TTLÂ»</h3>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li><strong class="text-emerald-400">token</strong> — el fragmento de texto que cuenta el modelo (más o menos una sílaba o palabra corta). El precio y el tamaño se miden en tokens.</li>
-<li><strong class="text-emerald-400">TTL</strong> — «time to live», el tiempo de vida de la entrada en la caché. Lo verás en detalle en el Módulo 1.2.</li>
+<li><strong class="text-emerald-400">token</strong> â€” el fragmento de texto que cuenta el modelo (mÃ¡s o menos una sÃ­laba o palabra corta). El precio y el tamaÃ±o se miden en tokens.</li>
+<li><strong class="text-emerald-400">TTL</strong> â€” Â«time to liveÂ», el tiempo de vida de la entrada en la cachÃ©. Lo verÃ¡s en detalle en el MÃ³dulo 1.2.</li>
 </ul>
 </div>
 <!-- code box: cache_control conceptual -->
 <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
-<div class="px-4 py-2 bg-dark-700/50 border-b border-dark-600 text-xs text-neutral-400 font-mono">dónde entra el breakpoint (conceptual)</div>
-<pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>system: "Você é um assistente… (instruções estáveis)"
-        ▲ cache_control: { type: "ephemeral" }   ← breakpoint aqui
-messages: [ …histórico…, {nova mensagem} ]        ← fora do cache</code></pre>
+<div class="px-4 py-2 bg-dark-700/50 border-b border-dark-600 text-xs text-neutral-400 font-mono">dÃ³nde entra el breakpoint (conceptual)</div>
+<pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>system: "VocÃª Ã© um assistenteâ€¦ (instruÃ§Ãµes estÃ¡veis)"
+        â–² cache_control: { type: "ephemeral" }   â† breakpoint aqui
+messages: [ â€¦histÃ³ricoâ€¦, {nova mensagem} ]        â† fora do cache</code></pre>
 </div>
 <!-- Box de alerta / regra -->
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center gap-2"><span aria-hidden="true">📐</span> Las reglas del breakpoint</h3>
+<h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center gap-2"><span aria-hidden="true">ðŸ“</span> Las reglas del breakpoint</h3>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li><strong>Máximo 4 por solicitud</strong> — no puedes marcar tantos cortes como quieras.</li>
-<li><strong>Prefijo mínimo ~1024–4096 tokens</strong> (varía según el modelo): por debajo de ese valor no se guarda en caché.</li>
-<li><strong>Falla silenciosa</strong> — si el fragmento es demasiado corto, no se guarda en caché y <em>no da error</em>: simplemente no ves el ahorro.</li>
+<li><strong>MÃ¡ximo 4 por solicitud</strong> â€” no puedes marcar tantos cortes como quieras.</li>
+<li><strong>Prefijo mÃ­nimo ~1024â€“4096 tokens</strong> (varÃ­a segÃºn el modelo): por debajo de ese valor no se guarda en cachÃ©.</li>
+<li><strong>Falla silenciosa</strong> â€” si el fragmento es demasiado corto, no se guarda en cachÃ© y <em>no da error</em>: simplemente no ves el ahorro.</li>
 </ul>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">💡</span> Consejo práctico</h3>
-<p class="text-sm text-neutral-300">En Claude Code no administras los breakpoints: la herramienta los coloca por ti. Lo que sí está bajo tu control es <strong class="text-emerald-400">no romper el prefijo</strong> (el resto del curso trata sobre eso). Conserva el concepto; usa tu atención para lo que realmente cambia.</p>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸ’¡</span> Consejo prÃ¡ctico</h3>
+<p class="text-sm text-neutral-300">En Claude Code no administras los breakpoints: la herramienta los coloca por ti. Lo que sÃ­ estÃ¡ bajo tu control es <strong class="text-emerald-400">no romper el prefijo</strong> (el resto del curso trata sobre eso). Conserva el concepto; usa tu atenciÃ³n para lo que realmente cambia.</p>
 </div>
 <div class="space-y-4 mb-6">
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Qué es</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">El breakpoint (<code class="font-mono text-xs">cache_control</code>) es la marca que define hasta dónde se guardará en caché el prefijo, con un límite de 4 por request y un tamaño mínimo de prefijo.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">QuÃ© es</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">El breakpoint (<code class="font-mono text-xs">cache_control</code>) es la marca que define hasta dÃ³nde se guardarÃ¡ en cachÃ© el prefijo, con un lÃ­mite de 4 por request y un tamaÃ±o mÃ­nimo de prefijo.</p>
 </div>
 <div>
-<h3 class="text-emerald-400 font-semibold mb-1">Por qué aprenderlo</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Explica por qué los prompts cortos parecen «no usar el caché» y por qué, en Claude Code, no tienes que marcar nada, pero sí entender el mecanismo.</p>
+<h3 class="text-emerald-400 font-semibold mb-1">Por quÃ© aprenderlo</h3>
+<p class="text-neutral-300 text-sm leading-relaxed">Explica por quÃ© los prompts cortos parecen Â«no usar el cachÃ©Â» y por quÃ©, en Claude Code, no tienes que marcar nada, pero sÃ­ entender el mecanismo.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Conceptos clave</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">cache_control</div><div class="text-xs text-neutral-400 mt-1">«guárdalo en caché hasta aquí»</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">máx. 4</div><div class="text-xs text-neutral-400 mt-1">breakpoints por solicitud</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">mínimo</div><div class="text-xs text-neutral-400 mt-1">~1024–4096 tokens</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">automático</div><div class="text-xs text-neutral-400 mt-1">en Claude Code</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">cache_control</div><div class="text-xs text-neutral-400 mt-1">Â«guÃ¡rdalo en cachÃ© hasta aquÃ­Â»</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">mÃ¡x. 4</div><div class="text-xs text-neutral-400 mt-1">breakpoints por solicitud</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">mÃ­nimo</div><div class="text-xs text-neutral-400 mt-1">~1024â€“4096 tokens</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">automÃ¡tico</div><div class="text-xs text-neutral-400 mt-1">en Claude Code</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Marcar como leído</span><span class="inema-label-done">Leído</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do</span>
 </button>
 </div>
 </section>
-<!-- ======================= RESUMO DO MÓDULO ======================= -->
+<!-- ======================= RESUMO DO MÃ“DULO ======================= -->
 <section class="mb-4">
 <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center gap-3"><span aria-hidden="true">📌</span> Resumen del módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-3"><span aria-hidden="true">ðŸ“Œ</span> Resumen del mÃ³dulo</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">La API es stateless</strong><span class="text-neutral-400"> — sin caché, cada turno vuelve a procesar toda la conversación.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">La caché reutiliza el prefijo estable</strong><span class="text-neutral-400"> — procesa una vez y luego vuelve a leerlo a bajo costo.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">Coincidencia de prefijo byte por byte</strong><span class="text-neutral-400"> — 1 byte diferente invalida todo lo que está a la derecha.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">Orden tools → system → messages</strong><span class="text-neutral-400"> — lo estable al principio, lo volátil al final.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">Hit, miss, write y el breakpoint</strong><span class="text-neutral-400"> — el vocabulario y la marca que completan el mecanismo.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">La API es stateless</strong><span class="text-neutral-400"> â€” sin cachÃ©, cada turno vuelve a procesar toda la conversaciÃ³n.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">La cachÃ© reutiliza el prefijo estable</strong><span class="text-neutral-400"> â€” procesa una vez y luego vuelve a leerlo a bajo costo.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">Coincidencia de prefijo byte por byte</strong><span class="text-neutral-400"> â€” 1 byte diferente invalida todo lo que estÃ¡ a la derecha.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">Orden tools â†’ system â†’ messages</strong><span class="text-neutral-400"> â€” lo estable al principio, lo volÃ¡til al final.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">Hit, miss, write y el breakpoint</strong><span class="text-neutral-400"> â€” el vocabulario y la marca que completan el mecanismo.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-emerald-400 mb-1">Siguiente módulo</h3>
-<p class="text-neutral-300 text-sm">1.2 — Términos y ahorro: los tres campos de <code class="font-mono text-xs">usage</code>, el TTL y el cálculo de cuándo se amortiza el caché.</p>
+<h3 class="font-semibold text-emerald-400 mb-1">Siguiente mÃ³dulo</h3>
+<p class="text-neutral-300 text-sm">1.2 â€” TÃ©rminos y ahorro: los tres campos de <code class="font-mono text-xs">usage</code>, el TTL y el cÃ¡lculo de cuÃ¡ndo se amortiza el cachÃ©.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Volver a la ruta</a>
-<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="modulo-1-2.html">Siguiente módulo: Términos y ahorro →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">â† Volver a la ruta</a>
+<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="modulo-1-2.html">Siguiente mÃ³dulo: TÃ©rminos y ahorro â†’</a>
 </div>
 </div>
 </section>
@@ -776,7 +776,7 @@ messages: [ …histórico…, {nova mensagem} ]        ← fora do cache</code><
 <!-- ======================= FOOTER ======================= -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache — Prompt Caching en Claude Code · Curso <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a> · 2026</p>
+<p>cccache â€” Prompt Caching en Claude Code Â· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
 </div>
 </footer>
 <!-- ======================= SCRIPTS ======================= -->
@@ -795,7 +795,7 @@ messages: [ …histórico…, {nova mensagem} ]        ← fora do cache</code><
         themeToggle.addEventListener('click', function () {
           html.classList.toggle('dark');
           try { localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
-          if (window.INEMA && INEMA.setPref) { INEMA.setPref('theme', html.classList.contains('dark') ? 'inema-dark' : 'claro'); }
+          if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', html.classList.contains('dark') ? 'ARCKHÉ-dark' : 'claro'); }
           syncIcons();
         });
       }
@@ -804,7 +804,7 @@ messages: [ …histórico…, {nova mensagem} ]        ← fora do cache</code><
 <script src="../../../assets/learn.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.INEMA && typeof INEMA.init === 'function') { INEMA.init(); }
+      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') { ARCKHÉ.init(); }
     });
   </script>
 </body>

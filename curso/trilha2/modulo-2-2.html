@@ -4,57 +4,57 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="inema-course"/>
-<title>Módulo 2.2 · Skills e ferramentas: anexar vs quebrar | cccache</title>
+<meta content="cccache" name="ARCKHÉ-course"/>
+<title>MÃ³dulo 2.2 Â· Skills e ferramentas: anexar vs quebrar | cccache</title>
 <!-- 1) ANTI-FOUC -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('inema.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'inema-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--inema-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
       } catch (e) { document.documentElement.classList.add('dark'); }
     })();
   </script>
-<!-- 2) MANIFESTO (erro #28 — idêntico em toda página) -->
-<script data-inema-manifest="" type="application/json">
+<!-- 2) MANIFESTO (erro #28 â€” idÃªntico em toda pÃ¡gina) -->
+<script data-ARCKHÉ-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache — Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que é prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "Técnico",
+      "id": "trilha2", "title": "TÃ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "Invalidação a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas práticas avançadas",
+      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs Compactação", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura pró-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -73,7 +73,7 @@
 <style>
     body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
     .dark body { background-color: #111827; }
-    [id^="topico-"], [id^="modulo-"], section[data-inema-topic] { scroll-margin-top: 5rem; }
+    [id^="topico-"], [id^="modulo-"], section[data-ARCKHÉ-topic] { scroll-margin-top: 5rem; }
 
     html:not(.dark) body { background-color: #f8fafc; }
     html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
@@ -129,79 +129,79 @@
   </style>
 <!-- 5) learn.css -->
 <link href="../../assets/learn.css" rel="stylesheet"/>
-<link href="https://inematds.github.io/cccache/curso/trilha2/modulo-2-2.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/cccache/en/curso/trilha2/modulo-2-2.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/cccache/es/curso/trilha2/modulo-2-2.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-2-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha2/modulo-2-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha2/modulo-2-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="inema-skip" href="#conteudo">Pular para o conteúdo</a>
+<link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-2-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha2/modulo-2-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha2/modulo-2-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="ARCKHÉ-skip" href="#conteudo">Pular para o conteÃºdo</a>
 <!-- ================= NAV (erro #13) ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
-<span aria-hidden="true" class="text-2xl">🧠</span>
+<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
 <span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span>
 </a>
 <a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="../trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">Técnico</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">TÃ©cnico</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Boas práticas</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">Boas prÃ¡ticas</span>
 </a>
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>Minha jornada</span>
-<span class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
+<span aria-hidden="true">â—·</span><span>Minha jornada</span>
+<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
 </button>
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-appearance-toggle="[data-inema-appearance]" type="button">
-<span aria-hidden="true">◑</span><span class="hidden sm:inline">Aparência</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
+<span aria-hidden="true">â—‘</span><span class="hidden sm:inline">AparÃªncia</span>
 </button>
-<div aria-label="Aparência e leitura" class="inema-appearance-pop" data-inema-appearance="" role="group">
-<p class="inema-seg-label">Tema</p>
-<div class="inema-segment">
-<button data-inema-set-theme="inema-dark" type="button">Escuro</button>
-<button data-inema-set-theme="claro" type="button">Claro</button>
-<button data-inema-set-theme="sepia" type="button">Sépia</button>
-<button data-inema-set-theme="foco" type="button">Foco</button>
-<button data-inema-set-theme="contraste" type="button">Alto contraste</button>
+<div aria-label="AparÃªncia e leitura" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
+<p class="ARCKHÉ-seg-label">Tema</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Escuro</button>
+<button data-ARCKHÉ-set-theme="claro" type="button">Claro</button>
+<button data-ARCKHÉ-set-theme="sepia" type="button">SÃ©pia</button>
+<button data-ARCKHÉ-set-theme="foco" type="button">Foco</button>
+<button data-ARCKHÉ-set-theme="contraste" type="button">Alto contraste</button>
 </div>
-<p class="inema-seg-label">Fonte</p>
-<div class="inema-segment">
-<button data-inema-set-font="inter" type="button">Inter</button>
-<button data-inema-set-font="system" type="button">Sistema</button>
-<button data-inema-set-font="leitura" type="button">Leitura</button>
+<p class="ARCKHÉ-seg-label">Fonte</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
+<button data-ARCKHÉ-set-font="system" type="button">Sistema</button>
+<button data-ARCKHÉ-set-font="leitura" type="button">Leitura</button>
 </div>
-<p class="inema-seg-label">Tamanho</p>
-<div class="inema-segment">
-<button data-inema-set-fontscale="100" type="button">A</button>
-<button data-inema-set-fontscale="112" type="button">A+</button>
-<button data-inema-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHÉ-seg-label">Tamanho</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
+<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="inema-seg-label">Largura da linha</p>
-<div class="inema-segment">
-<button data-inema-set-linewidth="60" type="button">Estreito</button>
-<button data-inema-set-linewidth="68" type="button">Médio</button>
-<button data-inema-set-linewidth="75" type="button">Largo</button>
+<p class="ARCKHÉ-seg-label">Largura da linha</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-linewidth="60" type="button">Estreito</button>
+<button data-ARCKHÉ-set-linewidth="68" type="button">MÃ©dio</button>
+<button data-ARCKHÉ-set-linewidth="75" type="button">Largo</button>
 </div>
-<p class="inema-seg-label">Entrelinha</p>
-<div class="inema-segment">
-<button data-inema-set-leading="1.45" type="button">Compacto</button>
-<button data-inema-set-leading="1.7" type="button">Confortável</button>
+<p class="ARCKHÉ-seg-label">Entrelinha</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-leading="1.45" type="button">Compacto</button>
+<button data-ARCKHÉ-set-leading="1.7" type="button">ConfortÃ¡vel</button>
 </div>
-<p class="inema-seg-label">Acento</p>
-<div aria-label="Cor de acento" class="inema-accent-grid" role="group">
-<button aria-label="Esmeralda" data-inema-set-accent="emerald" type="button"></button>
-<button aria-label="Azul" data-inema-set-accent="blue" type="button"></button>
-<button aria-label="Roxo" data-inema-set-accent="purple" type="button"></button>
-<button aria-label="Âmbar" data-inema-set-accent="amber" type="button"></button>
-<button aria-label="Turquesa" data-inema-set-accent="teal" type="button"></button>
-<button aria-label="Rosa" data-inema-set-accent="rose" type="button"></button>
+<p class="ARCKHÉ-seg-label">Acento</p>
+<div aria-label="Cor de acento" class="ARCKHÉ-accent-grid" role="group">
+<button aria-label="Esmeralda" data-ARCKHÉ-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-ARCKHÉ-set-accent="blue" type="button"></button>
+<button aria-label="Roxo" data-ARCKHÉ-set-accent="purple" type="button"></button>
+<button aria-label="Ã‚mbar" data-ARCKHÉ-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-ARCKHÉ-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-ARCKHÉ-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -218,126 +218,126 @@
 </div>
 </nav>
 <!-- Breadcrumb -->
-<nav aria-label="Trilha de navegação" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Trilha de navegaÃ§Ã£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center space-x-2 text-sm text-neutral-400">
-<a class="hover:text-blue-400" href="../../index.html">Início</a>
+<a class="hover:text-blue-400" href="../../index.html">InÃ­cio</a>
 <span aria-hidden="true">/</span>
 <a class="hover:text-blue-400" href="index.html">Trilha 2</a>
 <span aria-hidden="true">/</span>
-<span class="text-blue-400">Módulo 2.2</span>
+<span class="text-blue-400">MÃ³dulo 2.2</span>
 </div>
 </nav>
-<!-- Header do módulo -->
+<!-- Header do mÃ³dulo -->
 <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÓDULO 2.2</span>
-<h1 class="text-2xl sm:text-4xl font-bold mb-4">🧩 Skills e ferramentas: anexar vs quebrar</h1>
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.2</span>
+<h1 class="text-2xl sm:text-4xl font-bold mb-4">ðŸ§© Skills e ferramentas: anexar vs quebrar</h1>
 <p class="text-lg text-neutral-300 max-w-3xl">
-        O que <strong class="text-blue-400">anexa no fim</strong> (seguro, um write único) e o que
-        <strong class="text-blue-400">mexe na posição 0</strong> (reset do prefixo inteiro). Por que invocar uma skill
-        no meio da conversa não zera o cache, mas conectar um MCP sim.
+        O que <strong class="text-blue-400">anexa no fim</strong> (seguro, um write Ãºnico) e o que
+        <strong class="text-blue-400">mexe na posiÃ§Ã£o 0</strong> (reset do prefixo inteiro). Por que invocar uma skill
+        no meio da conversa nÃ£o zera o cache, mas conectar um MCP sim.
       </p>
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Tópicos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Técnico</div><div class="text-xs text-neutral-400">Nível</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Prática</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">TÃ©cnico</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrÃ¡tica</div><div class="text-xs text-neutral-400">Tipo</div></div>
 </div>
-<div aria-label="Progresso do módulo 2.2" class="inema-meter mt-6 max-w-sm" data-inema-meter="modulo-2-2">
-<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
+<div aria-label="Progresso do mÃ³dulo 2.2" class="ARCKHÉ-meter mt-6 max-w-sm" data-ARCKHÉ-meter="modulo-2-2">
+<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
 <div class="leading-tight">
-<span class="text-blue-400 font-bold" data-inema-meter-pct="">0%</span>
-<span class="text-xs text-neutral-400 ml-1" data-inema-meter-frac="">0 de 6</span>
+<span class="text-blue-400 font-bold" data-ARCKHÉ-meter-pct="">0%</span>
+<span class="text-xs text-neutral-400 ml-1" data-ARCKHÉ-meter-frac="">0 de 6</span>
 </div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:grid lg:grid-cols-[1fr_240px] lg:gap-10" id="conteudo">
 <main>
-<!-- ================= TÓPICO 1 ================= -->
-<section aria-labelledby="m22-t1-h" class="mb-16" data-inema-topic="modulo-2-2#topico-1" id="topico-1">
+<!-- ================= TÃ“PICO 1 ================= -->
+<section aria-labelledby="m22-t1-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-2#topico-1" id="topico-1">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">1</span>
-<h2 class="text-2xl font-bold" id="m22-t1-h">🏷️ Dois sentidos de "skill"</h2>
+<h2 class="text-2xl font-bold" id="m22-t1-h">ðŸ·ï¸ Dois sentidos de "skill"</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button">
-<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dúvida</span>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button">
+<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span>
 </button>
 </div>
-<div class="inema-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-inema-block="m2-2-t1-p1">
+<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHÉ-block="m2-2-t1-p1">
             A palavra "skill" tem <strong class="text-blue-400">dois sentidos</strong> que custam coisas diferentes.
-            (a) A <strong class="text-blue-400">descrição</strong> da skill — a linha curta que aparece na lista de
-            skills — fica <strong class="text-blue-400">sempre no prefixo estável</strong>. (b) O
-            <strong class="text-blue-400">conteúdo</strong> completo (o documentão) só entra quando a skill é
+            (a) A <strong class="text-blue-400">descriÃ§Ã£o</strong> da skill â€” a linha curta que aparece na lista de
+            skills â€” fica <strong class="text-blue-400">sempre no prefixo estÃ¡vel</strong>. (b) O
+            <strong class="text-blue-400">conteÃºdo</strong> completo (o documentÃ£o) sÃ³ entra quando a skill Ã©
             <strong class="text-blue-400">invocada</strong>.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">O que é</h3>
-<p class="text-neutral-300">Uma skill se apresenta ao modelo por uma descrição curta (barata, sempre presente) e carrega seu corpo só sob demanda. São dois blocos com custos e momentos diferentes.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">O que Ã©</h3>
+<p class="text-neutral-300">Uma skill se apresenta ao modelo por uma descriÃ§Ã£o curta (barata, sempre presente) e carrega seu corpo sÃ³ sob demanda. SÃ£o dois blocos com custos e momentos diferentes.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-2">Por que aprender</h3>
-<p class="text-neutral-300">Porque sem separar os dois você acha que "toda skill é cara". Na verdade, só o conteúdo pesa — e uma vez só, quando invocado.</p>
+<p class="text-neutral-300">Porque sem separar os dois vocÃª acha que "toda skill Ã© cara". Na verdade, sÃ³ o conteÃºdo pesa â€” e uma vez sÃ³, quando invocado.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-<h4 class="font-bold text-blue-400 mb-2">Descrição (a)</h4>
-<p class="text-sm text-neutral-300">Linha curta na lista de skills. Sempre no prefixo estável. Barata e constante.</p>
+<h4 class="font-bold text-blue-400 mb-2">DescriÃ§Ã£o (a)</h4>
+<p class="text-sm text-neutral-300">Linha curta na lista de skills. Sempre no prefixo estÃ¡vel. Barata e constante.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-<h4 class="font-bold text-blue-400 mb-2">Conteúdo (b)</h4>
-<p class="text-sm text-neutral-300">O documento completo. Entra só quando a skill é invocada. Pesa uma vez, depois vira read barato.</p>
+<h4 class="font-bold text-blue-400 mb-2">ConteÃºdo (b)</h4>
+<p class="text-sm text-neutral-300">O documento completo. Entra sÃ³ quando a skill Ã© invocada. Pesa uma vez, depois vira read barato.</p>
 </div>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceitos-chave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Descrição</strong> = sempre presente, barata.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Conteúdo</strong> = sob demanda, pesa 1×.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Invocar</strong> = trazer o conteúdo pra conversa.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Ter muitas skills listadas ≠ carregar todas.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">DescriÃ§Ã£o</strong> = sempre presente, barata.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">ConteÃºdo</strong> = sob demanda, pesa 1Ã—.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Invocar</strong> = trazer o conteÃºdo pra conversa.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Ter muitas skills listadas â‰  carregar todas.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
-<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
+<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
 </button>
 </div>
 </section>
-<!-- ================= TÓPICO 2 ================= -->
-<section aria-labelledby="m22-t2-h" class="mb-16" data-inema-topic="modulo-2-2#topico-2" id="topico-2">
+<!-- ================= TÃ“PICO 2 ================= -->
+<section aria-labelledby="m22-t2-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-2#topico-2" id="topico-2">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">2</span>
-<h2 class="text-2xl font-bold" id="m22-t2-h">➕ Skill no meio NÃO zera o cache</h2>
+<h2 class="text-2xl font-bold" id="m22-t2-h">âž• Skill no meio NÃƒO zera o cache</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button">
-<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dúvida</span>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button">
+<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span>
 </button>
 </div>
-<div class="inema-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-inema-block="m2-2-t2-p1">
-            Quando uma skill é invocada no meio da conversa, o conteúdo dela entra
-            <strong class="text-blue-400">anexado no FIM</strong> do histórico — <strong class="text-blue-400">não na
-            posição 0</strong>. Tudo que veio antes continua válido e é lido barato; só o bloco novo da skill é gravado
-            (um write). Nos turnos seguintes, ela já é <strong class="text-blue-400">read barato</strong>.
+<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHÉ-block="m2-2-t2-p1">
+            Quando uma skill Ã© invocada no meio da conversa, o conteÃºdo dela entra
+            <strong class="text-blue-400">anexado no FIM</strong> do histÃ³rico â€” <strong class="text-blue-400">nÃ£o na
+            posiÃ§Ã£o 0</strong>. Tudo que veio antes continua vÃ¡lido e Ã© lido barato; sÃ³ o bloco novo da skill Ã© gravado
+            (um write). Nos turnos seguintes, ela jÃ¡ Ã© <strong class="text-blue-400">read barato</strong>.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">O que é</h3>
-<p class="text-neutral-300">Anexar no fim preserva todo o prefixo anterior: o casamento de prefixo continua batendo até o ponto onde o conteúdo novo começa. Logo, não há reset — só uma gravação incremental.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">O que Ã©</h3>
+<p class="text-neutral-300">Anexar no fim preserva todo o prefixo anterior: o casamento de prefixo continua batendo atÃ© o ponto onde o conteÃºdo novo comeÃ§a. Logo, nÃ£o hÃ¡ reset â€” sÃ³ uma gravaÃ§Ã£o incremental.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-2">Por que aprender</h3>
-<p class="text-neutral-300">Porque tira o medo de invocar skills durante o trabalho. Aquele turno pode marcar uma % de cache mais baixa (o write da skill), mas é investimento único — vira barato já no próximo turno.</p>
+<p class="text-neutral-300">Porque tira o medo de invocar skills durante o trabalho. Aquele turno pode marcar uma % de cache mais baixa (o write da skill), mas Ã© investimento Ãºnico â€” vira barato jÃ¡ no prÃ³ximo turno.</p>
 </div>
-<!-- SVG: anexar no fim (seguro) vs mexer na posição 0 (quebra) -->
+<!-- SVG: anexar no fim (seguro) vs mexer na posiÃ§Ã£o 0 (quebra) -->
 <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Dois cenários lado a lado. À esquerda, anexar conteúdo no fim do histórico: o prefixo inteiro continua verde (lido do cache) e só um bloco novo no fim é gravado — seguro. À direita, mexer na lista de ferramentas na posição zero: tudo dali pra frente fica vermelho (invalidado) — quebra." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
+<svg aria-label="Dois cenÃ¡rios lado a lado. Ã€ esquerda, anexar conteÃºdo no fim do histÃ³rico: o prefixo inteiro continua verde (lido do cache) e sÃ³ um bloco novo no fim Ã© gravado â€” seguro. Ã€ direita, mexer na lista de ferramentas na posiÃ§Ã£o zero: tudo dali pra frente fica vermelho (invalidado) â€” quebra." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
 <defs>
 <lineargradient id="m22-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#60a5fa"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
 <pattern height="32" id="m22-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#3b82f6" opacity="0.12" r="1.3"></circle></pattern>
@@ -345,104 +345,104 @@
 <rect fill="url(#m22-grid)" height="300" width="1000" x="0" y="0"></rect>
 <line stroke="#334155" stroke-dasharray="6 8" stroke-width="1.5" x1="500" x2="500" y1="20" y2="280"></line>
 <!-- ESQUERDA: anexar no fim (seguro) -->
-<text fill="#34d399" font-family="Inter,sans-serif" font-size="14" font-weight="700" x="60" y="40">✓ Anexar no fim (seguro)</text>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="14" font-weight="700" x="60" y="40">âœ“ Anexar no fim (seguro)</text>
 <g font-family="Inter,sans-serif" font-size="12" font-weight="600">
-<rect fill="#0e2018" height="34" rx="7" stroke="#34d399" stroke-width="2" width="360" x="60" y="60"></rect><text fill="#a7f3d0" text-anchor="middle" x="240" y="82">tools (posição 0) — intacto</text>
-<rect fill="#0e2018" height="34" rx="7" stroke="#34d399" stroke-width="2" width="360" x="60" y="102"></rect><text fill="#a7f3d0" text-anchor="middle" x="240" y="124">system — intacto</text>
-<rect fill="#0e2018" height="34" rx="7" stroke="#34d399" stroke-width="2" width="360" x="60" y="144"></rect><text fill="#a7f3d0" text-anchor="middle" x="240" y="166">histórico — lido do cache</text>
-<rect fill="#0e1622" height="40" rx="7" stroke="url(#m22-grad)" stroke-width="2.5" width="360" x="60" y="192"></rect><text fill="#93c5fd" text-anchor="middle" x="240" y="217">+ conteúdo da skill (write único)</text>
+<rect fill="#0e2018" height="34" rx="7" stroke="#34d399" stroke-width="2" width="360" x="60" y="60"></rect><text fill="#a7f3d0" text-anchor="middle" x="240" y="82">tools (posiÃ§Ã£o 0) â€” intacto</text>
+<rect fill="#0e2018" height="34" rx="7" stroke="#34d399" stroke-width="2" width="360" x="60" y="102"></rect><text fill="#a7f3d0" text-anchor="middle" x="240" y="124">system â€” intacto</text>
+<rect fill="#0e2018" height="34" rx="7" stroke="#34d399" stroke-width="2" width="360" x="60" y="144"></rect><text fill="#a7f3d0" text-anchor="middle" x="240" y="166">histÃ³rico â€” lido do cache</text>
+<rect fill="#0e1622" height="40" rx="7" stroke="url(#m22-grad)" stroke-width="2.5" width="360" x="60" y="192"></rect><text fill="#93c5fd" text-anchor="middle" x="240" y="217">+ conteÃºdo da skill (write Ãºnico)</text>
 </g>
-<text fill="#93c5fd" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="240" y="256">prefixo continua batendo → read barato</text>
-<!-- DIREITA: mexer na posição 0 (quebra) -->
-<text fill="#f87171" font-family="Inter,sans-serif" font-size="14" font-weight="700" x="540" y="40">✗ Mexer na posição 0 (quebra)</text>
+<text fill="#93c5fd" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="240" y="256">prefixo continua batendo â†’ read barato</text>
+<!-- DIREITA: mexer na posiÃ§Ã£o 0 (quebra) -->
+<text fill="#f87171" font-family="Inter,sans-serif" font-size="14" font-weight="700" x="540" y="40">âœ— Mexer na posiÃ§Ã£o 0 (quebra)</text>
 <g font-family="Inter,sans-serif" font-size="12" font-weight="600">
-<rect fill="#2a0f16" height="34" rx="7" stroke="#f87171" stroke-width="2.5" width="360" x="540" y="60"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="82">tools (posição 0) — MUDOU</text>
-<rect fill="#2a0f16" height="34" rx="7" stroke="#f87171" stroke-width="2" width="360" x="540" y="102"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="124">system — invalidado</text>
-<rect fill="#2a0f16" height="34" rx="7" stroke="#f87171" stroke-width="2" width="360" x="540" y="144"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="166">histórico — invalidado</text>
-<rect fill="#2a0f16" height="40" rx="7" stroke="#f87171" stroke-width="2" width="360" x="540" y="192"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="217">tudo reprocessado (1×)</text>
+<rect fill="#2a0f16" height="34" rx="7" stroke="#f87171" stroke-width="2.5" width="360" x="540" y="60"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="82">tools (posiÃ§Ã£o 0) â€” MUDOU</text>
+<rect fill="#2a0f16" height="34" rx="7" stroke="#f87171" stroke-width="2" width="360" x="540" y="102"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="124">system â€” invalidado</text>
+<rect fill="#2a0f16" height="34" rx="7" stroke="#f87171" stroke-width="2" width="360" x="540" y="144"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="166">histÃ³rico â€” invalidado</text>
+<rect fill="#2a0f16" height="40" rx="7" stroke="#f87171" stroke-width="2" width="360" x="540" y="192"></rect><text fill="#fecaca" text-anchor="middle" x="720" y="217">tudo reprocessado (1Ã—)</text>
 </g>
-<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="720" y="256">um byte na posição 0 derruba o prefixo inteiro</text>
+<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="720" y="256">um byte na posiÃ§Ã£o 0 derruba o prefixo inteiro</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 text-center">Mesma quantidade de conteúdo novo, resultados opostos: anexar no fim preserva o cache; alterar a posição 0 zera tudo.</p>
+<p class="text-xs text-neutral-400 mt-3 text-center">Mesma quantidade de conteÃºdo novo, resultados opostos: anexar no fim preserva o cache; alterar a posiÃ§Ã£o 0 zera tudo.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceitos-chave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Anexa no fim</strong> = prefixo intacto.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write único</strong> do bloco da skill.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write Ãºnico</strong> do bloco da skill.</p></div>
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Turnos seguintes</strong> = read barato.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Invocar skill ≠ resetar o cache.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Invocar skill â‰  resetar o cache.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
-<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
+<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
 </button>
 </div>
 </section>
-<!-- ================= TÓPICO 3 ================= -->
-<section aria-labelledby="m22-t3-h" class="mb-16" data-inema-topic="modulo-2-2#topico-3" id="topico-3">
+<!-- ================= TÃ“PICO 3 ================= -->
+<section aria-labelledby="m22-t3-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-2#topico-3" id="topico-3">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">3</span>
-<h2 class="text-2xl font-bold" id="m22-t3-h">💥 Quebrar a lista de tools = posição 0</h2>
+<h2 class="text-2xl font-bold" id="m22-t3-h">ðŸ’¥ Quebrar a lista de tools = posiÃ§Ã£o 0</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button">
-<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dúvida</span>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button">
+<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span>
 </button>
 </div>
-<div class="inema-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-inema-block="m2-2-t3-p1">
-            As ferramentas são renderizadas na <strong class="text-blue-400">posição 0</strong> — antes de system e do
-            histórico. Por isso mudar a lista <code class="font-mono text-sm">tools</code>
-<strong class="text-blue-400">invalida TUDO</strong>: como o casamento de prefixo começa do primeiro byte,
-            qualquer alteração no bloco de ferramentas derruba o prefixo inteiro dali pra frente.
+<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHÉ-block="m2-2-t3-p1">
+            As ferramentas sÃ£o renderizadas na <strong class="text-blue-400">posiÃ§Ã£o 0</strong> â€” antes de system e do
+            histÃ³rico. Por isso mudar a lista <code class="font-mono text-sm">tools</code>
+<strong class="text-blue-400">invalida TUDO</strong>: como o casamento de prefixo comeÃ§a do primeiro byte,
+            qualquer alteraÃ§Ã£o no bloco de ferramentas derruba o prefixo inteiro dali pra frente.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">O que é</h3>
-<p class="text-neutral-300">A lista <code class="font-mono text-xs">tools</code> ocupa a posição 0 na ordem de montagem <code class="font-mono text-xs">tools → system → messages</code>. Mudar qualquer byte ali é o pior caso possível para o cache.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">O que Ã©</h3>
+<p class="text-neutral-300">A lista <code class="font-mono text-xs">tools</code> ocupa a posiÃ§Ã£o 0 na ordem de montagem <code class="font-mono text-xs">tools â†’ system â†’ messages</code>. Mudar qualquer byte ali Ã© o pior caso possÃ­vel para o cache.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-2">Por que aprender</h3>
-<p class="text-neutral-300">Porque é o silent invalidator mais caro. Saber que a posição 0 é sagrada muda como você conecta MCPs, edita descrições de tools e monta a lista.</p>
+<p class="text-neutral-300">Porque Ã© o silent invalidator mais caro. Saber que a posiÃ§Ã£o 0 Ã© sagrada muda como vocÃª conecta MCPs, edita descriÃ§Ãµes de tools e monta a lista.</p>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-red-400 mb-2 flex items-center"><span aria-hidden="true" class="mr-2">⚠️</span> Atenção</h3>
-<p class="text-neutral-300">Não é só "adicionar tool". <strong>Remover</strong>, <strong>reordenar</strong> ou mudar <strong>um caractere</strong> numa descrição também conta. A posição 0 precisa ser byte-a-byte idêntica entre requests.</p>
+<h3 class="text-lg font-semibold text-red-400 mb-2 flex items-center"><span aria-hidden="true" class="mr-2">âš ï¸</span> AtenÃ§Ã£o</h3>
+<p class="text-neutral-300">NÃ£o Ã© sÃ³ "adicionar tool". <strong>Remover</strong>, <strong>reordenar</strong> ou mudar <strong>um caractere</strong> numa descriÃ§Ã£o tambÃ©m conta. A posiÃ§Ã£o 0 precisa ser byte-a-byte idÃªntica entre requests.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceitos-chave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">tools</strong> = posição 0 do prompt.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">tools</strong> = posiÃ§Ã£o 0 do prompt.</p></div>
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Mudar tools</strong> = reset total.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Ordem: <code class="font-mono text-xs">tools → system → messages</code>.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Posição 0 = byte-a-byte idêntica.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Ordem: <code class="font-mono text-xs">tools â†’ system â†’ messages</code>.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">PosiÃ§Ã£o 0 = byte-a-byte idÃªntica.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
-<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
+<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
 </button>
 </div>
 </section>
-<!-- ================= TÓPICO 4 ================= -->
-<section aria-labelledby="m22-t4-h" class="mb-16" data-inema-topic="modulo-2-2#topico-4" id="topico-4">
+<!-- ================= TÃ“PICO 4 ================= -->
+<section aria-labelledby="m22-t4-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-2#topico-4" id="topico-4">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">4</span>
-<h2 class="text-2xl font-bold" id="m22-t4-h">🔨 Exemplos de quebra</h2>
+<h2 class="text-2xl font-bold" id="m22-t4-h">ðŸ”¨ Exemplos de quebra</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button">
-<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dúvida</span>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button">
+<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span>
 </button>
 </div>
-<div class="inema-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-inema-block="m2-2-t4-p1">
-            Quatro formas clássicas de quebrar a posição 0 sem perceber. Todas mexem na lista
-            <code class="font-mono text-sm">tools</code> — de propósito ou por acidente.
+<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHÉ-block="m2-2-t4-p1">
+            Quatro formas clÃ¡ssicas de quebrar a posiÃ§Ã£o 0 sem perceber. Todas mexem na lista
+            <code class="font-mono text-sm">tools</code> â€” de propÃ³sito ou por acidente.
           </p>
 </div>
 <div class="space-y-4 mb-6">
@@ -450,92 +450,92 @@
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-neutral-100 mb-1">Conectar/desconectar MCP no meio</h4>
-<p class="text-sm text-neutral-300">Registra (ou remove) ferramentas novas na lista → a posição 0 muda → invalida tudo.</p>
+<p class="text-sm text-neutral-300">Registra (ou remove) ferramentas novas na lista â†’ a posiÃ§Ã£o 0 muda â†’ invalida tudo.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">2</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-neutral-100 mb-1">Mudar <code class="font-mono text-xs">description</code> ou <code class="font-mono text-xs">input_schema</code></h4>
-<p class="text-sm text-neutral-300">Basta uma palavra numa description ou um campo no schema — os bytes de <code class="font-mono text-xs">tools</code> mudam.</p>
+<p class="text-sm text-neutral-300">Basta uma palavra numa description ou um campo no schema â€” os bytes de <code class="font-mono text-xs">tools</code> mudam.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Ordem não-determinística</h4>
-<p class="text-sm text-neutral-300">Montar <code class="font-mono text-xs">tools</code> de um <code class="font-mono text-xs">set</code>/<code class="font-mono text-xs">dict</code> sem ordenar → a ordem varia entre requests → miss silencioso. (É o assunto do exemplo copy-run abaixo.)</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Ordem nÃ£o-determinÃ­stica</h4>
+<p class="text-sm text-neutral-300">Montar <code class="font-mono text-xs">tools</code> de um <code class="font-mono text-xs">set</code>/<code class="font-mono text-xs">dict</code> sem ordenar â†’ a ordem varia entre requests â†’ miss silencioso. (Ã‰ o assunto do exemplo copy-run abaixo.)</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">Ligar/desligar tools por modo/permissão</h4>
-<p class="text-sm text-neutral-300">Trocar de modo que habilita/desabilita ferramentas altera a lista renderizada na posição 0.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">Ligar/desligar tools por modo/permissÃ£o</h4>
+<p class="text-sm text-neutral-300">Trocar de modo que habilita/desabilita ferramentas altera a lista renderizada na posiÃ§Ã£o 0.</p>
 </div>
 </div>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">O que é / Por que aprender</h3>
-<p class="text-neutral-300 mb-2"><strong class="text-blue-400">O que é:</strong> as quatro causas mais comuns de cache que "some" sem motivo aparente — todas alteram a posição 0.</p>
-<p class="text-neutral-300"><strong class="text-blue-400">Por que aprender:</strong> reconhecer o padrão faz você desconfiar da lista de tools primeiro quando <code class="font-mono text-xs">cache_read_input_tokens</code> zera.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">O que Ã© / Por que aprender</h3>
+<p class="text-neutral-300 mb-2"><strong class="text-blue-400">O que Ã©:</strong> as quatro causas mais comuns de cache que "some" sem motivo aparente â€” todas alteram a posiÃ§Ã£o 0.</p>
+<p class="text-neutral-300"><strong class="text-blue-400">Por que aprender:</strong> reconhecer o padrÃ£o faz vocÃª desconfiar da lista de tools primeiro quando <code class="font-mono text-xs">cache_read_input_tokens</code> zera.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceitos-chave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">MCP conectado no meio = tools novas.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">1 palavra na description já quebra.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><code class="font-mono text-xs">set</code>/<code class="font-mono text-xs">dict</code> sem sort = ordem variável.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Modo/permissão liga-desliga tools.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">1 palavra na description jÃ¡ quebra.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><code class="font-mono text-xs">set</code>/<code class="font-mono text-xs">dict</code> sem sort = ordem variÃ¡vel.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Modo/permissÃ£o liga-desliga tools.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
-<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
+<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
 </button>
 </div>
 </section>
-<!-- ================= TÓPICO 5 ================= -->
-<section aria-labelledby="m22-t5-h" class="mb-16" data-inema-topic="modulo-2-2#topico-5" id="topico-5">
+<!-- ================= TÃ“PICO 5 ================= -->
+<section aria-labelledby="m22-t5-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-2#topico-5" id="topico-5">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">5</span>
-<h2 class="text-2xl font-bold" id="m22-t5-h">🔍 Tool Search anexa de propósito</h2>
+<h2 class="text-2xl font-bold" id="m22-t5-h">ðŸ” Tool Search anexa de propÃ³sito</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button">
-<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dúvida</span>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button">
+<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span>
 </button>
 </div>
-<div class="inema-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-inema-block="m2-2-t5-p1">
+<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHÉ-block="m2-2-t5-p1">
             O <strong class="text-blue-400">Tool Search</strong> carrega o schema de uma ferramenta
-            <strong class="text-blue-400">anexando</strong> — não trocando a lista <code class="font-mono text-sm">tools</code>.
-            Isso foi projetado justamente para <strong class="text-blue-400">NÃO quebrar o cache</strong>: descobrir uma
-            tool via Tool Search é seguro; conectar um MCP que reescreve a lista, não.
+            <strong class="text-blue-400">anexando</strong> â€” nÃ£o trocando a lista <code class="font-mono text-sm">tools</code>.
+            Isso foi projetado justamente para <strong class="text-blue-400">NÃƒO quebrar o cache</strong>: descobrir uma
+            tool via Tool Search Ã© seguro; conectar um MCP que reescreve a lista, nÃ£o.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">O que é</h3>
-<p class="text-neutral-300">Tool Search traz o schema de uma ferramenta sob demanda, anexado no fim (como uma skill), preservando o prefixo. É o mesmo padrão "anexar no fim = seguro" aplicado a ferramentas.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">O que Ã©</h3>
+<p class="text-neutral-300">Tool Search traz o schema de uma ferramenta sob demanda, anexado no fim (como uma skill), preservando o prefixo. Ã‰ o mesmo padrÃ£o "anexar no fim = seguro" aplicado a ferramentas.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-2">Por que aprender</h3>
-<p class="text-neutral-300">Porque distingue dois caminhos que parecem iguais: "trazer uma ferramenta nova pra conversa" pode ser seguro (Tool Search, anexa) ou destrutivo (reescrever <code class="font-mono text-xs">tools</code>, posição 0).</p>
+<p class="text-neutral-300">Porque distingue dois caminhos que parecem iguais: "trazer uma ferramenta nova pra conversa" pode ser seguro (Tool Search, anexa) ou destrutivo (reescrever <code class="font-mono text-xs">tools</code>, posiÃ§Ã£o 0).</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-<h4 class="font-bold text-emerald-400 mb-3">✓ Seguro</h4>
+<h4 class="font-bold text-emerald-400 mb-3">âœ“ Seguro</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-emerald-400">✓</span><span>Descobrir tool via Tool Search (anexa no fim).</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">✓</span><span>Invocar skill (anexa conteúdo no fim).</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Descobrir tool via Tool Search (anexa no fim).</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Invocar skill (anexa conteÃºdo no fim).</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-3">✗ Quebra</h4>
+<h4 class="font-bold text-red-400 mb-3">âœ— Quebra</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-red-400">✗</span><span>Conectar MCP que reescreve a lista de tools.</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">✗</span><span>Editar description/schema de uma tool existente.</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>Conectar MCP que reescreve a lista de tools.</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>Editar description/schema de uma tool existente.</span></li>
 </ul>
 </div>
 </div>
@@ -543,80 +543,80 @@
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceitos-chave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Tool Search <strong class="text-blue-400">anexa</strong> o schema.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Feito para <strong class="text-blue-400">não</strong> quebrar o cache.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Descobrir tool ≠ reescrever <code class="font-mono text-xs">tools</code>.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Mesmo princípio das skills (fim = seguro).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Feito para <strong class="text-blue-400">nÃ£o</strong> quebrar o cache.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Descobrir tool â‰  reescrever <code class="font-mono text-xs">tools</code>.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300">Mesmo princÃ­pio das skills (fim = seguro).</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
-<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
+<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
 </button>
 </div>
 </section>
-<!-- ================= TÓPICO 6 ================= -->
-<section aria-labelledby="m22-t6-h" class="mb-16" data-inema-topic="modulo-2-2#topico-6" id="topico-6">
+<!-- ================= TÃ“PICO 6 ================= -->
+<section aria-labelledby="m22-t6-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-2#topico-6" id="topico-6">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">6</span>
-<h2 class="text-2xl font-bold" id="m22-t6-h">👍 Regra de bolso</h2>
+<h2 class="text-2xl font-bold" id="m22-t6-h">ðŸ‘ Regra de bolso</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Marcar dúvida neste tópico" type="button">
-<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dúvida</span>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button">
+<span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span>
 </button>
 </div>
-<div class="inema-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-inema-block="m2-2-t6-p1">
-            A frase que resolve 90% das decisões do dia a dia: <strong class="text-blue-400">conteúdo novo no FIM =
+<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHÉ-block="m2-2-t6-p1">
+            A frase que resolve 90% das decisÃµes do dia a dia: <strong class="text-blue-400">conteÃºdo novo no FIM =
             seguro</strong>. Mexer na lista de <code class="font-mono text-sm">tools</code> ou no
-            <strong class="text-blue-400">system prompt</strong> = <strong class="text-blue-400">reset da posição 0</strong>.
+            <strong class="text-blue-400">system prompt</strong> = <strong class="text-blue-400">reset da posiÃ§Ã£o 0</strong>.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">O que é</h3>
-<p class="text-neutral-300">Um teste mental de uma linha: antes de qualquer mudança, pergunte "isso muda o começo do prompt ou só acrescenta no fim?". Fim = write barato; começo = reset.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">O que Ã©</h3>
+<p class="text-neutral-300">Um teste mental de uma linha: antes de qualquer mudanÃ§a, pergunte "isso muda o comeÃ§o do prompt ou sÃ³ acrescenta no fim?". Fim = write barato; comeÃ§o = reset.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-2">Por que aprender</h3>
-<p class="text-neutral-300">Porque você não precisa memorizar cada caso: a regra de bolso classifica qualquer ação nova em "seguro" ou "reset" na hora.</p>
+<p class="text-neutral-300">Porque vocÃª nÃ£o precisa memorizar cada caso: a regra de bolso classifica qualquer aÃ§Ã£o nova em "seguro" ou "reset" na hora.</p>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">💡</span> Dica prática</h3>
-<p class="text-neutral-300">Pergunte sempre: <strong class="text-primary">"isso muda o começo ou só acrescenta no fim?"</strong> Se muda o começo (tools/system), espere um reset. Se acrescenta no fim (skill/Tool Search/nova mensagem), é write único e barato.</p>
+<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ðŸ’¡</span> Dica prÃ¡tica</h3>
+<p class="text-neutral-300">Pergunte sempre: <strong class="text-primary">"isso muda o comeÃ§o ou sÃ³ acrescenta no fim?"</strong> Se muda o comeÃ§o (tools/system), espere um reset. Se acrescenta no fim (skill/Tool Search/nova mensagem), Ã© write Ãºnico e barato.</p>
 </div>
 <!-- ============ EXEMPLO COPY-RUN (erro #30) ============ -->
 <div class="mb-8">
-<h3 class="text-xl font-bold mb-3 flex items-center"><span aria-hidden="true" class="mr-2">⚡</span> Exemplo copy-run — tornar a montagem de <code class="font-mono">tools</code> determinística</h3>
+<h3 class="text-xl font-bold mb-3 flex items-center"><span aria-hidden="true" class="mr-2">âš¡</span> Exemplo copy-run â€” tornar a montagem de <code class="font-mono">tools</code> determinÃ­stica</h3>
 <div class="rounded-xl border border-blue-500/30 bg-dark-900 overflow-hidden mb-4">
 <div class="flex items-center justify-between px-4 py-2 bg-dark-800 border-b border-dark-600">
-<span class="text-xs font-mono text-blue-400">python · ❌ quebra vs ✅ estável</span>
+<span class="text-xs font-mono text-blue-400">python Â· âŒ quebra vs âœ… estÃ¡vel</span>
 <button class="copy-btn text-xs text-neutral-300 hover:text-blue-400 transition-colors" onclick="copyCode(this)" type="button">Copiar</button>
 </div>
 <div class="p-4">
-<p class="text-sm text-neutral-300 mb-3"><strong class="text-blue-400">Objetivo:</strong> garantir que a lista <code class="font-mono text-xs">tools</code> (posição 0) saia byte-a-byte idêntica em todo request. Iterar um <code class="font-mono text-xs">set</code>/<code class="font-mono text-xs">dict</code> sem ordenar deixa a ordem variar → o cache nunca bate.</p>
-<pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-800 rounded-lg p-4 overflow-x-auto"><code># ❌ QUEBRA — ordem varia entre requests (cache nunca bate)
+<p class="text-sm text-neutral-300 mb-3"><strong class="text-blue-400">Objetivo:</strong> garantir que a lista <code class="font-mono text-xs">tools</code> (posiÃ§Ã£o 0) saia byte-a-byte idÃªntica em todo request. Iterar um <code class="font-mono text-xs">set</code>/<code class="font-mono text-xs">dict</code> sem ordenar deixa a ordem variar â†’ o cache nunca bate.</p>
+<pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-800 rounded-lg p-4 overflow-x-auto"><code># âŒ QUEBRA â€” ordem varia entre requests (cache nunca bate)
 tools = [tool_schema(name) for name in &lt;meu_set_de_tools&gt;]
-#                                       ^ set/dict: ordem não garantida
+#                                       ^ set/dict: ordem nÃ£o garantida
 
-# ✅ ESTÁVEL — ordena por nome → mesma sequência de bytes sempre
+# âœ… ESTÃVEL â€” ordena por nome â†’ mesma sequÃªncia de bytes sempre
 tools = [tool_schema(name) for name in sorted(&lt;meu_set_de_tools&gt;)]
 
-# (se as tools forem dicts, serialize com chaves ordenadas também)
+# (se as tools forem dicts, serialize com chaves ordenadas tambÃ©m)
 # payload = json.dumps(tool, sort_keys=True)</code></pre>
-<p class="text-sm text-neutral-300 mt-3"><strong class="text-blue-400">Como verificar:</strong> rode o mesmo pedido duas vezes seguidas e olhe o <code class="font-mono text-xs">usage</code>. Com o <code class="font-mono text-xs">sorted(...)</code>, o <code class="font-mono text-xs">cache_read_input_tokens</code> <strong>deixa de ser 0</strong> entre requests iguais — sinal de que a posição 0 ficou idêntica e o prefixo bateu.</p>
+<p class="text-sm text-neutral-300 mt-3"><strong class="text-blue-400">Como verificar:</strong> rode o mesmo pedido duas vezes seguidas e olhe o <code class="font-mono text-xs">usage</code>. Com o <code class="font-mono text-xs">sorted(...)</code>, o <code class="font-mono text-xs">cache_read_input_tokens</code> <strong>deixa de ser 0</strong> entre requests iguais â€” sinal de que a posiÃ§Ã£o 0 ficou idÃªntica e o prefixo bateu.</p>
 </div>
 </div>
 <div class="rounded-xl border border-blue-500/30 bg-dark-900 overflow-hidden">
 <div class="flex items-center justify-between px-4 py-2 bg-dark-800 border-b border-dark-600">
-<span class="text-xs font-mono text-blue-400">prompt · peça ao Claude Code para aplicar</span>
+<span class="text-xs font-mono text-blue-400">prompt Â· peÃ§a ao Claude Code para aplicar</span>
 <button class="copy-btn text-xs text-neutral-300 hover:text-blue-400 transition-colors" onclick="copyCode(this)" type="button">Copiar</button>
 </div>
 <div class="p-4">
 <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-800 rounded-lg p-4 overflow-x-auto"><code>No arquivo &lt;caminho que monta a lista de tools&gt;, procure
-onde `tools` é construída a partir de um set ou dict e:
-  1. ordene a serialização por nome (sorted / sort_keys=True);
-  2. confirme que a ordem fica estável entre dois requests;
+onde `tools` Ã© construÃ­da a partir de um set ou dict e:
+  1. ordene a serializaÃ§Ã£o por nome (sorted / sort_keys=True);
+  2. confirme que a ordem fica estÃ¡vel entre dois requests;
   3. me mostre o antes/depois do trecho.</code></pre>
 </div>
 </div>
@@ -624,52 +624,52 @@ onde `tools` é construída a partir de um set ou dict e:
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceitos-chave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Fim</strong> = seguro (write único).</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Começo</strong> (tools/system) = reset.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><code class="font-mono text-xs">sorted(...)</code> deixa a posição 0 estável.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Fim</strong> = seguro (write Ãºnico).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">ComeÃ§o</strong> (tools/system) = reset.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><code class="font-mono text-xs">sorted(...)</code> deixa a posiÃ§Ã£o 0 estÃ¡vel.</p></div>
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><code class="font-mono text-xs">cache_read</code> &gt; 0 entre requests iguais = ok.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">●</span>
-<span class="inema-label-todo">Marcar como lido</span><span class="inema-label-done">Lido ✓</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
+<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
 </button>
 </div>
 </section>
 <!-- ================= RESUMO ================= -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">📌</span> Resumo do módulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ðŸ“Œ</span> Resumo do mÃ³dulo</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">✓</span><div><strong class="text-neutral-100">"Skill" tem dois sentidos</strong><span class="text-neutral-400"> — descrição (sempre) e conteúdo (sob demanda).</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">✓</span><div><strong class="text-neutral-100">Skill no meio anexa no fim</strong><span class="text-neutral-400"> — write único, não reset.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">✓</span><div><strong class="text-neutral-100">Mudar tools = posição 0</strong><span class="text-neutral-400"> — invalida tudo dali pra frente.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">✓</span><div><strong class="text-neutral-100">4 quebras clássicas</strong><span class="text-neutral-400"> — MCP, description/schema, ordem, modo.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">✓</span><div><strong class="text-neutral-100">Regra de bolso</strong><span class="text-neutral-400"> — fim = seguro; começo = reset.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">"Skill" tem dois sentidos</strong><span class="text-neutral-400"> â€” descriÃ§Ã£o (sempre) e conteÃºdo (sob demanda).</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Skill no meio anexa no fim</strong><span class="text-neutral-400"> â€” write Ãºnico, nÃ£o reset.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Mudar tools = posiÃ§Ã£o 0</strong><span class="text-neutral-400"> â€” invalida tudo dali pra frente.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">4 quebras clÃ¡ssicas</strong><span class="text-neutral-400"> â€” MCP, description/schema, ordem, modo.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Regra de bolso</strong><span class="text-neutral-400"> â€” fim = seguro; comeÃ§o = reset.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-blue-400 mb-2">Próximo módulo:</h3>
-<p class="text-neutral-300">2.3 — Invalidação a fundo</p>
+<h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo mÃ³dulo:</h3>
+<p class="text-neutral-300">2.3 â€” InvalidaÃ§Ã£o a fundo</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-2-1.html">← Módulo anterior</a>
-<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-3.html">Próximo módulo →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-2-1.html">â† MÃ³dulo anterior</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-3.html">PrÃ³ximo mÃ³dulo â†’</a>
 </div>
 </div>
 </section>
 </main>
 <!-- TOC sticky + scrollspy -->
 <aside class="hidden lg:block">
-<nav aria-label="Índice da página" class="sticky top-24 self-start" data-inema-toc="">
-<p class="text-sm text-neutral-400 mb-2">Seção <span class="inema-toc-pos">1</span> de <span class="inema-toc-total">6</span></p>
+<nav aria-label="Ãndice da pÃ¡gina" class="sticky top-24 self-start" data-ARCKHÉ-toc="">
+<p class="text-sm text-neutral-400 mb-2">SeÃ§Ã£o <span class="ARCKHÉ-toc-pos">1</span> de <span class="ARCKHÉ-toc-total">6</span></p>
 <ul class="space-y-1 text-sm">
-<li><a class="inema-toc-link" href="#topico-1">1. Dois sentidos de "skill"</a></li>
-<li><a class="inema-toc-link" href="#topico-2">2. Skill no meio não zera</a></li>
-<li><a class="inema-toc-link" href="#topico-3">3. Tools = posição 0</a></li>
-<li><a class="inema-toc-link" href="#topico-4">4. Exemplos de quebra</a></li>
-<li><a class="inema-toc-link" href="#topico-5">5. Tool Search anexa</a></li>
-<li><a class="inema-toc-link" href="#topico-6">6. Regra de bolso</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-1">1. Dois sentidos de "skill"</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-2">2. Skill no meio nÃ£o zera</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-3">3. Tools = posiÃ§Ã£o 0</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-4">4. Exemplos de quebra</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-5">5. Tool Search anexa</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-6">6. Regra de bolso</a></li>
 </ul>
 </nav>
 </aside>
@@ -677,7 +677,7 @@ onde `tools` é construída a partir de um set ou dict e:
 <!-- FOOTER -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache — Prompt Caching no Claude Code · Curso <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a> · 2026</p>
+<p>cccache â€” Prompt Caching no Claude Code Â· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
 </div>
 </footer>
 <!-- SCRIPTS -->
@@ -688,7 +688,7 @@ onde `tools` é construída a partir de um set ou dict e:
       var code = box && box.querySelector('code');
       if (!code) { return; }
       var text = code.textContent;
-      function done() { var o = btn.textContent; btn.textContent = 'Copiado ✓'; btn.classList.add('copied'); setTimeout(function () { btn.textContent = o; btn.classList.remove('copied'); }, 1600); }
+      function done() { var o = btn.textContent; btn.textContent = 'Copiado âœ“'; btn.classList.add('copied'); setTimeout(function () { btn.textContent = o; btn.classList.remove('copied'); }, 1600); }
       if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); }); }
       else { fallbackCopy(text); done(); }
     }
@@ -696,7 +696,7 @@ onde `tools` é construída a partir de um set ou dict e:
       try { var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'absolute'; ta.style.left = '-9999px'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); } catch (e) { }
     }
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.INEMA && typeof INEMA.init === 'function') { INEMA.init(); }
+      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') { ARCKHÉ.init(); }
     });
   </script>
 </body>

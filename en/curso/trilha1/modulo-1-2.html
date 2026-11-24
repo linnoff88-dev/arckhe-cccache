@@ -4,57 +4,57 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="inema-course"/>
-<title>Module 1.2 · Terms and savings | cccache — Prompt Caching in Claude Code</title>
+<meta content="cccache" name="ARCKHÉ-course"/>
+<title>Module 1.2 Â· Terms and savings | cccache â€” Prompt Caching in Claude Code</title>
 <!-- 1) ANTI-FOUC (espelhado da landing, erro #18) -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('inema.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'inema-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--inema-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
       } catch (e) { document.documentElement.classList.add('dark'); }
     })();
   </script>
-<!-- 2) MANIFESTO do curso (erro #28) — VERBATIM da landing -->
-<script data-inema-manifest="" type="application/json">
+<!-- 2) MANIFESTO do curso (erro #28) â€” VERBATIM da landing -->
+<script data-ARCKHÉ-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache — Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que é prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "Técnico",
+      "id": "trilha2", "title": "TÃ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "Invalidação a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas práticas avançadas",
+      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs Compactação", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura pró-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -134,20 +134,20 @@
     pre { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; }
   </style>
 <link href="../../../assets/learn.css" rel="stylesheet"/>
-<link href="https://inematds.github.io/cccache/curso/trilha1/modulo-1-2.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/cccache/en/curso/trilha1/modulo-1-2.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/cccache/es/curso/trilha1/modulo-1-2.html" hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha1/modulo-1-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-1-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha1/modulo-1-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="inema-skip" href="#conteudo">Skip to content</a>
+<link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha1/modulo-1-2.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-1-2.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha1/modulo-1-2.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="ARCKHÉ-skip" href="#conteudo">Skip to content</a>
 <!-- ================= NAVIGATION (erro #13) ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
-<span aria-hidden="true" class="text-2xl">🧠</span>
+<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="../trilha1/index.html">
@@ -159,54 +159,54 @@
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
 <span class="sm:hidden">T3</span><span class="hidden sm:inline">Best practices</span>
 </a>
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-journey-open="" type="button">
-<span aria-hidden="true">◷</span><span>My journey</span>
-<span class="inema-journey-badge hidden" data-count="0" data-inema-journey-badge=""></span>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
+<span aria-hidden="true">â—·</span><span>My journey</span>
+<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
 </button>
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-inema-appearance-toggle="[data-inema-appearance]" type="button">
-<span aria-hidden="true">◑</span><span class="hidden sm:inline">Appearance</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
+<span aria-hidden="true">â—‘</span><span class="hidden sm:inline">Appearance</span>
 </button>
-<div aria-label="Appearance and reading" class="inema-appearance-pop" data-inema-appearance="" role="group">
-<p class="inema-seg-label">Theme</p>
-<div class="inema-segment">
-<button data-inema-set-theme="inema-dark" type="button">Dark</button>
-<button data-inema-set-theme="claro" type="button">Clear</button>
-<button data-inema-set-theme="sepia" type="button">Sepia</button>
-<button data-inema-set-theme="foco" type="button">Focus</button>
-<button data-inema-set-theme="contraste" type="button">High contrast</button>
+<div aria-label="Appearance and reading" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
+<p class="ARCKHÉ-seg-label">Theme</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Dark</button>
+<button data-ARCKHÉ-set-theme="claro" type="button">Clear</button>
+<button data-ARCKHÉ-set-theme="sepia" type="button">Sepia</button>
+<button data-ARCKHÉ-set-theme="foco" type="button">Focus</button>
+<button data-ARCKHÉ-set-theme="contraste" type="button">High contrast</button>
 </div>
-<p class="inema-seg-label">Source</p>
-<div class="inema-segment">
-<button data-inema-set-font="inter" type="button">Inter</button>
-<button data-inema-set-font="system" type="button">System</button>
-<button data-inema-set-font="leitura" type="button">Reading</button>
+<p class="ARCKHÉ-seg-label">Source</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
+<button data-ARCKHÉ-set-font="system" type="button">System</button>
+<button data-ARCKHÉ-set-font="leitura" type="button">Reading</button>
 </div>
-<p class="inema-seg-label">Size</p>
-<div class="inema-segment">
-<button data-inema-set-fontscale="100" type="button">A</button>
-<button data-inema-set-fontscale="112" type="button">A+</button>
-<button data-inema-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHÉ-seg-label">Size</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
+<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="inema-seg-label">Line width</p>
-<div class="inema-segment">
-<button data-inema-set-linewidth="60" type="button">Narrow</button>
-<button data-inema-set-linewidth="68" type="button">Medium</button>
-<button data-inema-set-linewidth="75" type="button">Wide</button>
+<p class="ARCKHÉ-seg-label">Line width</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-linewidth="60" type="button">Narrow</button>
+<button data-ARCKHÉ-set-linewidth="68" type="button">Medium</button>
+<button data-ARCKHÉ-set-linewidth="75" type="button">Wide</button>
 </div>
-<p class="inema-seg-label">Line spacing</p>
-<div class="inema-segment">
-<button data-inema-set-leading="1.45" type="button">Compact</button>
-<button data-inema-set-leading="1.7" type="button">Comfortable</button>
+<p class="ARCKHÉ-seg-label">Line spacing</p>
+<div class="ARCKHÉ-segment">
+<button data-ARCKHÉ-set-leading="1.45" type="button">Compact</button>
+<button data-ARCKHÉ-set-leading="1.7" type="button">Comfortable</button>
 </div>
-<p class="inema-seg-label">Accent</p>
-<div aria-label="Accent color" class="inema-accent-grid" role="group">
-<button aria-label="Emerald" data-inema-set-accent="emerald" type="button"></button>
-<button aria-label="Blue" data-inema-set-accent="blue" type="button"></button>
-<button aria-label="Purple" data-inema-set-accent="purple" type="button"></button>
-<button aria-label="Amber" data-inema-set-accent="amber" type="button"></button>
-<button aria-label="Turquoise" data-inema-set-accent="teal" type="button"></button>
-<button aria-label="Pink" data-inema-set-accent="rose" type="button"></button>
+<p class="ARCKHÉ-seg-label">Accent</p>
+<div aria-label="Accent color" class="ARCKHÉ-accent-grid" role="group">
+<button aria-label="Emerald" data-ARCKHÉ-set-accent="emerald" type="button"></button>
+<button aria-label="Blue" data-ARCKHÉ-set-accent="blue" type="button"></button>
+<button aria-label="Purple" data-ARCKHÉ-set-accent="purple" type="button"></button>
+<button aria-label="Amber" data-ARCKHÉ-set-accent="amber" type="button"></button>
+<button aria-label="Turquoise" data-ARCKHÉ-set-accent="teal" type="button"></button>
+<button aria-label="Pink" data-ARCKHÉ-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -227,14 +227,14 @@
 </div>
 </nav>
 <main id="conteudo">
-<!-- ======================= HEADER DO MÓDULO ======================= -->
+<!-- ======================= HEADER DO MÃ“DULO ======================= -->
 <header class="bg-gradient-to-br from-emerald-900/30 via-dark-900 to-dark-900 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MODULE 1.2</span>
-<h1 class="text-2xl sm:text-4xl font-bold mb-4">💸 Terms and savings</h1>
+<h1 class="text-2xl sm:text-4xl font-bold mb-4">ðŸ’¸ Terms and savings</h1>
 <p class="text-lg text-neutral-300 max-w-3xl mb-8">
           Now for the numbers. Three fields of <code class="font-mono text-base">usage</code> tell the story of each turn,
-          the <strong class="text-emerald-400">TTL</strong> determines how long the cache stays warm, and four relative costs explain why a long conversation costs <strong class="text-emerald-400">~10%</strong> — and when
+          the <strong class="text-emerald-400">TTL</strong> determines how long the cache stays warm, and four relative costs explain why a long conversation costs <strong class="text-emerald-400">~10%</strong> â€” and when
           the cache has already paid for itself.
         </p>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
@@ -244,51 +244,51 @@
 <div class="bg-dark-800/60 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Theory</div><div class="text-xs text-neutral-400">Type</div></div>
 </div>
 <div class="mt-6 max-w-md">
-<div aria-label="Module 1.2 progress" class="inema-meter" data-inema-meter="modulo-1-2">
-<div class="inema-bar"><div class="inema-bar__fill" data-inema-meter-fill=""></div></div>
-<span class="text-sm text-emerald-400 font-semibold" data-inema-meter-pct="">0%</span>
-<span class="text-xs text-neutral-400" data-inema-meter-frac="">0 of 0</span>
+<div aria-label="Module 1.2 progress" class="ARCKHÉ-meter" data-ARCKHÉ-meter="modulo-1-2">
+<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
+<span class="text-sm text-emerald-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<span class="text-xs text-neutral-400" data-ARCKHÉ-meter-frac="">0 of 0</span>
 </div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:flex lg:gap-10">
 <!-- TOC sticky + scrollspy -->
-<nav aria-label="Module index" class="hidden lg:block w-56 flex-shrink-0 sticky top-20 self-start" data-inema-toc="">
+<nav aria-label="Module index" class="hidden lg:block w-56 flex-shrink-0 sticky top-20 self-start" data-ARCKHÉ-toc="">
 <p class="text-xs uppercase tracking-wide text-neutral-500 mb-2">In this module</p>
-<p class="text-sm text-neutral-400 mb-3" data-inema-section-counter="">Section 1 of 6</p>
+<p class="text-sm text-neutral-400 mb-3" data-ARCKHÉ-section-counter="">Section 1 of 6</p>
 <ul class="space-y-1 text-sm">
-<li><a class="inema-toc-link" href="#topico-1">1. cache_read_input_tokens</a></li>
-<li><a class="inema-toc-link" href="#topico-2">2. cache_creation_input_tokens</a></li>
-<li><a class="inema-toc-link" href="#topico-3">3. input_tokens (the rest)</a></li>
-<li><a class="inema-toc-link" href="#topico-4">4. TTL: 5 min and 1 h</a></li>
-<li><a class="inema-toc-link" href="#topico-5">5. Relative costs</a></li>
-<li><a class="inema-toc-link" href="#topico-6">6. Break-even</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-1">1. cache_read_input_tokens</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-2">2. cache_creation_input_tokens</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-3">3. input_tokens (the rest)</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-4">4. TTL: 5 min and 1 h</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-5">5. Relative costs</a></li>
+<li><a class="ARCKHÉ-toc-link" href="#topico-6">6. Break-even</a></li>
 </ul>
 </nav>
 <div class="flex-1 min-w-0">
-<!-- ============ TÓPICO 1 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-2#topico-1" id="topico-1">
+<!-- ============ TÃ“PICO 1 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-2#topico-1" id="topico-1">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">1</span>
-<h2 class="text-2xl font-bold">📖 cache_read_input_tokens</h2>
+<h2 class="text-2xl font-bold">ðŸ“– cache_read_input_tokens</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Mark a question on this topic" type="button">
 <span aria-hidden="true">?</span><span>I have a question</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-2-t1-p1">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-2-t1-p1">
             Every API response includes an accounting block called <code class="font-mono text-sm text-emerald-400">usage</code>.
             The first field that matters is <code class="font-mono text-sm text-emerald-400">cache_read_input_tokens</code>: the tokens
-            that were <strong class="text-emerald-400">served from the cache</strong> in this turn. They cost ~0.1× the input price—
-            that’s the money the cache saves you.
+            that were <strong class="text-emerald-400">served from the cache</strong> in this turn. They cost ~0.1Ã— the input priceâ€”
+            thatâ€™s the money the cache saves you.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> New here? "usage" and "token"</h3>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> New here? "usage" and "token"</h3>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li><strong class="text-emerald-400">usage</strong> — the brief usage summary the API returns with the response, saying how many tokens were used and where they came from.</li>
-<li><strong class="text-emerald-400">token</strong> — the little piece of text the model counts (~a syllable or short word). Price and size are measured in tokens.</li>
+<li><strong class="text-emerald-400">usage</strong> â€” the brief usage summary the API returns with the response, saying how many tokens were used and where they came from.</li>
+<li><strong class="text-emerald-400">token</strong> â€” the little piece of text the model counts (~a syllable or short word). Price and size are measured in tokens.</li>
 </ul>
 </div>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
@@ -300,126 +300,126 @@
 <text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="40">Input tokens in a warm turn</text>
 <rect fill="#0e2018" height="46" rx="10" stroke="#34d399" stroke-width="2" width="720" x="30" y="56"></rect>
 <rect fill="#10b981" height="38" opacity="0.35" rx="7" width="640" x="34" y="60"></rect>
-<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="354" y="84">cache_read_input_tokens · ≈ 0.1×</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="354" y="84">cache_read_input_tokens Â· â‰ˆ 0.1Ã—</text>
 <rect fill="#38bdf8" height="38" opacity="0.3" rx="7" width="68" x="678" y="60"></rect>
 <text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="712" y="124">new</text>
 <text fill="#34d399" font-family="Inter,sans-serif" font-size="11" font-weight="600" text-anchor="middle" x="354" y="132">read from cache (cheap)</text>
 </svg>
 <p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Illustration:</strong> the larger this range, the more the cache is working for you. This is the field that <em>proof</em> that there was a hit.</p>
 </div>
-<!-- ✓/✗ grid -->
+<!-- âœ“/âœ— grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5">
-<h4 class="font-bold text-emerald-400 mb-3">✓ Healthy signal</h4>
+<h4 class="font-bold text-emerald-400 mb-3">âœ“ Healthy signal</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span><code class="font-mono text-xs">cache_read_input_tokens</code> high and growing between turns</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Most of the input in a long conversation comes from the cache</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span><code class="font-mono text-xs">cache_read_input_tokens</code> high and growing between turns</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Most of the input in a long conversation comes from the cache</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5">
-<h4 class="font-bold text-red-400 mb-3">✗ Sign of a problem</h4>
+<h4 class="font-bold text-red-400 mb-3">âœ— Sign of a problem</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Stays <strong>0</strong> even when repeating the same prefix — something is breaking the cache</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Disappears after an action — something changed the prefix</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Stays <strong>0</strong> even when repeating the same prefix â€” something is breaking the cache</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Disappears after an action â€” something changed the prefix</span></li>
 </ul>
 </div>
 </div>
 <div class="space-y-4 mb-6">
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">What it is</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">The field for <code class="font-mono text-xs">usage</code> that counts the tokens served from the cache this turn, billed at ~0.1× the input price.</p>
+<p class="text-neutral-300 text-sm leading-relaxed">The field for <code class="font-mono text-xs">usage</code> that counts the tokens served from the cache this turn, billed at ~0.1Ã— the input price.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">Why learn</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">It’s objective proof that the cache was hit. Without checking this field, you’re only assuming you’re saving money.</p>
+<p class="text-neutral-300 text-sm leading-relaxed">Itâ€™s objective proof that the cache was hit. Without checking this field, youâ€™re only assuming youâ€™re saving money.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Key concepts</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">read from cache</div><div class="text-xs text-neutral-400 mt-1">tokens served at a discount</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">≈ 0,1×</div><div class="text-xs text-neutral-400 mt-1">one tenth of the input</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">â‰ˆ 0,1Ã—</div><div class="text-xs text-neutral-400 mt-1">one tenth of the input</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">hit signal</div><div class="text-xs text-neutral-400 mt-1">proof that it matched</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">zero = alert</div><div class="text-xs text-neutral-400 mt-1">has an invalidator</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Mark as read</span><span class="inema-label-done">Read</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Mark as read</span><span class="ARCKHÉ-label-done">Read</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 2 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-2#topico-2" id="topico-2">
+<!-- ============ TÃ“PICO 2 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-2#topico-2" id="topico-2">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">2</span>
-<h2 class="text-2xl font-bold">✍️ cache_creation_input_tokens</h2>
+<h2 class="text-2xl font-bold">âœï¸ cache_creation_input_tokens</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Mark a question on this topic" type="button">
 <span aria-hidden="true">?</span><span>I have a question</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-2-t2-p1">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-2-t2-p1">
             The second field is <code class="font-mono text-sm text-emerald-400">cache_creation_input_tokens</code>: the tokens
-            <strong class="text-emerald-400">written to the cache</strong> in this turn. Writing has a small premium—it costs ~1.25×
-            (with a 5 min TTL) or ~2× (with a 1 h TTL). It’s the price you pay once so you can read cheaply later.
+            <strong class="text-emerald-400">written to the cache</strong> in this turn. Writing has a small premiumâ€”it costs ~1.25Ã—
+            (with a 5 min TTL) or ~2Ã— (with a 1 h TTL). Itâ€™s the price you pay once so you can read cheaply later.
           </p>
 <div class="bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-xl border border-emerald-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center gap-2"><span aria-hidden="true">🧠</span> The trade-off behind the premium</h3>
-<p class="text-neutral-300 text-sm mb-3">You pay a little more to write (1.25×), and in return, each subsequent read costs almost nothing (0.1×). It’s an investment: one write now buys many cheap reads later.</p>
+<h3 class="text-lg font-semibold text-emerald-400 mb-3 flex items-center gap-2"><span aria-hidden="true">ðŸ§ </span> The trade-off behind the premium</h3>
+<p class="text-neutral-300 text-sm mb-3">You pay a little more to write (1.25Ã—), and in return, each subsequent read costs almost nothing (0.1Ã—). Itâ€™s an investment: one write now buys many cheap reads later.</p>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">•</span><span>Write with 5 min TTL ≈ <strong>1,25×</strong></span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">•</span><span>Write with 1 h TTL ≈ <strong>2×</strong> (more expensive write, longer lifetime)</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">â€¢</span><span>Write with 5 min TTL â‰ˆ <strong>1,25Ã—</strong></span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">â€¢</span><span>Write with 1 h TTL â‰ˆ <strong>2Ã—</strong> (more expensive write, longer lifetime)</span></li>
 </ul>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-blue-400 mb-2 flex items-center gap-2"><span aria-hidden="true">🔎</span> When this field gets high</h3>
-<p class="text-sm text-neutral-300">It’s normal for it to appear in the <strong>first turn</strong> (writes the prefix) and whenever a new block is added (a loaded skill, for example). See <em>write all the time, without read</em>, however, signals a cache that writes but never reads—a likely invalidator (you’ll see this in Track 2).</p>
+<h3 class="text-base font-semibold text-blue-400 mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸ”Ž</span> When this field gets high</h3>
+<p class="text-sm text-neutral-300">Itâ€™s normal for it to appear in the <strong>first turn</strong> (writes the prefix) and whenever a new block is added (a loaded skill, for example). See <em>write all the time, without read</em>, however, signals a cache that writes but never readsâ€”a likely invalidator (youâ€™ll see this in Track 2).</p>
 </div>
 <div class="space-y-4 mb-6">
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">What it is</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">The tokens written to the cache in this turn, billed at ~1.25× (TTL 5 min) or ~2× (TTL 1 h).</p>
+<p class="text-neutral-300 text-sm leading-relaxed">The tokens written to the cache in this turn, billed at ~1.25Ã— (TTL 5 min) or ~2Ã— (TTL 1 h).</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">Why learn</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Understanding that the write is a one-time cost prevents the shock of seeing a number larger than the full input — and teaches you to wait for the payback.</p>
+<p class="text-neutral-300 text-sm leading-relaxed">Understanding that the write is a one-time cost prevents the shock of seeing a number larger than the full input â€” and teaches you to wait for the payback.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Key concepts</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">written</div><div class="text-xs text-neutral-400 mt-1">tokens written to the cache</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">≈ 1,25×</div><div class="text-xs text-neutral-400 mt-1">write with TTL 5 min</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">≈ 2×</div><div class="text-xs text-neutral-400 mt-1">write with TTL 1 h</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">â‰ˆ 1,25Ã—</div><div class="text-xs text-neutral-400 mt-1">write with TTL 5 min</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">â‰ˆ 2Ã—</div><div class="text-xs text-neutral-400 mt-1">write with TTL 1 h</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">paid once</div><div class="text-xs text-neutral-400 mt-1">per new block</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Mark as read</span><span class="inema-label-done">Read</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Mark as read</span><span class="ARCKHÉ-label-done">Read</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 3 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-2#topico-3" id="topico-3">
+<!-- ============ TÃ“PICO 3 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-2#topico-3" id="topico-3">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">3</span>
-<h2 class="text-2xl font-bold">🧮 input_tokens (the rest)</h2>
+<h2 class="text-2xl font-bold">ðŸ§® input_tokens (the rest)</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Mark a question on this topic" type="button">
 <span aria-hidden="true">?</span><span>I have a question</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-2-t3-p1">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-2-t3-p1">
             The third field is <code class="font-mono text-sm text-emerald-400">input_tokens</code>: only the part
-            <strong class="text-emerald-400">not cached</strong>, charged at the full price (1×). And here's the golden rule
+            <strong class="text-emerald-400">not cached</strong>, charged at the full price (1Ã—). And here's the golden rule
             for reading <code class="font-mono text-sm">usage</code>: the total prompt is the <strong class="text-emerald-400">sum
-            of the three fields</strong> — don’t look at one in isolation.
+            of the three fields</strong> â€” donâ€™t look at one in isolation.
           </p>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
 <svg aria-label="The total prompt size for one turn is the sum of three fields: cache_read_input_tokens plus cache_creation_input_tokens plus input_tokens." class="w-full h-auto" role="img" viewbox="0 0 900 200">
@@ -431,15 +431,15 @@
 <g font-family="Inter,sans-serif" font-size="12" font-weight="600">
 <rect fill="#0e2018" height="70" rx="12" stroke="#34d399" stroke-width="2" width="180" x="20" y="70"></rect>
 <text fill="#34d399" font-size="13" text-anchor="middle" x="110" y="98">cache_read</text>
-<text fill="#a7f3d0" text-anchor="middle" x="110" y="118">read · 0.1×</text>
+<text fill="#a7f3d0" text-anchor="middle" x="110" y="118">read Â· 0.1Ã—</text>
 <text fill="#e5e7eb" font-size="28" font-weight="700" text-anchor="middle" x="222" y="112">+</text>
 <rect fill="#0e1b26" height="70" rx="12" stroke="#38bdf8" stroke-width="2" width="180" x="244" y="70"></rect>
 <text fill="#bfe6ff" font-size="13" text-anchor="middle" x="334" y="98">cache_creation</text>
-<text fill="#9ad6ff" text-anchor="middle" x="334" y="118">written · 1.25×</text>
+<text fill="#9ad6ff" text-anchor="middle" x="334" y="118">written Â· 1.25Ã—</text>
 <text fill="#e5e7eb" font-size="28" font-weight="700" text-anchor="middle" x="446" y="112">+</text>
 <rect fill="#26201a" height="70" rx="12" stroke="#9ca3af" stroke-width="2" width="180" x="468" y="70"></rect>
 <text fill="#e5e7eb" font-size="13" text-anchor="middle" x="558" y="98">input_tokens</text>
-<text fill="#cbd5e1" text-anchor="middle" x="558" y="118">uncached · 1×</text>
+<text fill="#cbd5e1" text-anchor="middle" x="558" y="118">uncached Â· 1Ã—</text>
 <text fill="#e5e7eb" font-size="28" font-weight="700" text-anchor="middle" x="670" y="112">=</text>
 <g filter="url(#m12b-glow)"><rect fill="#0e2018" height="70" rx="12" stroke="#10b981" stroke-width="2.5" width="188" x="692" y="70"></rect></g>
 <text fill="#34d399" font-size="14" font-weight="700" text-anchor="middle" x="786" y="98">total prompt</text>
@@ -447,27 +447,27 @@
 </g>
 <text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="450" y="40">The size of one turn = sum of the three fields</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Illustration:</strong> if you look only at <code class="font-mono">input_tokens</code>, think the turn was tiny. The true size is the sum — and it's normal for most of it to come from the cache.</p>
+<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Illustration:</strong> if you look only at <code class="font-mono">input_tokens</code>, think the turn was tiny. The true size is the sum â€” and it's normal for most of it to come from the cache.</p>
 </div>
 <!-- Box de alerta: a pegadinha -->
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-red-400 mb-2 flex items-center gap-2"><span aria-hidden="true">⚠️</span> The “small input” gotcha</h3>
+<h3 class="text-base font-semibold text-red-400 mb-2 flex items-center gap-2"><span aria-hidden="true">âš ï¸</span> The â€œsmall inputâ€ gotcha</h3>
 <p class="text-sm text-neutral-300">Your agent ran for hours and <code class="font-mono text-xs">input_tokens</code> shows a small number? It's not a bug or magical savings: the rest came from the cache. Add the three fields to see the actual amount that was processed.</p>
 </div>
 <!-- code box: exemplo de usage -->
 <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
 <div class="px-4 py-2 bg-dark-700/50 border-b border-dark-600 text-xs text-neutral-400 font-mono">usage block example (illustrative)</div>
 <pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>"usage": {
-  "cache_read_input_tokens":     98000,   // lido do cache  · 0,1×
-  "cache_creation_input_tokens":  1200,   // gravado agora  · 1,25×
-  "input_tokens":                  300    // não-cacheado   · 1×
+  "cache_read_input_tokens":     98000,   // lido do cache  Â· 0,1Ã—
+  "cache_creation_input_tokens":  1200,   // gravado agora  Â· 1,25Ã—
+  "input_tokens":                  300    // nÃ£o-cacheado   Â· 1Ã—
 }
 // total processado no turno = 98000 + 1200 + 300 = 99500 tokens</code></pre>
 </div>
 <div class="space-y-4 mb-6">
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">What it is</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">The portion of the prompt that didn’t come from the cache, charged at the full price (1×). Added to the other two fields, it gives the actual size of the turn.</p>
+<p class="text-neutral-300 text-sm leading-relaxed">The portion of the prompt that didnâ€™t come from the cache, charged at the full price (1Ã—). Added to the other two fields, it gives the actual size of the turn.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">Why learn</h3>
@@ -477,69 +477,69 @@
 <h3 class="text-emerald-400 font-semibold mb-2">Key concepts</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">uncached</div><div class="text-xs text-neutral-400 mt-1">only the rest</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">1× (full)</div><div class="text-xs text-neutral-400 mt-1">reference price</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">1Ã— (full)</div><div class="text-xs text-neutral-400 mt-1">reference price</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">total = sum</div><div class="text-xs text-neutral-400 mt-1">of the three fields</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">gotcha</div><div class="text-xs text-neutral-400 mt-1">low input ≠ short turn</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">gotcha</div><div class="text-xs text-neutral-400 mt-1">low input â‰  short turn</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Mark as read</span><span class="inema-label-done">Read</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Mark as read</span><span class="ARCKHÉ-label-done">Read</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 4 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-2#topico-4" id="topico-4">
+<!-- ============ TÃ“PICO 4 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-2#topico-4" id="topico-4">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">4</span>
-<h2 class="text-2xl font-bold">⏱️ TTL: 5 minutes and 1 hour</h2>
+<h2 class="text-2xl font-bold">â±ï¸ TTL: 5 minutes and 1 hour</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Mark a question on this topic" type="button">
 <span aria-hidden="true">?</span><span>I have a question</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-2-t4-p1">
-            A cache entry doesn’t live forever. The <strong class="text-emerald-400">TTL</strong> (lifetime) is
-            <strong class="text-emerald-400">5 min</strong> by default, and it is <em>renewed with every use</em> — in other words, an
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-2-t4-p1">
+            A cache entry doesnâ€™t live forever. The <strong class="text-emerald-400">TTL</strong> (lifetime) is
+            <strong class="text-emerald-400">5 min</strong> by default, and it is <em>renewed with every use</em> â€” in other words, an
             active conversation keeps the cache warm on its own. There is also the option to <strong class="text-emerald-400">1 h</strong> (more expensive write,
-            ~2×) for traffic with long pauses.
+            ~2Ã—) for traffic with long pauses.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> New here? "TTL"</h3>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> New here? "TTL"</h3>
 <p class="text-sm text-neutral-300"><strong class="text-emerald-400">TTL</strong> = <em>time to live</em>, how long the entry remains valid in the cache. If it goes unused past the TTL, the entry expires and the next request pays to write it again.</p>
 </div>
 <!-- Timeline: renova por uso / expira -->
 <h3 class="text-lg font-semibold mb-4 text-neutral-100">The cache clock</h3>
 <div class="space-y-5 mb-6">
 <div class="flex items-start gap-4">
-<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">▶</span></div>
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">â–¶</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-neutral-100 mb-1">You respond within ~5 min</h4>
 <p class="text-sm text-neutral-300">Each use resets the 5-minute timer. While the conversation is active, the cache stays warm and you pay the cheaper read price.</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
-<div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center"><span class="text-red-400 font-bold">⏸</span></div>
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center"><span class="text-red-400 font-bold">â¸</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-neutral-100 mb-1">You pause for more than ~5 min</h4>
-<p class="text-sm text-neutral-300">The TTL expires, the entry disappears from the cache, and the next message pays a <em>cold write</em> — writes the prefix again.</p>
+<p class="text-sm text-neutral-300">The TTL expires, the entry disappears from the cache, and the next message pays a <em>cold write</em> â€” writes the prefix again.</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">1h</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
 <h4 class="font-semibold text-neutral-100 mb-1">Traffic with pauses: 1 h TTL</h4>
-<p class="text-sm text-neutral-300">If pauses often exceed 5 min, the 1-hour TTL keeps the cache alive longer—at the cost of a more expensive write (~2×).</p>
+<p class="text-sm text-neutral-300">If pauses often exceed 5 min, the 1-hour TTL keeps the cache alive longerâ€”at the cost of a more expensive write (~2Ã—).</p>
 </div>
 </div>
 </div>
 <div class="space-y-4 mb-6">
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">What it is</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">The cache entry's time to live: 5 min by default (renewed with each use) or 1 h (write ~2×) for longer pauses.</p>
+<p class="text-neutral-300 text-sm leading-relaxed">The cache entry's time to live: 5 min by default (renewed with each use) or 1 h (write ~2Ã—) for longer pauses.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">Why learn</h3>
@@ -550,78 +550,78 @@
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">TTL</div><div class="text-xs text-neutral-400 mt-1">lifetime</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">5 min default</div><div class="text-xs text-neutral-400 mt-1">renewed per use</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">1 h optional</div><div class="text-xs text-neutral-400 mt-1">write ~2×</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">expires → write</div><div class="text-xs text-neutral-400 mt-1">a long pause cools it down</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">1 h optional</div><div class="text-xs text-neutral-400 mt-1">write ~2Ã—</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">expires â†’ write</div><div class="text-xs text-neutral-400 mt-1">a long pause cools it down</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Mark as read</span><span class="inema-label-done">Read</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Mark as read</span><span class="ARCKHÉ-label-done">Read</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 5 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-2#topico-5" id="topico-5">
+<!-- ============ TÃ“PICO 5 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-2#topico-5" id="topico-5">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">5</span>
-<h2 class="text-2xl font-bold">💸 Relative costs</h2>
+<h2 class="text-2xl font-bold">ðŸ’¸ Relative costs</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Mark a question on this topic" type="button">
 <span aria-hidden="true">?</span><span>I have a question</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-2-t5-p1">
-            Four numbers explain any calculation in the course, all relative to the price of one uncached input token (1×):
-            <strong class="text-emerald-400">read ~0.1×</strong>, <strong class="text-emerald-400">write 5 min ~1.25×</strong>,
-            <strong class="text-emerald-400">write 1 h ~2×</strong> e <strong class="text-emerald-400">uncached 1×</strong>.
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-2-t5-p1">
+            Four numbers explain any calculation in the course, all relative to the price of one uncached input token (1Ã—):
+            <strong class="text-emerald-400">read ~0.1Ã—</strong>, <strong class="text-emerald-400">write 5 min ~1.25Ã—</strong>,
+            <strong class="text-emerald-400">write 1 h ~2Ã—</strong> e <strong class="text-emerald-400">uncached 1Ã—</strong>.
             In a long conversation, most of the input (system + history) is charged at ~10% of the price.
           </p>
 <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Bar comparing relative costs per token: cache reads at about 0.1×, uncached at 1×, writes with a 5-minute TTL at about 1.25×, and writes with a 1-hour TTL at about 2×." class="w-full h-auto" role="img" viewbox="0 0 900 260">
+<svg aria-label="Bar comparing relative costs per token: cache reads at about 0.1Ã—, uncached at 1Ã—, writes with a 5-minute TTL at about 1.25Ã—, and writes with a 1-hour TTL at about 2Ã—." class="w-full h-auto" role="img" viewbox="0 0 900 260">
 <defs>
 <pattern height="30" id="m12c-grid" patternunits="userSpaceOnUse" width="30"><circle cx="1.2" cy="1.2" fill="#10b981" opacity="0.12" r="1.2"></circle></pattern>
 </defs>
 <rect fill="url(#m12c-grid)" height="260" width="900" x="0" y="0"></rect>
-<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="34">Relative cost per token (1× = uncached input)</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="30" y="34">Relative cost per token (1Ã— = uncached input)</text>
 <!-- escala: 300px por 1x, base x=230 -->
 <line stroke="#4b5563" stroke-width="1.5" x1="230" x2="230" y1="52" y2="240"></line>
 <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
 <!-- read 0,1x -> 30px -->
 <text fill="#34d399" text-anchor="end" x="215" y="83">read</text>
 <rect fill="#10b981" height="30" opacity="0.45" rx="6" stroke="#34d399" stroke-width="1.5" width="30" x="230" y="66"></rect>
-<text fill="#34d399" x="272" y="87">≈ 0,1×</text>
+<text fill="#34d399" x="272" y="87">â‰ˆ 0,1Ã—</text>
 <!-- cheio 1x -> 300px -->
 <text fill="#e5e7eb" text-anchor="end" x="215" y="128">uncached</text>
 <rect fill="#9ca3af" height="30" opacity="0.35" rx="6" stroke="#cbd5e1" stroke-width="1.5" width="300" x="230" y="111"></rect>
-<text fill="#e5e7eb" x="542" y="132">1× (reference)</text>
+<text fill="#e5e7eb" x="542" y="132">1Ã— (reference)</text>
 <!-- write 5min 1,25x -> 375px -->
 <text fill="#bfe6ff" text-anchor="end" x="215" y="173">write 5 min</text>
 <rect fill="#38bdf8" height="30" opacity="0.3" rx="6" stroke="#38bdf8" stroke-width="1.5" width="375" x="230" y="156"></rect>
-<text fill="#9ad6ff" x="617" y="177">≈ 1,25×</text>
+<text fill="#9ad6ff" x="617" y="177">â‰ˆ 1,25Ã—</text>
 <!-- write 1h 2x -> 600px -->
 <text fill="#bfe6ff" text-anchor="end" x="215" y="218">write 1 h</text>
 <rect fill="#38bdf8" height="30" opacity="0.45" rx="6" stroke="#38bdf8" stroke-width="1.5" width="600" x="230" y="201"></rect>
-<text fill="#9ad6ff" text-anchor="end" x="842" y="222">≈ 2×</text>
+<text fill="#9ad6ff" text-anchor="end" x="842" y="222">â‰ˆ 2Ã—</text>
 </g>
 </svg>
-<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Illustration:</strong> read is the tiny bar — that’s where the savings are. Write costs a little more than full price, but you pay once; you’d pay full price every turn.</p>
+<p class="text-xs text-neutral-400 mt-3"><strong class="text-emerald-400">Illustration:</strong> read is the tiny bar â€” thatâ€™s where the savings are. Write costs a little more than full price, but you pay once; youâ€™d pay full price every turn.</p>
 </div>
 <!-- Data box: tabela -->
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center gap-2"><span aria-hidden="true">📊</span> The cost table</h3>
+<h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center gap-2"><span aria-hidden="true">ðŸ“Š</span> The cost table</h3>
 <div class="overflow-x-auto">
 <table class="w-full text-sm text-left text-neutral-300">
 <thead class="text-neutral-400 border-b border-dark-600">
 <tr><th class="py-2 pr-4">Operation</th><th class="py-2 pr-4">Relative cost</th><th class="py-2">When</th></tr>
 </thead>
 <tbody class="divide-y divide-dark-600">
-<tr><td class="py-2 pr-4 font-mono text-xs">read</td><td class="py-2 pr-4 text-emerald-400 font-semibold">≈ 0,1×</td><td class="py-2">cache reread</td></tr>
-<tr><td class="py-2 pr-4 font-mono text-xs">uncached</td><td class="py-2 pr-4 font-semibold">1×</td><td class="py-2">reference (full price)</td></tr>
-<tr><td class="py-2 pr-4 font-mono text-xs">write 5 min</td><td class="py-2 pr-4 font-semibold">≈ 1,25×</td><td class="py-2">write, short TTL</td></tr>
-<tr><td class="py-2 pr-4 font-mono text-xs">write 1 h</td><td class="py-2 pr-4 font-semibold">≈ 2×</td><td class="py-2">write, long TTL</td></tr>
+<tr><td class="py-2 pr-4 font-mono text-xs">read</td><td class="py-2 pr-4 text-emerald-400 font-semibold">â‰ˆ 0,1Ã—</td><td class="py-2">cache reread</td></tr>
+<tr><td class="py-2 pr-4 font-mono text-xs">uncached</td><td class="py-2 pr-4 font-semibold">1Ã—</td><td class="py-2">reference (full price)</td></tr>
+<tr><td class="py-2 pr-4 font-mono text-xs">write 5 min</td><td class="py-2 pr-4 font-semibold">â‰ˆ 1,25Ã—</td><td class="py-2">write, short TTL</td></tr>
+<tr><td class="py-2 pr-4 font-mono text-xs">write 1 h</td><td class="py-2 pr-4 font-semibold">â‰ˆ 2Ã—</td><td class="py-2">write, long TTL</td></tr>
 </tbody>
 </table>
 </div>
@@ -638,63 +638,63 @@
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Key concepts</h3>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">read 0.1×</div><div class="text-xs text-neutral-400 mt-1">the actual savings</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">write 1.25×</div><div class="text-xs text-neutral-400 mt-1">TTL 5 min</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">write 2×</div><div class="text-xs text-neutral-400 mt-1">TTL 1 h</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">full 1×</div><div class="text-xs text-neutral-400 mt-1">the reference</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">read 0.1Ã—</div><div class="text-xs text-neutral-400 mt-1">the actual savings</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">write 1.25Ã—</div><div class="text-xs text-neutral-400 mt-1">TTL 5 min</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">write 2Ã—</div><div class="text-xs text-neutral-400 mt-1">TTL 1 h</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">full 1Ã—</div><div class="text-xs text-neutral-400 mt-1">the reference</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Mark as read</span><span class="inema-label-done">Read</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Mark as read</span><span class="ARCKHÉ-label-done">Read</span>
 </button>
 </div>
 </section>
-<!-- ============ TÓPICO 6 ============ -->
-<section class="mb-16" data-inema-topic="modulo-1-2#topico-6" id="topico-6">
+<!-- ============ TÃ“PICO 6 ============ -->
+<section class="mb-16" data-ARCKHÉ-topic="modulo-1-2#topico-6" id="topico-6">
 <div class="flex items-start justify-between gap-4 mb-4">
 <div class="flex items-center gap-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl flex-shrink-0">6</span>
-<h2 class="text-2xl font-bold">⚖️ Break-even point</h2>
+<h2 class="text-2xl font-bold">âš–ï¸ Break-even point</h2>
 </div>
-<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-inema-doubt-toggle="" title="Mark a question on this topic" type="button">
+<button aria-pressed="false" class="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Mark a question on this topic" type="button">
 <span aria-hidden="true">?</span><span>I have a question</span>
 </button>
 </div>
-<p class="text-neutral-300 mb-5 leading-relaxed" data-inema-block="m1-2-t6-p1">
+<p class="text-neutral-300 mb-5 leading-relaxed" data-ARCKHÉ-block="m1-2-t6-p1">
             Caching is worthwhile when you read enough for the write to pay for itself. With <strong class="text-emerald-400">TTL 5 min</strong>,
-            <strong class="text-emerald-400">2 requests</strong> already pay for themselves (1.25× to write + 0.1× to read = 1.35×, versus 2×
-            paying full price twice). With <strong class="text-emerald-400">TTL 1 h</strong> (write ~2×), you need ~3.
+            <strong class="text-emerald-400">2 requests</strong> already pay for themselves (1.25Ã— to write + 0.1Ã— to read = 1.35Ã—, versus 2Ã—
+            paying full price twice). With <strong class="text-emerald-400">TTL 1 h</strong> (write ~2Ã—), you need ~3.
           </p>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-5 mb-6">
-<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">🌱</span> New here? "break-even"</h3>
+<h3 class="text-base font-semibold text-primary mb-2 flex items-center gap-2"><span aria-hidden="true">ðŸŒ±</span> New here? "break-even"</h3>
 <p class="text-sm text-neutral-300"><strong class="text-emerald-400">break-even</strong> = the break-even point: how many reads it takes for the cost with caching to match (and then beat) the cost without caching. Before this point, you only paid the write premium.</p>
 </div>
 <!-- code/math box -->
 <div class="bg-dark-800 rounded-xl border border-dark-600 overflow-hidden mb-6">
 <div class="px-4 py-2 bg-dark-700/50 border-b border-dark-600 text-xs text-neutral-400 font-mono">the break-even calculation (per token, 5 min TTL)</div>
-<pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>sem cache, 2 turnos:   1× + 1×            = 2,00×
-com cache, 2 turnos:   1,25× (write) + 0,1× (read) = 1,35×
-                                            ────────
-já no 2º turno o cache sai mais barato →  economia
-(com TTL 1 h, write ≈ 2×, o empate chega por volta do 3º turno)</code></pre>
+<pre class="p-4 text-sm text-neutral-300 overflow-x-auto"><code>sem cache, 2 turnos:   1Ã— + 1Ã—            = 2,00Ã—
+com cache, 2 turnos:   1,25Ã— (write) + 0,1Ã— (read) = 1,35Ã—
+                                            â”€â”€â”€â”€â”€â”€â”€â”€
+jÃ¡ no 2Âº turno o cache sai mais barato â†’  economia
+(com TTL 1 h, write â‰ˆ 2Ã—, o empate chega por volta do 3Âº turno)</code></pre>
 </div>
-<!-- ✓/✗ grid: cachear vs não -->
+<!-- âœ“/âœ— grid: cachear vs nÃ£o -->
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-5">
-<h4 class="font-bold text-emerald-400 mb-3">✓ Worth caching</h4>
+<h4 class="font-bold text-emerald-400 mb-3">âœ“ Worth caching</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Stable prefix that will be reread over multiple turns</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">✓</span><span>Active conversation: system + history repeat</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Stable prefix that will be reread over multiple turns</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400 mt-0.5">âœ“</span><span>Active conversation: system + history repeat</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-5">
-<h4 class="font-bold text-red-400 mb-3">✗ Don’t cache</h4>
+<h4 class="font-bold text-red-400 mb-3">âœ— Donâ€™t cache</h4>
 <ul class="space-y-2 text-sm text-neutral-300">
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Prefix that changes the <em>each</em> request — only pays for write, never reads</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✗</span><span>Single call, no repetition—the write doesn’t pay for itself</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Prefix that changes the <em>each</em> request â€” only pays for write, never reads</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">âœ—</span><span>Single call, no repetitionâ€”the write doesnâ€™t pay for itself</span></li>
 </ul>
 </div>
 </div>
@@ -705,7 +705,7 @@ já no 2º turno o cache sai mais barato →  economia
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-1">Why learn</h3>
-<p class="text-neutral-300 text-sm leading-relaxed">Teaches you NOT to cache what changes on every request (you’d only pay for the write) and to trust the cache when it’s read again.</p>
+<p class="text-neutral-300 text-sm leading-relaxed">Teaches you NOT to cache what changes on every request (youâ€™d only pay for the write) and to trust the cache when itâ€™s read again.</p>
 </div>
 <div>
 <h3 class="text-emerald-400 font-semibold mb-2">Key concepts</h3>
@@ -713,35 +713,35 @@ já no 2º turno o cache sai mais barato →  economia
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">break-even point</div><div class="text-xs text-neutral-400 mt-1">write pays off</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">2 reqs</div><div class="text-xs text-neutral-400 mt-1">TTL 5 min</div></div>
 <div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">~3 reqs</div><div class="text-xs text-neutral-400 mt-1">TTL 1 h</div></div>
-<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">always changes?</div><div class="text-xs text-neutral-400 mt-1">don’t cache</div></div>
+<div class="bg-dark-800 rounded-lg border border-dark-600 p-3"><div class="text-sm font-semibold text-emerald-400">always changes?</div><div class="text-xs text-neutral-400 mt-1">donâ€™t cache</div></div>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-8">
-<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-inema-read-toggle="" type="button">
-<span aria-hidden="true" class="inema-ico-todo">○</span><span aria-hidden="true" class="inema-ico-done">✓</span>
-<span class="inema-label-todo">Mark as read</span><span class="inema-label-done">Read</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors justify-start" data-ARCKHÉ-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">âœ“</span>
+<span class="ARCKHÉ-label-todo">Mark as read</span><span class="ARCKHÉ-label-done">Read</span>
 </button>
 </div>
 </section>
-<!-- ======================= RESUMO DO MÓDULO ======================= -->
+<!-- ======================= RESUMO DO MÃ“DULO ======================= -->
 <section class="mb-4">
 <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center gap-3"><span aria-hidden="true">📌</span> Module summary</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-3"><span aria-hidden="true">ðŸ“Œ</span> Module summary</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">Three usage fields</strong><span class="text-neutral-400"> — read (0.1×), creation (1.25×/2×), and input (1×); the total is the sum.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">The small input gotcha</strong><span class="text-neutral-400"> — look at the sum of all three, never just one field.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">TTL of 5 min and 1 h</strong><span class="text-neutral-400"> — refreshed with use; a long pause cools the cache.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">Relative costs</strong><span class="text-neutral-400"> — read 0.1× · write 1.25× / 2× · full price 1×; most of it costs about 10%.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">✓</span><div><strong class="text-neutral-100">Break-even</strong><span class="text-neutral-400"> — 2 requests (5 min) or ~3 (1 h); don’t cache what changes all the time.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">Three usage fields</strong><span class="text-neutral-400"> â€” read (0.1Ã—), creation (1.25Ã—/2Ã—), and input (1Ã—); the total is the sum.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">The small input gotcha</strong><span class="text-neutral-400"> â€” look at the sum of all three, never just one field.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">TTL of 5 min and 1 h</strong><span class="text-neutral-400"> â€” refreshed with use; a long pause cools the cache.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">Relative costs</strong><span class="text-neutral-400"> â€” read 0.1Ã— Â· write 1.25Ã— / 2Ã— Â· full price 1Ã—; most of it costs about 10%.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-emerald-400 mt-0.5">âœ“</span><div><strong class="text-neutral-100">Break-even</strong><span class="text-neutral-400"> â€” 2 requests (5 min) or ~3 (1 h); donâ€™t cache what changes all the time.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
 <h3 class="font-semibold text-emerald-400 mb-1">Next track</h3>
-<p class="text-neutral-300 text-sm">Track 2 — Technical: the cache within a growing conversation, skills and tools (append vs. break), and invalidation in depth, with copy-and-run examples.</p>
+<p class="text-neutral-300 text-sm">Track 2 â€” Technical: the cache within a growing conversation, skills and tools (append vs. break), and invalidation in depth, with copy-and-run examples.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-1-1.html">← Previous module</a>
-<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="../trilha2/index.html">Next track: Technical →</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-1-1.html">â† Previous module</a>
+<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="../trilha2/index.html">Next track: Technical â†’</a>
 </div>
 </div>
 </section>
@@ -751,7 +751,7 @@ já no 2º turno o cache sai mais barato →  economia
 <!-- ======================= FOOTER ======================= -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache — Prompt Caching in Claude Code · Course <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" rel="noopener" target="_blank">INEMA.CLUB</a> · 2026</p>
+<p>cccache â€” Prompt Caching in Claude Code Â· Course <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
 </div>
 </footer>
 <!-- ======================= SCRIPTS ======================= -->
@@ -770,7 +770,7 @@ já no 2º turno o cache sai mais barato →  economia
         themeToggle.addEventListener('click', function () {
           html.classList.toggle('dark');
           try { localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); } catch (e) {}
-          if (window.INEMA && INEMA.setPref) { INEMA.setPref('theme', html.classList.contains('dark') ? 'inema-dark' : 'claro'); }
+          if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', html.classList.contains('dark') ? 'ARCKHÉ-dark' : 'claro'); }
           syncIcons();
         });
       }
@@ -779,7 +779,7 @@ já no 2º turno o cache sai mais barato →  economia
 <script src="../../../assets/learn.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.INEMA && typeof INEMA.init === 'function') { INEMA.init(); }
+      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') { ARCKHÉ.init(); }
     });
   </script>
 </body>
