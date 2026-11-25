@@ -4,57 +4,57 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="ARCKHÉ-course"/>
-<title>MÃ³dulo 2.1 Â· El cachÃ© en una conversaciÃ³n | cccache</title>
+<meta content="cccache" name="ARCKHê-course"/>
+<title>MêÂ³dulo 2.1 êÂ· El cachêÂ© en una conversaciêÂ³n | cccache</title>
 <!-- 1) ANTI-FOUC -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHê.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHê-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHê-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
       } catch (e) { document.documentElement.classList.add('dark'); }
     })();
   </script>
-<!-- 2) MANIFESTO (erro #28 â€” idÃªntico em toda pÃ¡gina) -->
-<script data-ARCKHÉ-manifest="" type="application/json">
+<!-- 2) MANIFESTO (erro #28 ê¢â¬â idêÂªntico em toda pêÂ¡gina) -->
+<script data-ARCKHê-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache ê¢â¬â Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que êÂ© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "TÃ©cnico",
+      "id": "trilha2", "title": "TêÂ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaêÂ§êÂ£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
+      "id": "trilha3", "title": "Boas prêÂ¡ticas avanêÂ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaêÂ§êÂ£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prêÂ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -73,9 +73,9 @@
 <style>
     body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
     .dark body { background-color: #111827; }
-    [id^="topico-"], [id^="modulo-"], section[data-ARCKHÉ-topic] { scroll-margin-top: 5rem; }
+    [id^="topico-"], [id^="modulo-"], section[data-ARCKHê-topic] { scroll-margin-top: 5rem; }
 
-    /* Light mode â€” base */
+    /* Light mode ê¢â¬â base */
     html:not(.dark) body { background-color: #f8fafc; }
     html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
     html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
@@ -88,7 +88,7 @@
     html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
     html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
 
-    /* Light mode â€” acento T2 Blue + auxiliares */
+    /* Light mode ê¢â¬â acento T2 Blue + auxiliares */
     html:not(.dark) .text-blue-400 { color: #2563eb; }
     html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37, 99, 235, 0.12); }
     html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37, 99, 235, 0.08); }
@@ -107,7 +107,7 @@
     html:not(.dark) .border-red-500\/30 { border-color: rgba(220, 38, 38, 0.25); }
     html:not(.dark) .text-emerald-400 { color: #059669; }
 
-    /* Light mode â€” gradientes + especiais */
+    /* Light mode ê¢â¬â gradientes + especiais */
     html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
     html:not(.dark) .text-primary { color: #a16207; }
     html:not(.dark) .bg-primary\/10 { background-color: rgba(161, 98, 7, 0.08); }
@@ -118,7 +118,7 @@
     html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
     html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255, 255, 255, 0.95); }
 
-    /* Dark â€” bordas suaves */
+    /* Dark ê¢â¬â bordas suaves */
     .dark .border-dark-600 { border-color: #374151; }
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
@@ -141,78 +141,78 @@
 <!-- 5) learn.css -->
 <link href="../../../assets/learn.css" rel="stylesheet"/>
 <link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha2/modulo-2-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha2/modulo-2-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-2-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
-<a class="ARCKHÉ-skip" href="#conteudo">Saltar al contenido</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHê-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha2/modulo-2-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha2/modulo-2-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-2-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<a class="ARCKHê-skip" href="#conteudo">Saltar al contenido</a>
 <!-- ================= NAV (erro #13) ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
-<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
+<span aria-hidden="true" class="text-2xl">ê°Å¸Â§Â </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html">
 <span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span>
 </a>
 <a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="../trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">TÃ©cnico</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">TêÂ©cnico</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prÃ¡cticas</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prêÂ¡cticas</span>
 </a>
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
-<span aria-hidden="true">â—·</span><span>Mi recorrido</span>
-<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-journey-open="" type="button">
+<span aria-hidden="true">ê¢âÂ·</span><span>Mi recorrido</span>
+<span class="ARCKHê-journey-badge hidden" data-count="0" data-ARCKHê-journey-badge=""></span>
 </button>
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
-<span aria-hidden="true">â—‘</span><span class="hidden sm:inline">Apariencia</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" type="button">
+<span aria-hidden="true">ê¢ââ</span><span class="hidden sm:inline">Apariencia</span>
 </button>
-<div aria-label="Apariencia y lectura" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
-<p class="ARCKHÉ-seg-label">Tema</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Oscuro</button>
-<button data-ARCKHÉ-set-theme="claro" type="button">Claro</button>
-<button data-ARCKHÉ-set-theme="sepia" type="button">Sepia</button>
-<button data-ARCKHÉ-set-theme="foco" type="button">Enfoque</button>
-<button data-ARCKHÉ-set-theme="contraste" type="button">Alto contraste</button>
+<div aria-label="Apariencia y lectura" class="ARCKHê-appearance-pop" data-ARCKHê-appearance="" role="group">
+<p class="ARCKHê-seg-label">Tema</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-theme="ARCKHê-dark" type="button">Oscuro</button>
+<button data-ARCKHê-set-theme="claro" type="button">Claro</button>
+<button data-ARCKHê-set-theme="sepia" type="button">Sepia</button>
+<button data-ARCKHê-set-theme="foco" type="button">Enfoque</button>
+<button data-ARCKHê-set-theme="contraste" type="button">Alto contraste</button>
 </div>
-<p class="ARCKHÉ-seg-label">Fuente</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
-<button data-ARCKHÉ-set-font="system" type="button">Sistema</button>
-<button data-ARCKHÉ-set-font="leitura" type="button">Lectura</button>
+<p class="ARCKHê-seg-label">Fuente</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-font="inter" type="button">Inter</button>
+<button data-ARCKHê-set-font="system" type="button">Sistema</button>
+<button data-ARCKHê-set-font="leitura" type="button">Lectura</button>
 </div>
-<p class="ARCKHÉ-seg-label">TamaÃ±o</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
-<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
-<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHê-seg-label">TamaêÂ±o</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-fontscale="100" type="button">A</button>
+<button data-ARCKHê-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHê-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="ARCKHÉ-seg-label">Ancho de lÃ­nea</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-linewidth="60" type="button">Estrecho</button>
-<button data-ARCKHÉ-set-linewidth="68" type="button">Medio</button>
-<button data-ARCKHÉ-set-linewidth="75" type="button">Ancho</button>
+<p class="ARCKHê-seg-label">Ancho de lêÂ­nea</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-linewidth="60" type="button">Estrecho</button>
+<button data-ARCKHê-set-linewidth="68" type="button">Medio</button>
+<button data-ARCKHê-set-linewidth="75" type="button">Ancho</button>
 </div>
-<p class="ARCKHÉ-seg-label">Interlineado</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-leading="1.45" type="button">Compacto</button>
-<button data-ARCKHÉ-set-leading="1.7" type="button">CÃ³modo</button>
+<p class="ARCKHê-seg-label">Interlineado</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-leading="1.45" type="button">Compacto</button>
+<button data-ARCKHê-set-leading="1.7" type="button">CêÂ³modo</button>
 </div>
-<p class="ARCKHÉ-seg-label">Acento</p>
-<div aria-label="Color de acento" class="ARCKHÉ-accent-grid" role="group">
-<button aria-label="Esmeralda" data-ARCKHÉ-set-accent="emerald" type="button"></button>
-<button aria-label="Azul" data-ARCKHÉ-set-accent="blue" type="button"></button>
-<button aria-label="Morado" data-ARCKHÉ-set-accent="purple" type="button"></button>
-<button aria-label="Ãmbar" data-ARCKHÉ-set-accent="amber" type="button"></button>
-<button aria-label="Turquesa" data-ARCKHÉ-set-accent="teal" type="button"></button>
-<button aria-label="Rosa" data-ARCKHÉ-set-accent="rose" type="button"></button>
+<p class="ARCKHê-seg-label">Acento</p>
+<div aria-label="Color de acento" class="ARCKHê-accent-grid" role="group">
+<button aria-label="Esmeralda" data-ARCKHê-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-ARCKHê-set-accent="blue" type="button"></button>
+<button aria-label="Morado" data-ARCKHê-set-accent="purple" type="button"></button>
+<button aria-label="êÂmbar" data-ARCKHê-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-ARCKHê-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-ARCKHê-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -229,24 +229,24 @@
 </div>
 </nav>
 <!-- Breadcrumb -->
-<nav aria-label="Ruta de navegaciÃ³n" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Ruta de navegaciêÂ³n" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center space-x-2 text-sm text-neutral-400">
 <a class="hover:text-blue-400" href="../../index.html">Inicio</a>
 <span aria-hidden="true">/</span>
 <a class="hover:text-blue-400" href="index.html">Trilha 2</a>
 <span aria-hidden="true">/</span>
-<span class="text-blue-400">MÃ³dulo 2.1</span>
+<span class="text-blue-400">MêÂ³dulo 2.1</span>
 </div>
 </nav>
-<!-- Header do mÃ³dulo -->
+<!-- Header do mêÂ³dulo -->
 <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.1</span>
-<h1 class="text-2xl sm:text-4xl font-bold mb-4">ðŸ’¬ El cachÃ© en una conversaciÃ³n</h1>
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MêâDULO 2.1</span>
+<h1 class="text-2xl sm:text-4xl font-bold mb-4">ê°Å¸âÂ¬ El cachêÂ© en una conversaciêÂ³n</h1>
 <p class="text-lg text-neutral-300 max-w-3xl">
-        CÃ³mo se comporta el prompt caching a lo largo de una conversaciÃ³n que crece: el prefijo estable aumenta,
-        cada turno vuelve a leer a bajo costo y el porcentaje de cachÃ© <strong class="text-blue-400">sube</strong> â€” no se descarga.
-        DÃ³nde entra la escritura en frÃ­o y por quÃ© la pausa larga cuesta.
+        CêÂ³mo se comporta el prompt caching a lo largo de una conversaciêÂ³n que crece: el prefijo estable aumenta,
+        cada turno vuelve a leer a bajo costo y el porcentaje de cachêÂ© <strong class="text-blue-400">sube</strong> ê¢â¬â no se descarga.
+        DêÂ³nde entra la escritura en frêÂ­o y por quêÂ© la pausa larga cuesta.
       </p>
 <div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
@@ -256,63 +256,63 @@
 <div class="text-xl font-bold text-blue-400">~30</div><div class="text-xs text-neutral-400">Minutos</div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-<div class="text-xl font-bold text-blue-400">TÃ©cnico</div><div class="text-xs text-neutral-400">Nivel</div>
+<div class="text-xl font-bold text-blue-400">TêÂ©cnico</div><div class="text-xs text-neutral-400">Nivel</div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600">
-<div class="text-xl font-bold text-blue-400">PrÃ¡ctica</div><div class="text-xs text-neutral-400">Tipo</div>
+<div class="text-xl font-bold text-blue-400">PrêÂ¡ctica</div><div class="text-xs text-neutral-400">Tipo</div>
 </div>
 </div>
-<div aria-label="Progreso del mÃ³dulo 2.1" class="ARCKHÉ-meter mt-6 max-w-sm" data-ARCKHÉ-meter="modulo-2-1">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
+<div aria-label="Progreso del mêÂ³dulo 2.1" class="ARCKHê-meter mt-6 max-w-sm" data-ARCKHê-meter="modulo-2-1">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
 <div class="leading-tight">
-<span class="text-blue-400 font-bold" data-ARCKHÉ-meter-pct="">0%</span>
-<span class="text-xs text-neutral-400 ml-1" data-ARCKHÉ-meter-frac="">0 de 6</span>
+<span class="text-blue-400 font-bold" data-ARCKHê-meter-pct="">0%</span>
+<span class="text-xs text-neutral-400 ml-1" data-ARCKHê-meter-frac="">0 de 6</span>
 </div>
 </div>
 </div>
 </header>
-<!-- Corpo: conteÃºdo + TOC sticky -->
+<!-- Corpo: conteêÂºdo + TOC sticky -->
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:grid lg:grid-cols-[1fr_240px] lg:gap-10" id="conteudo">
 <main>
-<!-- ================= TÃ“PICO 1 ================= -->
-<section aria-labelledby="m21-t1-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-1#topico-1" id="topico-1">
+<!-- ================= TêâPICO 1 ================= -->
+<section aria-labelledby="m21-t1-h" class="mb-16" data-ARCKHê-topic="modulo-2-1#topico-1" id="topico-1">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">1</span>
-<h2 class="text-2xl font-bold" id="m21-t1-h">ðŸ“ˆ El prefijo estable crece</h2>
+<h2 class="text-2xl font-bold" id="m21-t1-h">ê°Å¸âË El prefijo estable crece</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span>
 </button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m2-1-t1-p1">
-            En una conversaciÃ³n, <strong class="text-blue-400">system + tools + todo el historial</strong> â€” incluida la
-            Ãºltima respuesta del modelo â€” forman un <strong class="text-blue-400">prefijo estable</strong> que
-            <strong class="text-blue-400">crece en cada turno</strong>. Solo tu prÃ³ximo mensaje es realmente nuevo; todo
-            lo anterior es idÃ©ntico a lo que ya se procesÃ³.
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m2-1-t1-p1">
+            En una conversaciêÂ³n, <strong class="text-blue-400">system + tools + todo el historial</strong> ê¢â¬â incluida la
+            êÂºltima respuesta del modelo ê¢â¬â forman un <strong class="text-blue-400">prefijo estable</strong> que
+            <strong class="text-blue-400">crece en cada turno</strong>. Solo tu prêÂ³ximo mensaje es realmente nuevo; todo
+            lo anterior es idêÂ©ntico a lo que ya se procesêÂ³.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">QuÃ© es</h3>
-<p class="text-neutral-300">El prefijo estable es la parte del prompt que no cambia entre un turno y el siguiente: herramientas, prompt del sistema e historial acumulado. Es la Â«materia primaÂ» de la cachÃ©: cuanto mÃ¡s grande, mÃ¡s tokens salen baratos.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">QuêÂ© es</h3>
+<p class="text-neutral-300">El prefijo estable es la parte del prompt que no cambia entre un turno y el siguiente: herramientas, prompt del sistema e historial acumulado. Es la êÂ«materia primaêÂ» de la cachêÂ©: cuanto mêÂ¡s grande, mêÂ¡s tokens salen baratos.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quÃ© aprenderlo</h3>
-<p class="text-neutral-300">Porque eso es lo que abarata la conversaciÃ³n: cada respuesta que da Claude Code pasa a formar parte del prefijo estable del siguiente turno, asÃ­ que el "peso" de la conversaciÃ³n se desplaza al lado del cachÃ© (~0,1Ã—) en vez de cobrarse al precio completo (1Ã—).</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quêÂ© aprenderlo</h3>
+<p class="text-neutral-300">Porque eso es lo que abarata la conversaciêÂ³n: cada respuesta que da Claude Code pasa a formar parte del prefijo estable del siguiente turno, asêÂ­ que el "peso" de la conversaciêÂ³n se desplaza al lado del cachêÂ© (~0,1êâ) en vez de cobrarse al precio completo (1êâ).</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Prefijo</strong> = inicio idÃ©ntico que se repite turno a turno.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Solo escapa el final</strong> â€” tu nuevo mensaje es la Ãºnica parte que no estÃ¡ en cachÃ©.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Orden</strong> de ensamblaje: <code class="font-mono text-xs">tools â†’ system â†’ messages</code>.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Crece</strong> â€” la respuesta del modelo se agrega al historial y hace crecer el prefijo.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Prefijo</strong> = inicio idêÂ©ntico que se repite turno a turno.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Solo escapa el final</strong> ê¢â¬â tu nuevo mensaje es la êÂºnica parte que no estêÂ¡ en cachêÂ©.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Orden</strong> de ensamblaje: <code class="font-mono text-xs">tools ê¢â â system ê¢â â messages</code>.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Crece</strong> ê¢â¬â la respuesta del modelo se agrega al historial y hace crecer el prefijo.</p></div>
 </div>
 </div>
 <!-- SVG: prefixo crescendo turno a turno -->
 <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Tres turnos uno al lado del otro. En cada turno, el prefijo estable (tools, system e historial) ocupa mÃ¡s espacio porque se incorporÃ³ la respuesta anterior, y solo una franja delgada en la parte superior representa el mensaje nuevo." class="w-full h-auto" role="img" viewbox="0 0 1000 230">
+<svg aria-label="Tres turnos uno al lado del otro. En cada turno, el prefijo estable (tools, system e historial) ocupa mêÂ¡s espacio porque se incorporêÂ³ la respuesta anterior, y solo una franja delgada en la parte superior representa el mensaje nuevo." class="w-full h-auto" role="img" viewbox="0 0 1000 230">
 <defs>
 <lineargradient id="m21a-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#60a5fa"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
 <pattern height="32" id="m21a-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#3b82f6" opacity="0.12" r="1.3"></circle></pattern>
@@ -341,152 +341,152 @@
 <path d="M290,170 L390,140" fill="none" opacity="0.5" stroke="#38bdf8" stroke-width="1.6"></path>
 <path d="M620,140 L710,110" fill="none" opacity="0.5" stroke="#38bdf8" stroke-width="1.6"></path>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 text-center">La caja azul (prefijo, leÃ­do del cachÃ©) crece; la franja delgada en la parte superior (tu mensaje nuevo, escrito) se vuelve proporcionalmente mÃ¡s pequeÃ±a en cada turno.</p>
+<p class="text-xs text-neutral-400 mt-3 text-center">La caja azul (prefijo, leêÂ­do del cachêÂ©) crece; la franja delgada en la parte superior (tu mensaje nuevo, escrito) se vuelve proporcionalmente mêÂ¡s pequeêÂ±a en cada turno.</p>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ================= TÃ“PICO 2 ================= -->
-<section aria-labelledby="m21-t2-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-1#topico-2" id="topico-2">
+<!-- ================= TêâPICO 2 ================= -->
+<section aria-labelledby="m21-t2-h" class="mb-16" data-ARCKHê-topic="modulo-2-1#topico-2" id="topico-2">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">2</span>
-<h2 class="text-2xl font-bold" id="m21-t2-h">ðŸ” Hit por turno</h2>
+<h2 class="text-2xl font-bold" id="m21-t2-h">ê°Å¸âÂ Hit por turno</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span>
 </button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m2-1-t2-p1">
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m2-1-t2-p1">
             Con cada mensaje nuevo, <strong class="text-blue-400">solo cambia el final</strong>. La API vuelve a leer todo el prefijo del
-            cachÃ© (lectura â‰ˆ <strong class="text-blue-400">0,1Ã—</strong>) y guarda solo el bloque nuevo de ese turno. Es lo que
-            se llama <strong class="text-blue-400">hit</strong>: el prefijo coincidiÃ³ y se sirviÃ³ desde el cachÃ©.
+            cachêÂ© (lectura ê¢â°Ë <strong class="text-blue-400">0,1êâ</strong>) y guarda solo el bloque nuevo de ese turno. Es lo que
+            se llama <strong class="text-blue-400">hit</strong>: el prefijo coincidiêÂ³ y se sirviêÂ³ desde el cachêÂ©.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">QuÃ© es</h3>
-<p class="text-neutral-300">Hit ocurre cuando el prefijo del request coincide con una entrada ya procesada y se vuelve a leer por ~10% del precio. Cada turno de la conversaciÃ³n es, en la prÃ¡ctica, un hit grande sobre el prefijo + un write pequeÃ±o de la parte nueva.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">QuêÂ© es</h3>
+<p class="text-neutral-300">Hit ocurre cuando el prefijo del request coincide con una entrada ya procesada y se vuelve a leer por ~10% del precio. Cada turno de la conversaciêÂ³n es, en la prêÂ¡ctica, un hit grande sobre el prefijo + un write pequeêÂ±o de la parte nueva.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quÃ© aprenderlo</h3>
-<p class="text-neutral-300">Porque explica por quÃ© el 2.Âº turno en adelante cuesta mucho menos que el 1.Âº: la mayor parte del prompt ya estÃ¡ en el cachÃ© y solo se vuelve a procesar la diferencia. Es la mecÃ¡nica que hace que una sesiÃ³n larga no cueste una fortuna.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quêÂ© aprenderlo</h3>
+<p class="text-neutral-300">Porque explica por quêÂ© el 2.êÂº turno en adelante cuesta mucho menos que el 1.êÂº: la mayor parte del prompt ya estêÂ¡ en el cachêÂ© y solo se vuelve a procesar la diferencia. Es la mecêÂ¡nica que hace que una sesiêÂ³n larga no cueste una fortuna.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-<h4 class="font-bold text-emerald-400 mb-3">âœ“ QuÃ© cuenta como hit</h4>
+<h4 class="font-bold text-emerald-400 mb-3">ê¢Åâ QuêÂ© cuenta como hit</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Prefijo idÃ©ntico byte por byte al request anterior.</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Dentro de la ventana de TTL (el cachÃ© sigue caliente).</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Solo se guarda el mensaje nuevo al final.</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>Prefijo idêÂ©ntico byte por byte al request anterior.</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>Dentro de la ventana de TTL (el cachêÂ© sigue caliente).</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>Solo se guarda el mensaje nuevo al final.</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-3">âœ— QuÃ© se convierte en miss</h4>
+<h4 class="font-bold text-red-400 mb-3">ê¢Åâ QuêÂ© se convierte en miss</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>Cualquier byte diferente en medio del prefijo.</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>El TTL venciÃ³ (terminÃ³ el tiempo de vida).</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>Cambiaste el modelo (el cache es por modelo).</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>Cualquier byte diferente en medio del prefijo.</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>El TTL venciêÂ³ (terminêÂ³ el tiempo de vida).</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>Cambiaste el modelo (el cache es por modelo).</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Hit</strong> = leyÃ³ del cachÃ© (~0,1Ã—).</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write</strong> = escribiÃ³ el bloque nuevo del turno (~1,25Ã—).</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Miss</strong> = no lo encontrÃ³, procesÃ³ todo (1Ã—).</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Por turno</strong> = 1 acierto grande + 1 write pequeÃ±o.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Hit</strong> = leyêÂ³ del cachêÂ© (~0,1êâ).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write</strong> = escribiêÂ³ el bloque nuevo del turno (~1,25êâ).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Miss</strong> = no lo encontrêÂ³, procesêÂ³ todo (1êâ).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Por turno</strong> = 1 acierto grande + 1 write pequeêÂ±o.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ================= TÃ“PICO 3 ================= -->
-<section aria-labelledby="m21-t3-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-1#topico-3" id="topico-3">
+<!-- ================= TêâPICO 3 ================= -->
+<section aria-labelledby="m21-t3-h" class="mb-16" data-ARCKHê-topic="modulo-2-1#topico-3" id="topico-3">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">3</span>
-<h2 class="text-2xl font-bold" id="m21-t3-h">â±ï¸ TTL de 5 min renovado con el uso</h2>
+<h2 class="text-2xl font-bold" id="m21-t3-h">ê¢ÂÂ±ê¯Â¸Â TTL de 5 min renovado con el uso</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span>
 </button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m2-1-t3-p1">
-<strong class="text-blue-400">TTL</strong> es el tiempo de vida de la entrada en la cachÃ©. El valor predeterminado es
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m2-1-t3-p1">
+<strong class="text-blue-400">TTL</strong> es el tiempo de vida de la entrada en la cachêÂ©. El valor predeterminado es
             <strong class="text-blue-400">5 minutos</strong>, pero con un detalle importante: es
             <strong class="text-blue-400">renovado en cada uso</strong>.
           </p>
-<p data-ARCKHÉ-block="m2-1-t3-p2">
-            Es decir: mientras respondas dentro de la ventana de ~5 min, el reloj se reinicia y la cachÃ© permanece caliente
-            indefinidamente. Una conversaciÃ³n activa mantiene el prefijo a bajo costo sin que tengas que hacer nada especial.
+<p data-ARCKHê-block="m2-1-t3-p2">
+            Es decir: mientras respondas dentro de la ventana de ~5 min, el reloj se reinicia y la cachêÂ© permanece caliente
+            indefinidamente. Una conversaciêÂ³n activa mantiene el prefijo a bajo costo sin que tengas que hacer nada especial.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">QuÃ© es</h3>
-<p class="text-neutral-300">TTL (time-to-live) es el perÃ­odo de validez de la entrada. Cada lectura/escritura reinicia ese reloj, asÃ­ que una secuencia continua de mensajes nunca deja que el cachÃ© se enfrÃ­e.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">QuêÂ© es</h3>
+<p class="text-neutral-300">TTL (time-to-live) es el perêÂ­odo de validez de la entrada. Cada lectura/escritura reinicia ese reloj, asêÂ­ que una secuencia continua de mensajes nunca deja que el cachêÂ© se enfrêÂ­e.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quÃ© aprenderlo</h3>
-<p class="text-neutral-300">Porque trabajar a un ritmo continuo literalmente cuesta menos y porque explica el costo de retomar despuÃ©s de una pausa larga (siguiente tema y tema 6).</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quêÂ© aprenderlo</h3>
+<p class="text-neutral-300">Porque trabajar a un ritmo continuo literalmente cuesta menos y porque explica el costo de retomar despuêÂ©s de una pausa larga (siguiente tema y tema 6).</p>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ðŸ’¡</span> Consejo prÃ¡ctico</h3>
-<p class="text-neutral-300">TambiÃ©n existe un TTL de <strong class="text-primary">1 hora</strong> (escritura mÃ¡s cara, ~2Ã—) para trÃ¡fico con pausas largas. Solo sirve cuando hay gaps &gt; 5 min entre requests; si no, el TTL de 5 min es suficiente y cuesta menos.</p>
+<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ê°Å¸âÂ¡</span> Consejo prêÂ¡ctico</h3>
+<p class="text-neutral-300">TambiêÂ©n existe un TTL de <strong class="text-primary">1 hora</strong> (escritura mêÂ¡s cara, ~2êâ) para trêÂ¡fico con pausas largas. Solo sirve cuando hay gaps &gt; 5 min entre requests; si no, el TTL de 5 min es suficiente y cuesta menos.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">TTL predeterminado</strong> = 5 min.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Se renueva con el uso</strong> â€” cada turno reinicia el reloj.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">ConversaciÃ³n activa</strong> = cachÃ© siempre caliente.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">TTL 1h</strong> = write ~2Ã—, para trÃ¡fico con pausas.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Se renueva con el uso</strong> ê¢â¬â cada turno reinicia el reloj.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">ConversaciêÂ³n activa</strong> = cachêÂ© siempre caliente.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">TTL 1h</strong> = write ~2êâ, para trêÂ¡fico con pausas.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ================= TÃ“PICO 4 ================= -->
-<section aria-labelledby="m21-t4-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-1#topico-4" id="topico-4">
+<!-- ================= TêâPICO 4 ================= -->
+<section aria-labelledby="m21-t4-h" class="mb-16" data-ARCKHê-topic="modulo-2-1#topico-4" id="topico-4">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">4</span>
-<h2 class="text-2xl font-bold" id="m21-t4-h">ðŸ“Š El % de cachÃ© SUBE en cada turno</h2>
+<h2 class="text-2xl font-bold" id="m21-t4-h">ê°Å¸âÅ  El % de cachêÂ© SUBE en cada turno</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span>
 </button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m2-1-t4-p1">
-            Este es el punto que mÃ¡s confusiÃ³n genera. El cachÃ© <strong class="text-blue-400">no es una baterÃ­a que
-            se descarga</strong>. Un turno puede marcar solo <strong class="text-blue-400">40%</strong> de la cachÃ© â€”
-            porque hubo muchas cosas nuevas (p. ej., se cargÃ³ una skill grande). Pero ese bloque nuevo se convierte en
-            <strong class="text-blue-400">lectura barata en el prÃ³ximo turno</strong>, y el porcentaje
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m2-1-t4-p1">
+            Este es el punto que mêÂ¡s confusiêÂ³n genera. El cachêÂ© <strong class="text-blue-400">no es una baterêÂ­a que
+            se descarga</strong>. Un turno puede marcar solo <strong class="text-blue-400">40%</strong> de la cachêÂ© ê¢â¬â
+            porque hubo muchas cosas nuevas (p. ej., se cargêÂ³ una skill grande). Pero ese bloque nuevo se convierte en
+            <strong class="text-blue-400">lectura barata en el prêÂ³ximo turno</strong>, y el porcentaje
             <strong class="text-blue-400">sube</strong>.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">QuÃ© es</h3>
-<p class="text-neutral-300">El Â«% de cachÃ©Â» de un turno es cuÃ¡nto del prompt vino del cachÃ© (read) frente a cuÃ¡nto fue nuevo (write + sin cachÃ©). Como lo nuevo de hoy serÃ¡ lo almacenado en cachÃ© maÃ±ana, la fracciÃ³n leÃ­da del cachÃ© tiende a crecer turno a turno.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">QuêÂ© es</h3>
+<p class="text-neutral-300">El êÂ«% de cachêÂ©êÂ» de un turno es cuêÂ¡nto del prompt vino del cachêÂ© (read) frente a cuêÂ¡nto fue nuevo (write + sin cachêÂ©). Como lo nuevo de hoy serêÂ¡ lo almacenado en cachêÂ© maêÂ±ana, la fracciêÂ³n leêÂ­da del cachêÂ© tiende a crecer turno a turno.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quÃ© aprenderlo</h3>
-<p class="text-neutral-300">Porque deshace la intuiciÃ³n equivocada de que "el cachÃ© se acaba". Ver un 40% en un turno no es un problema: solo indica que entrÃ³ algo grande, que serÃ¡ barato de aquÃ­ en adelante.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quêÂ© aprenderlo</h3>
+<p class="text-neutral-300">Porque deshace la intuiciêÂ³n equivocada de que "el cachêÂ© se acaba". Ver un 40% en un turno no es un problema: solo indica que entrêÂ³ algo grande, que serêÂ¡ barato de aquêÂ­ en adelante.</p>
 </div>
 <!-- SVG destaque: barra 40% -> 99% -->
 <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
@@ -498,27 +498,27 @@
 <rect fill="url(#m21b-grid)" height="210" width="1000" x="0" y="0"></rect>
 <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
 <!-- Barra turno agora: 40% -->
-<text fill="#93c5fd" x="60" y="52">turno actual (cargÃ³ una skill grande)</text>
+<text fill="#93c5fd" x="60" y="52">turno actual (cargêÂ³ una skill grande)</text>
 <rect fill="#0e1622" height="34" rx="8" stroke="#334155" stroke-width="1.5" width="700" x="60" y="62"></rect>
 <rect fill="url(#m21b-grad)" height="34" rx="8" width="280" x="60" y="62"></rect>
-<text fill="#0b1220" font-weight="700" text-anchor="middle" x="200" y="84">40% de la cachÃ©</text>
-<text fill="#93c5fd" x="792" y="84">40k leÃ­dos / 60k nuevos</text>
-<!-- Barra prÃ³ximo turno: 99% -->
+<text fill="#0b1220" font-weight="700" text-anchor="middle" x="200" y="84">40% de la cachêÂ©</text>
+<text fill="#93c5fd" x="792" y="84">40k leêÂ­dos / 60k nuevos</text>
+<!-- Barra prêÂ³ximo turno: 99% -->
 <text fill="#93c5fd" x="60" y="140">siguiente turno (solo un mensaje corto)</text>
 <rect fill="#0e1622" height="34" rx="8" stroke="#334155" stroke-width="1.5" width="700" x="60" y="150"></rect>
 <rect fill="url(#m21b-grad)" height="34" rx="8" width="693" x="60" y="150"></rect>
-<text fill="#0b1220" font-weight="700" text-anchor="middle" x="406" y="172">99% de la cachÃ©</text>
-<text fill="#93c5fd" x="792" y="172">~100k leÃ­dos / ~1k nuevos</text>
+<text fill="#0b1220" font-weight="700" text-anchor="middle" x="406" y="172">99% de la cachêÂ©</text>
+<text fill="#93c5fd" x="792" y="172">~100k leêÂ­dos / ~1k nuevos</text>
 </g>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 text-center">El nuevo bloque del turno del 40% (la skill) es exactamente lo que hace que el siguiente turno llegue a ~99%: se convirtiÃ³ en una lectura barata.</p>
+<p class="text-xs text-neutral-400 mt-3 text-center">El nuevo bloque del turno del 40% (la skill) es exactamente lo que hace que el siguiente turno llegue a ~99%: se convirtiêÂ³ en una lectura barata.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceptos clave</h3>
 <div class="overflow-x-auto">
 <table class="w-full text-sm text-left">
 <thead class="text-blue-400 border-b border-dark-600">
-<tr><th class="py-2 pr-4">Turno</th><th class="py-2 pr-4">LeÃ­do de la cachÃ©</th><th class="py-2 pr-4">Nuevo</th><th class="py-2">% de cachÃ©</th></tr>
+<tr><th class="py-2 pr-4">Turno</th><th class="py-2 pr-4">LeêÂ­do de la cachêÂ©</th><th class="py-2 pr-4">Nuevo</th><th class="py-2">% de cachêÂ©</th></tr>
 </thead>
 <tbody class="text-neutral-300">
 <tr class="border-b border-dark-700"><td class="py-2 pr-4">ahora (skill grande)</td><td class="py-2 pr-4">40k</td><td class="py-2 pr-4">60k</td><td class="py-2 text-blue-400 font-semibold">40%</td></tr>
@@ -528,176 +528,176 @@
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ================= TÃ“PICO 5 ================= -->
-<section aria-labelledby="m21-t5-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-1#topico-5" id="topico-5">
+<!-- ================= TêâPICO 5 ================= -->
+<section aria-labelledby="m21-t5-h" class="mb-16" data-ARCKHê-topic="modulo-2-1#topico-5" id="topico-5">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">5</span>
-<h2 class="text-2xl font-bold" id="m21-t5-h">âœï¸ Primer mensaje = write</h2>
+<h2 class="text-2xl font-bold" id="m21-t5-h">ê¢ÅÂê¯Â¸Â Primer mensaje = write</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span>
 </button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m2-1-t5-p1">
-            El primer mensaje de una conversaciÃ³n <strong class="text-blue-400">no hay nada que leer</strong> todavÃ­a â€” no
-            existe un prefijo anterior. Entonces ella <strong class="text-blue-400">guarda el cachÃ©</strong> y paga un poco mÃ¡s
-            (write â‰ˆ 1,25Ã— con TTL de 5 min). Es el Ãºnico turno que escribe el prefijo completo.
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m2-1-t5-p1">
+            El primer mensaje de una conversaciêÂ³n <strong class="text-blue-400">no hay nada que leer</strong> todavêÂ­a ê¢â¬â no
+            existe un prefijo anterior. Entonces ella <strong class="text-blue-400">guarda el cachêÂ©</strong> y paga un poco mêÂ¡s
+            (write ê¢â°Ë 1,25êâ con TTL de 5 min). Es el êÂºnico turno que escribe el prefijo completo.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">QuÃ© es</h3>
-<p class="text-neutral-300">El write inicial es la Â«inversiÃ³nÂ» que paga los turnos siguientes. Grabas una vez para leer muchas veces a bajo costo.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">QuêÂ© es</h3>
+<p class="text-neutral-300">El write inicial es la êÂ«inversiêÂ³nêÂ» que paga los turnos siguientes. Grabas una vez para leer muchas veces a bajo costo.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quÃ© aprenderlo</h3>
-<p class="text-neutral-300">Porque evita el susto de ver el 1.Âº turno "caro". No es un bug ni un desperdicio: es la escritura que permite ahorrar en el resto de la sesiÃ³n.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quêÂ© aprenderlo</h3>
+<p class="text-neutral-300">Porque evita el susto de ver el 1.êÂº turno "caro". No es un bug ni un desperdicio: es la escritura que permite ahorrar en el resto de la sesiêÂ³n.</p>
 </div>
 <div class="space-y-4 mb-6">
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">1.er turno â€” write</h4>
-<p class="text-sm text-neutral-300">Registra tools + system + el 1.er mensaje. Pagas ~1,25Ã— por lo que registraste. TodavÃ­a no hay nada que leer.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">1.er turno ê¢â¬â write</h4>
+<p class="text-sm text-neutral-300">Registra tools + system + el 1.er mensaje. Pagas ~1,25êâ por lo que registraste. TodavêÂ­a no hay nada que leer.</p>
 </div>
 </div>
 <div class="flex items-start space-x-4">
 <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">2</span></div>
 <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600">
-<h4 class="font-semibold text-neutral-100 mb-1">A partir del 2.Âº turno â€” read + pequeÃ±o write</h4>
-<p class="text-sm text-neutral-300">Lee el prefijo a ~0,1Ã— y escribe solo el mensaje nuevo. AquÃ­ se nota el ahorro.</p>
+<h4 class="font-semibold text-neutral-100 mb-1">A partir del 2.êÂº turno ê¢â¬â read + pequeêÂ±o write</h4>
+<p class="text-sm text-neutral-300">Lee el prefijo a ~0,1êâ y escribe solo el mensaje nuevo. AquêÂ­ se nota el ahorro.</p>
 </div>
 </div>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">1.Âª msg</strong> solo escribe â€” no lee.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write</strong> ~1,25Ã— (TTL 5 min).</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">InversiÃ³n</strong> que abarata el resto.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">A partir del 2.Âº</strong> predomina read ~0,1Ã—.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">1.êÂª msg</strong> solo escribe ê¢â¬â no lee.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write</strong> ~1,25êâ (TTL 5 min).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">InversiêÂ³n</strong> que abarata el resto.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">A partir del 2.êÂº</strong> predomina read ~0,1êâ.</p></div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ================= TÃ“PICO 6 ================= -->
-<section aria-labelledby="m21-t6-h" class="mb-16" data-ARCKHÉ-topic="modulo-2-1#topico-6" id="topico-6">
+<!-- ================= TêâPICO 6 ================= -->
+<section aria-labelledby="m21-t6-h" class="mb-16" data-ARCKHê-topic="modulo-2-1#topico-6" id="topico-6">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl flex-shrink-0">6</span>
-<h2 class="text-2xl font-bold" id="m21-t6-h">ðŸ§Š Una pausa larga = write en frÃ­o</h2>
+<h2 class="text-2xl font-bold" id="m21-t6-h">ê°Å¸Â§Å  Una pausa larga = write en frêÂ­o</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button">
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm flex-shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button">
 <span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span>
 </button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m2-1-t6-p1">
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m2-1-t6-p1">
             Si superas los <strong class="text-blue-400">~5 min inactivo</strong>, el TTL vence y la entrada desaparece del
-            cachÃ©. El siguiente mensaje paga la <strong class="text-blue-400">volver a guardar</strong> â€” Ã© o
-            <strong class="text-blue-400">write frÃ­o</strong>. No es un fallo; solo significa que el cachÃ© se enfriÃ³.
+            cachêÂ©. El siguiente mensaje paga la <strong class="text-blue-400">volver a guardar</strong> ê¢â¬â êÂ© o
+            <strong class="text-blue-400">write frêÂ­o</strong>. No es un fallo; solo significa que el cachêÂ© se enfriêÂ³.
           </p>
 </div>
 <div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">QuÃ© es</h3>
-<p class="text-neutral-300">Write en frÃ­o es la nueva escritura del prefijo despuÃ©s de que vence el TTL. Desde el punto de vista del costo, es como reiniciar la conversaciÃ³n: vuelves a pagar la escritura inicial.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">QuêÂ© es</h3>
+<p class="text-neutral-300">Write en frêÂ­o es la nueva escritura del prefijo despuêÂ©s de que vence el TTL. Desde el punto de vista del costo, es como reiniciar la conversaciêÂ³n: vuelves a pagar la escritura inicial.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quÃ© aprenderlo</h3>
-<p class="text-neutral-300">Porque explica por quÃ© "retomar despuÃ©s del almuerzo" cuesta: fue una escritura frÃ­a, no un problema. Y seÃ±ala la soluciÃ³n: el TTL de 1 h para flujos con pausas previsibles.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-2">Por quêÂ© aprenderlo</h3>
+<p class="text-neutral-300">Porque explica por quêÂ© "retomar despuêÂ©s del almuerzo" cuesta: fue una escritura frêÂ­a, no un problema. Y seêÂ±ala la soluciêÂ³n: el TTL de 1 h para flujos con pausas previsibles.</p>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-red-400 mb-2 flex items-center"><span aria-hidden="true" class="mr-2">âš ï¸</span> AtenciÃ³n</h3>
-<p class="text-neutral-300">No confundas una escritura en frÃ­o con un invalidator silencioso. La escritura en frÃ­o ocurre por <strong>tiempo</strong> (TTL expirÃ³). El silent invalidator (Ruta 2, mÃ³dulo 2.3) ocurre por <strong>bytes que cambian</strong> en el prefijo, incluso con el cachÃ© caliente.</p>
+<h3 class="text-lg font-semibold text-red-400 mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> AtenciêÂ³n</h3>
+<p class="text-neutral-300">No confundas una escritura en frêÂ­o con un invalidator silencioso. La escritura en frêÂ­o ocurre por <strong>tiempo</strong> (TTL expirêÂ³). El silent invalidator (Ruta 2, mêÂ³dulo 2.3) ocurre por <strong>bytes que cambian</strong> en el prefijo, incluso con el cachêÂ© caliente.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6">
 <h3 class="text-lg font-semibold text-blue-400 mb-3">Conceptos clave</h3>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Pausa &gt; TTL</strong> = la entrada vence.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write en frÃ­o</strong> = vuelve a escribir el prefijo.</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Fix para gaps</strong> = TTL de 1 h (write ~2Ã—).</p></div>
-<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">No es un bug</strong> â€” es la cachÃ© enfriÃ¡ndose.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Write en frêÂ­o</strong> = vuelve a escribir el prefijo.</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">Fix para gaps</strong> = TTL de 1 h (write ~2êâ).</p></div>
+<div class="bg-dark-700/40 rounded-lg p-4"><p class="text-sm text-neutral-300"><strong class="text-blue-400">No es un bug</strong> ê¢â¬â es la cachêÂ© enfriêÂ¡ndose.</p></div>
 </div>
 </div>
 <!-- ============ EXEMPLO COPY-RUN (erro #30) ============ -->
 <div class="mb-8">
-<h3 class="text-xl font-bold mb-3 flex items-center"><span aria-hidden="true" class="mr-2">âš¡</span> Ejemplo copy-run â€” auditar cuÃ¡nto vino del cachÃ©</h3>
+<h3 class="text-xl font-bold mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ê¢Å¡Â¡</span> Ejemplo copy-run ê¢â¬â auditar cuêÂ¡nto vino del cachêÂ©</h3>
 <div class="rounded-xl border border-blue-500/30 bg-dark-900 overflow-hidden">
 <div class="flex items-center justify-between px-4 py-2 bg-dark-800 border-b border-dark-600">
-<span class="text-xs font-mono text-blue-400">prompt Â· pega en Claude Code</span>
+<span class="text-xs font-mono text-blue-400">prompt êÂ· pega en Claude Code</span>
 <button class="copy-btn text-xs text-neutral-300 hover:text-blue-400 transition-colors" onclick="copyCode(this)" type="button">Copiar</button>
 </div>
 <div class="p-4">
-<p class="text-sm text-neutral-300 mb-3"><strong class="text-blue-400">Objetivo:</strong> confirmar, en una respuesta real de la API, cuÃ¡nto del prompt vino de la cachÃ© â€” para ver con tus propios ojos cÃ³mo las lecturas baratas dominan los turnos.</p>
-<pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-800 rounded-lg p-4 overflow-x-auto"><code>Numa resposta recente da API que vocÃª tem acesso (ou num
+<p class="text-sm text-neutral-300 mb-3"><strong class="text-blue-400">Objetivo:</strong> confirmar, en una respuesta real de la API, cuêÂ¡nto del prompt vino de la cachêÂ© ê¢â¬â para ver con tus propios ojos cêÂ³mo las lecturas baratas dominan los turnos.</p>
+<pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-800 rounded-lg p-4 overflow-x-auto"><code>Numa resposta recente da API que vocêÂª tem acesso (ou num
 log de &lt;caminho do meu log de requests&gt;), leia o objeto
-`usage` e me mostre os trÃªs campos:
+`usage` e me mostre os trêÂªs campos:
 
   - cache_read_input_tokens        (lido do cache, ~0,1x)
   - cache_creation_input_tokens    (gravado, ~1,25x)
-  - input_tokens                   (sÃ³ o resto nÃ£o-cacheado, 1x)
+  - input_tokens                   (sêÂ³ o resto nêÂ£o-cacheado, 1x)
 
 Depois calcule e me explique:
-  1. a SOMA dos trÃªs (= tamanho total do prompt);
+  1. a SOMA dos trêÂªs (= tamanho total do prompt);
   2. qual % veio do cache (read / soma);
-  3. se este parece um 1Âº turno (write alto) ou um turno
+  3. se este parece um 1êÂº turno (write alto) ou um turno
      posterior (read dominante).</code></pre>
-<p class="text-sm text-neutral-300 mt-3"><strong class="text-blue-400">CÃ³mo verificar:</strong> a <strong>suma de los tres campos</strong> debe coincidir con el tamaÃ±o total del prompt. En turnos posteriores de una conversaciÃ³n activa, <code class="font-mono text-xs">cache_read_input_tokens</code> debe ser la porciÃ³n mÃ¡s grande y el % de cachÃ© alto (tema 4). En el 1.er turno, la porciÃ³n de <code class="font-mono text-xs">cache_creation_input_tokens</code> predomina (tema 5).</p>
+<p class="text-sm text-neutral-300 mt-3"><strong class="text-blue-400">CêÂ³mo verificar:</strong> a <strong>suma de los tres campos</strong> debe coincidir con el tamaêÂ±o total del prompt. En turnos posteriores de una conversaciêÂ³n activa, <code class="font-mono text-xs">cache_read_input_tokens</code> debe ser la porciêÂ³n mêÂ¡s grande y el % de cachêÂ© alto (tema 4). En el 1.er turno, la porciêÂ³n de <code class="font-mono text-xs">cache_creation_input_tokens</code> predomina (tema 5).</p>
 </div>
 </div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center justify-start gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ================= RESUMO ================= -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ðŸ“Œ</span> Resumen del mÃ³dulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ê°Å¸âÅ</span> Resumen del mêÂ³dulo</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">El prefijo estable crece</strong><span class="text-neutral-400"> â€” cada respuesta del modelo hace crecer la parte almacenada en cachÃ©.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Hit por turno</strong><span class="text-neutral-400"> â€” vuelve a leer el prefijo a ~0,1Ã— y graba solo lo nuevo.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">TTL de 5 min renovado con cada uso</strong><span class="text-neutral-400"> â€” la conversaciÃ³n activa se mantiene caliente.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">El % de cachÃ© SUBE</strong><span class="text-neutral-400"> â€” 40% en un turno con una skill grande se convierte en ~99% en el siguiente.</span></div></div>
-<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">1.Âª msg grabada; una pausa larga lo enfrÃ­a</strong><span class="text-neutral-400"> â€” se explican el write inicial y el write en frÃ­o.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">El prefijo estable crece</strong><span class="text-neutral-400"> ê¢â¬â cada respuesta del modelo hace crecer la parte almacenada en cachêÂ©.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Hit por turno</strong><span class="text-neutral-400"> ê¢â¬â vuelve a leer el prefijo a ~0,1êâ y graba solo lo nuevo.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">TTL de 5 min renovado con cada uso</strong><span class="text-neutral-400"> ê¢â¬â la conversaciêÂ³n activa se mantiene caliente.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">El % de cachêÂ© SUBE</strong><span class="text-neutral-400"> ê¢â¬â 40% en un turno con una skill grande se convierte en ~99% en el siguiente.</span></div></div>
+<div class="flex items-start space-x-3"><span aria-hidden="true" class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">1.êÂª msg grabada; una pausa larga lo enfrêÂ­a</strong><span class="text-neutral-400"> ê¢â¬â se explican el write inicial y el write en frêÂ­o.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-blue-400 mb-2">Siguiente mÃ³dulo:</h3>
-<p class="text-neutral-300">2.2 â€” Skills y herramientas: agregar vs. romper</p>
+<h3 class="font-semibold text-blue-400 mb-2">Siguiente mêÂ³dulo:</h3>
+<p class="text-neutral-300">2.2 ê¢â¬â Skills y herramientas: agregar vs. romper</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">â† Volver a la Ruta 2</a>
-<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-2.html">Siguiente mÃ³dulo â†’</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">ê¢â Â Volver a la Ruta 2</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="modulo-2-2.html">Siguiente mêÂ³dulo ê¢â â</a>
 </div>
 </div>
 </section>
 </main>
 <!-- TOC sticky + scrollspy -->
 <aside class="hidden lg:block">
-<nav aria-label="Ãndice de la pÃ¡gina" class="sticky top-24 self-start" data-ARCKHÉ-toc="">
-<p class="text-sm text-neutral-400 mb-2">SecciÃ³n <span class="ARCKHÉ-toc-pos">1</span> de <span class="ARCKHÉ-toc-total">6</span></p>
+<nav aria-label="êÂndice de la pêÂ¡gina" class="sticky top-24 self-start" data-ARCKHê-toc="">
+<p class="text-sm text-neutral-400 mb-2">SecciêÂ³n <span class="ARCKHê-toc-pos">1</span> de <span class="ARCKHê-toc-total">6</span></p>
 <ul class="space-y-1 text-sm">
-<li><a class="ARCKHÉ-toc-link" href="#topico-1">1. El prefijo estable crece</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-2">2. Acierto por turno</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-3">3. TTL de 5 min</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-4">4. El % de cachÃ© SUBE</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-5">5. El primer mensaje = escritura</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-6">6. Pausa larga = escritura en frÃ­o</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-1">1. El prefijo estable crece</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-2">2. Acierto por turno</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-3">3. TTL de 5 min</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-4">4. El % de cachêÂ© SUBE</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-5">5. El primer mensaje = escritura</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-6">6. Pausa larga = escritura en frêÂ­o</a></li>
 </ul>
 </nav>
 </aside>
@@ -705,7 +705,7 @@ Depois calcule e me explique:
 <!-- FOOTER -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache â€” Prompt Caching en Claude Code Â· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
+<p>cccache ê¢â¬â Prompt Caching en Claude Code êÂ· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a> êÂ· 2026</p>
 </div>
 </footer>
 <!-- SCRIPTS -->
@@ -716,7 +716,7 @@ Depois calcule e me explique:
       var code = box && box.querySelector('code');
       if (!code) { return; }
       var text = code.textContent;
-      function done() { var o = btn.textContent; btn.textContent = 'Copiado âœ“'; btn.classList.add('copied'); setTimeout(function () { btn.textContent = o; btn.classList.remove('copied'); }, 1600); }
+      function done() { var o = btn.textContent; btn.textContent = 'Copiado ê¢Åâ'; btn.classList.add('copied'); setTimeout(function () { btn.textContent = o; btn.classList.remove('copied'); }, 1600); }
       if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); }); }
       else { fallbackCopy(text); done(); }
     }
@@ -724,7 +724,7 @@ Depois calcule e me explique:
       try { var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'absolute'; ta.style.left = '-9999px'; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); } catch (e) { }
     }
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') { ARCKHÉ.init(); }
+      if (window.ARCKHê && typeof ARCKHê.init === 'function') { ARCKHê.init(); }
     });
   </script>
 </body>

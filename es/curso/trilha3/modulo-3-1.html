@@ -4,20 +4,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="ARCKHÉ-course"/>
-<title>MÃ³dulo 3.1 â€” CachÃ© vs. compactaciÃ³n | cccache Â· ARCKHÉ AI</title>
+<meta content="cccache" name="ARCKHê-course"/>
+<title>MêÂ³dulo 3.1 ê¢â¬â CachêÂ© vs. compactaciêÂ³n | cccache êÂ· ARCKHê AI</title>
 <!-- 1) ANTI-FOUC -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHê.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHê-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHê-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
@@ -25,36 +25,36 @@
     })();
   </script>
 <!-- 2) MANIFESTO (erro #28) -->
-<script data-ARCKHÉ-manifest="" type="application/json">
+<script data-ARCKHê-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache ê¢â¬â Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que êÂ© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "TÃ©cnico",
+      "id": "trilha2", "title": "TêÂ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaêÂ§êÂ£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
+      "id": "trilha3", "title": "Boas prêÂ¡ticas avanêÂ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaêÂ§êÂ£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prêÂ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -146,72 +146,72 @@
   </style>
 <link href="../../../assets/learn.css" rel="stylesheet"/>
 <link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha3/modulo-3-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha3/modulo-3-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-3-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
-<a class="ARCKHÉ-skip" href="#conteudo">Saltar al contenido</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHê-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha3/modulo-3-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha3/modulo-3-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-3-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<a class="ARCKHê-skip" href="#conteudo">Saltar al contenido</a>
 <!-- ================= NAVIGATION ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
-<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
+<span aria-hidden="true" class="text-2xl">ê°Å¸Â§Â </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">TÃ©cnico</span></a>
-<a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prÃ¡cticas</span></a>
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
-<span aria-hidden="true">â—·</span><span>Mi recorrido</span>
-<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">TêÂ©cnico</span></a>
+<a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Buenas prêÂ¡cticas</span></a>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-journey-open="" type="button">
+<span aria-hidden="true">ê¢âÂ·</span><span>Mi recorrido</span>
+<span class="ARCKHê-journey-badge hidden" data-count="0" data-ARCKHê-journey-badge=""></span>
 </button>
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
-<span aria-hidden="true">â—‘</span><span class="hidden sm:inline">Apariencia</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" type="button">
+<span aria-hidden="true">ê¢ââ</span><span class="hidden sm:inline">Apariencia</span>
 </button>
-<div aria-label="Apariencia y lectura" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
-<p class="ARCKHÉ-seg-label">Tema</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Oscuro</button>
-<button data-ARCKHÉ-set-theme="claro" type="button">Claro</button>
-<button data-ARCKHÉ-set-theme="sepia" type="button">Sepia</button>
-<button data-ARCKHÉ-set-theme="foco" type="button">Enfoque</button>
-<button data-ARCKHÉ-set-theme="contraste" type="button">Alto contraste</button>
+<div aria-label="Apariencia y lectura" class="ARCKHê-appearance-pop" data-ARCKHê-appearance="" role="group">
+<p class="ARCKHê-seg-label">Tema</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-theme="ARCKHê-dark" type="button">Oscuro</button>
+<button data-ARCKHê-set-theme="claro" type="button">Claro</button>
+<button data-ARCKHê-set-theme="sepia" type="button">Sepia</button>
+<button data-ARCKHê-set-theme="foco" type="button">Enfoque</button>
+<button data-ARCKHê-set-theme="contraste" type="button">Alto contraste</button>
 </div>
-<p class="ARCKHÉ-seg-label">Fuente</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
-<button data-ARCKHÉ-set-font="system" type="button">Sistema</button>
-<button data-ARCKHÉ-set-font="leitura" type="button">Lectura</button>
+<p class="ARCKHê-seg-label">Fuente</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-font="inter" type="button">Inter</button>
+<button data-ARCKHê-set-font="system" type="button">Sistema</button>
+<button data-ARCKHê-set-font="leitura" type="button">Lectura</button>
 </div>
-<p class="ARCKHÉ-seg-label">TamaÃ±o</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
-<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
-<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHê-seg-label">TamaêÂ±o</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-fontscale="100" type="button">A</button>
+<button data-ARCKHê-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHê-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="ARCKHÉ-seg-label">Ancho de lÃ­nea</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-linewidth="60" type="button">Estrecho</button>
-<button data-ARCKHÉ-set-linewidth="68" type="button">Medio</button>
-<button data-ARCKHÉ-set-linewidth="75" type="button">Ancho</button>
+<p class="ARCKHê-seg-label">Ancho de lêÂ­nea</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-linewidth="60" type="button">Estrecho</button>
+<button data-ARCKHê-set-linewidth="68" type="button">Medio</button>
+<button data-ARCKHê-set-linewidth="75" type="button">Ancho</button>
 </div>
-<p class="ARCKHÉ-seg-label">Interlineado</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-leading="1.45" type="button">Compacto</button>
-<button data-ARCKHÉ-set-leading="1.7" type="button">CÃ³modo</button>
+<p class="ARCKHê-seg-label">Interlineado</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-leading="1.45" type="button">Compacto</button>
+<button data-ARCKHê-set-leading="1.7" type="button">CêÂ³modo</button>
 </div>
-<p class="ARCKHÉ-seg-label">Acento</p>
-<div aria-label="Color de acento" class="ARCKHÉ-accent-grid" role="group">
-<button aria-label="Esmeralda" data-ARCKHÉ-set-accent="emerald" type="button"></button>
-<button aria-label="Azul" data-ARCKHÉ-set-accent="blue" type="button"></button>
-<button aria-label="Morado" data-ARCKHÉ-set-accent="purple" type="button"></button>
-<button aria-label="Ãmbar" data-ARCKHÉ-set-accent="amber" type="button"></button>
-<button aria-label="Turquesa" data-ARCKHÉ-set-accent="teal" type="button"></button>
-<button aria-label="Rosa" data-ARCKHÉ-set-accent="rose" type="button"></button>
+<p class="ARCKHê-seg-label">Acento</p>
+<div aria-label="Color de acento" class="ARCKHê-accent-grid" role="group">
+<button aria-label="Esmeralda" data-ARCKHê-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-ARCKHê-set-accent="blue" type="button"></button>
+<button aria-label="Morado" data-ARCKHê-set-accent="purple" type="button"></button>
+<button aria-label="êÂmbar" data-ARCKHê-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-ARCKHê-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-ARCKHê-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -224,66 +224,66 @@
 </div>
 </nav>
 <!-- Breadcrumb -->
-<nav aria-label="Ruta de navegaciÃ³n" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Ruta de navegaciêÂ³n" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center flex-wrap gap-2 text-sm text-neutral-400">
 <a class="hover:text-purple-400" href="../../index.html">Inicio</a><span aria-hidden="true">/</span>
 <a class="hover:text-purple-400" href="index.html">Trilha 3</a><span aria-hidden="true">/</span>
-<span class="text-purple-400">MÃ³dulo 3.1</span>
+<span class="text-purple-400">MêÂ³dulo 3.1</span>
 </div>
 </nav>
 <!-- Header -->
 <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 3.1</span>
-<h1 class="text-3xl sm:text-4xl font-bold mb-4">âš–ï¸ CachÃ© vs. compactaciÃ³n</h1>
-<p class="text-lg text-neutral-300 max-w-3xl">La cachÃ© y la compactaciÃ³n parecen competir, pero optimizan cosas distintas: una modifica el <strong class="text-purple-400">precio por token</strong>, el otro en <strong class="text-purple-400">cuÃ¡ntos tokens</strong> tÃº cargas. Quien entiende ambos ejes toma la decisiÃ³n correcta y deja de pagar por un contexto enorme turno tras turno.</p>
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MêâDULO 3.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">ê¢Å¡âê¯Â¸Â CachêÂ© vs. compactaciêÂ³n</h1>
+<p class="text-lg text-neutral-300 max-w-3xl">La cachêÂ© y la compactaciêÂ³n parecen competir, pero optimizan cosas distintas: una modifica el <strong class="text-purple-400">precio por token</strong>, el otro en <strong class="text-purple-400">cuêÂ¡ntos tokens</strong> têÂº cargas. Quien entiende ambos ejes toma la decisiêÂ³n correcta y deja de pagar por un contexto enorme turno tras turno.</p>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Temas</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~40</div><div class="text-xs text-neutral-400">Minutos</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Avanzado</div><div class="text-xs text-neutral-400">Nivel</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">DecisiÃ³n</div><div class="text-xs text-neutral-400">Tipo</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">DecisiêÂ³n</div><div class="text-xs text-neutral-400">Tipo</div></div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:flex lg:gap-8" id="conteudo">
 <!-- TOC -->
-<nav aria-label="Ãndice de la pÃ¡gina" class="hidden lg:block sticky top-20 self-start w-56 shrink-0" data-ARCKHÉ-toc="">
-<p class="text-xs uppercase tracking-wide text-neutral-500 mb-2">En este mÃ³dulo</p>
-<p class="text-sm text-neutral-400 mb-3"><span data-ARCKHÉ-section-counter="">SecciÃ³n 1 de 6</span></p>
+<nav aria-label="êÂndice de la pêÂ¡gina" class="hidden lg:block sticky top-20 self-start w-56 shrink-0" data-ARCKHê-toc="">
+<p class="text-xs uppercase tracking-wide text-neutral-500 mb-2">En este mêÂ³dulo</p>
+<p class="text-sm text-neutral-400 mb-3"><span data-ARCKHê-section-counter="">SecciêÂ³n 1 de 6</span></p>
 <ol class="space-y-1 text-sm">
-<li><a class="ARCKHÉ-toc-link" href="#topico-1">1. Dos ejes diferentes</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-2">2. Aunque estÃ© en cachÃ©, sigue siendo caro</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-3">3. El lÃ­mite de 1M</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-4">4. Los nÃºmeros de la compactaciÃ³n</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-5">5. Calidad y latencia</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-6">6. CuÃ¡ndo compactar</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-1">1. Dos ejes diferentes</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-2">2. Aunque estêÂ© en cachêÂ©, sigue siendo caro</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-3">3. El lêÂ­mite de 1M</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-4">4. Los nêÂºmeros de la compactaciêÂ³n</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-5">5. Calidad y latencia</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-6">6. CuêÂ¡ndo compactar</a></li>
 </ol>
 <div class="mt-5 pt-4 border-t border-dark-600">
-<div aria-label="Progreso del mÃ³dulo 3.1" class="ARCKHÉ-meter" data-ARCKHÉ-meter="modulo-3-1">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
-<span class="text-xs text-purple-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<div aria-label="Progreso del mêÂ³dulo 3.1" class="ARCKHê-meter" data-ARCKHê-meter="modulo-3-1">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
+<span class="text-xs text-purple-400 font-semibold" data-ARCKHê-meter-pct="">0%</span>
 </div>
-<p class="text-xs text-neutral-500 mt-1"><span data-ARCKHÉ-meter-frac="">0 de 6</span> leÃ­dos</p>
+<p class="text-xs text-neutral-500 mt-1"><span data-ARCKHê-meter-frac="">0 de 6</span> leêÂ­dos</p>
 </div>
 </nav>
-<!-- ConteÃºdo -->
-<main class="flex-1 min-w-0" data-ARCKHÉ-module="3-1" data-ARCKHÉ-track="3" id="modulo-3-1">
-<!-- ===== TÃ“PICO 1 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-1#topico-1" id="topico-1">
+<!-- ConteêÂºdo -->
+<main class="flex-1 min-w-0" data-ARCKHê-module="3-1" data-ARCKHê-track="3" id="modulo-3-1">
+<!-- ===== TêâPICO 1 ===== -->
+<section class="mb-16" data-ARCKHê-topic="modulo-3-1#topico-1" id="topico-1">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-<h2 class="text-2xl font-bold">â†”ï¸ Dos ejes diferentes</h2>
+<h2 class="text-2xl font-bold">ê¢â âê¯Â¸Â Dos ejes diferentes</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-1-t1-p1"><strong class="text-purple-400">CachÃ©</strong> optimiza el <strong>precio por token</strong> del contexto. <strong class="text-purple-400">Compactar</strong> optimiza <strong>cuÃ¡ntos tokens</strong> tÃº cargas. Son dos ejes que no compiten en el mismo lugar, y por eso quieres ambos.</p>
-<p data-ARCKHÉ-block="m3-1-t1-p2"><em>Compactar</em> = resumir el historial en una versiÃ³n mÃ¡s corta; en Claude Code, el comando es <code class="font-mono text-sm">/compact</code>. No cambia el precio por token; cambia el <em>tamaÃ±o</em> de lo que vuelves a enviar.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-1-t1-p1"><strong class="text-purple-400">CachêÂ©</strong> optimiza el <strong>precio por token</strong> del contexto. <strong class="text-purple-400">Compactar</strong> optimiza <strong>cuêÂ¡ntos tokens</strong> têÂº cargas. Son dos ejes que no compiten en el mismo lugar, y por eso quieres ambos.</p>
+<p data-ARCKHê-block="m3-1-t1-p2"><em>Compactar</em> = resumir el historial en una versiêÂ³n mêÂ¡s corta; en Claude Code, el comando es <code class="font-mono text-sm">/compact</code>. No cambia el precio por token; cambia el <em>tamaêÂ±o</em> de lo que vuelves a enviar.</p>
 </div>
 <!-- SVG: dois eixos -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Un plan con dos ejes: el vertical es el precio por token, reducido por el cache; el horizontal es la cantidad de tokens, reducida por la compactaciÃ³n. El cache mueve el punto hacia abajo; la compactaciÃ³n lo mueve hacia la izquierda." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
+<svg aria-label="Un plan con dos ejes: el vertical es el precio por token, reducido por el cache; el horizontal es la cantidad de tokens, reducida por la compactaciêÂ³n. El cache mueve el punto hacia abajo; la compactaciêÂ³n lo mueve hacia la izquierda." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
 <defs>
 <lineargradient id="m31a-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
 <filter height="180%" id="m31a-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
@@ -294,155 +294,155 @@
 <rect fill="url(#m31a-grid)" height="300" width="1000" x="0" y="0"></rect>
 <path d="M130,255 L130,40" fill="none" marker-end="url(#m31a-ap)" opacity="0.7" stroke="#c084fc" stroke-width="2"></path>
 <path d="M130,255 L910,255" fill="none" marker-end="url(#m31a-ac)" opacity="0.7" stroke="#38bdf8" stroke-width="2"></path>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" transform="rotate(-90 52 150)" x="52" y="150">precio/token (cachÃ© â†“)</text>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="520" y="290">cantidad de tokens (compactar â†)</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" transform="rotate(-90 52 150)" x="52" y="150">precio/token (cachêÂ© ê¢â â)</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="520" y="290">cantidad de tokens (compactar ê¢â Â)</text>
 <g font-family="Inter,sans-serif">
 <rect fill="#1a1230" height="50" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="700" y="58"></rect>
 <text fill="#c084fc" font-size="12.5" font-weight="600" text-anchor="middle" x="790" y="79">contexto lleno</text>
-<text fill="#e9d5ff" font-size="11.5" text-anchor="middle" x="790" y="97">muchos tokens Â· 1Ã—</text>
+<text fill="#e9d5ff" font-size="11.5" text-anchor="middle" x="790" y="97">muchos tokens êÂ· 1êâ</text>
 </g>
 <path d="M790,108 L790,182" fill="none" marker-end="url(#m31a-ap)" opacity="0.75" stroke="#c084fc" stroke-width="2"></path>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" x="804" y="150">cachÃ©</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" x="804" y="150">cachêÂ©</text>
 <g font-family="Inter,sans-serif">
 <rect fill="#1a1230" height="48" opacity="0.9" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="700" y="190"></rect>
-<text fill="#c084fc" font-size="12.5" font-weight="600" text-anchor="middle" x="790" y="210">solo cachÃ©</text>
-<text fill="#e9d5ff" font-size="11.5" text-anchor="middle" x="790" y="228">muchos tokens Â· 0,1Ã—</text>
+<text fill="#c084fc" font-size="12.5" font-weight="600" text-anchor="middle" x="790" y="210">solo cachêÂ©</text>
+<text fill="#e9d5ff" font-size="11.5" text-anchor="middle" x="790" y="228">muchos tokens êÂ· 0,1êâ</text>
 </g>
 <path d="M700,214 L406,214" fill="none" marker-end="url(#m31a-ac)" opacity="0.7" stroke="#38bdf8" stroke-width="2"></path>
 <text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="545" y="205">compactar</text>
 <g filter="url(#m31a-glow)"><rect fill="#1a1230" height="54" rx="14" stroke="url(#m31a-grad)" stroke-width="2.5" width="204" x="200" y="188"></rect></g>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" x="302" y="210">cachÃ© + compacto</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="302" y="228">pocos tokens Â· 0,1Ã—</text>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="12.5" font-weight="700" text-anchor="middle" x="302" y="210">cachêÂ© + compacto</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="302" y="228">pocos tokens êÂ· 0,1êâ</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: la cachÃ© <strong class="text-purple-400">solo baja</strong> (precio); la compactaciÃ³n <strong class="text-sky-400">solo avanza hacia la izquierda</strong> (cantidad). Una no hace el trabajo de la otra.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: la cachêÂ© <strong class="text-purple-400">solo baja</strong> (precio); la compactaciêÂ³n <strong class="text-sky-400">solo avanza hacia la izquierda</strong> (cantidad). Una no hace el trabajo de la otra.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">CachÃ©</div><p class="text-xs text-neutral-400">Cambia el precio por token</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">CachêÂ©</div><p class="text-xs text-neutral-400">Cambia el precio por token</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Compactar</div><p class="text-xs text-neutral-400">Cambia la cantidad de tokens</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">/compact</div><p class="text-xs text-neutral-400">Resume el historial en Claude Code</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Los dos</div><p class="text-xs text-neutral-400">Ejes ortogonales, no rivales</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ===== TÃ“PICO 2 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-1#topico-2" id="topico-2">
+<!-- ===== TêâPICO 2 ===== -->
+<section class="mb-16" data-ARCKHê-topic="modulo-3-1#topico-2" id="topico-2">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-<h2 class="text-2xl font-bold">ðŸ’° Un contexto grande cacheado sigue siendo caro</h2>
+<h2 class="text-2xl font-bold">ê°Å¸âÂ° Un contexto grande cacheado sigue siendo caro</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-1-t2-p1">El descuento de la cachÃ© engaÃ±a. La cachÃ© abarata <em>por token</em>, pero 400k tokens leÃ­dos a <strong class="text-purple-400">0,1Ã—</strong> todavÃ­a equivalen a <strong class="text-purple-400">~40k de input completo</strong> por turno, y eso <strong>cada turno</strong>, mientras el contexto siga teniendo este tamaÃ±o.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-1-t2-p1">El descuento de la cachêÂ© engaêÂ±a. La cachêÂ© abarata <em>por token</em>, pero 400k tokens leêÂ­dos a <strong class="text-purple-400">0,1êâ</strong> todavêÂ­a equivalen a <strong class="text-purple-400">~40k de input completo</strong> por turno, y eso <strong>cada turno</strong>, mientras el contexto siga teniendo este tamaêÂ±o.</p>
 </div>
 <div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-purple-400 mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ðŸ§®</span> El cÃ¡lculo que asusta</h3>
-<p class="text-neutral-300 mb-3">400.000 tokens Ã— 0,1Ã— = <strong class="text-purple-400">40.000 tokens equivalentes de input completo</strong>, pagados en cada mensaje. El hit alto (99%) no cambia eso: el volumen es grande.</p>
-<div class="font-mono text-sm bg-dark-900/60 rounded-lg p-4 text-neutral-300 overflow-x-auto">400k leÃ­dos @ 0,1Ã—  â‰ˆ  40k-equiv / turno<br/>Ã— cada turno de la conversaciÃ³n = suma que crece sin parar</div>
+<h3 class="text-lg font-semibold text-purple-400 mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ê°Å¸Â§Â®</span> El cêÂ¡lculo que asusta</h3>
+<p class="text-neutral-300 mb-3">400.000 tokens êâ 0,1êâ = <strong class="text-purple-400">40.000 tokens equivalentes de input completo</strong>, pagados en cada mensaje. El hit alto (99%) no cambia eso: el volumen es grande.</p>
+<div class="font-mono text-sm bg-dark-900/60 rounded-lg p-4 text-neutral-300 overflow-x-auto">400k leêÂ­dos @ 0,1êâ  ê¢â°Ë  40k-equiv / turno<br/>êâ cada turno de la conversaciêÂ³n = suma que crece sin parar</div>
 </div>
-<!-- SVG: 0.1x de muito ainda Ã© muito -->
+<!-- SVG: 0.1x de muito ainda êÂ© muito -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Barra de 400 mil tokens a precio completo y la misma barra reducida a una dÃ©cima parte por el cachÃ©; incluso a una dÃ©cima parte, el bloque resultante equivale a 40 mil tokens de input a precio completo." class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<svg aria-label="Barra de 400 mil tokens a precio completo y la misma barra reducida a una dêÂ©cima parte por el cachêÂ©; incluso a una dêÂ©cima parte, el bloque resultante equivale a 40 mil tokens de input a precio completo." class="w-full h-auto" role="img" viewbox="0 0 1000 200">
 <defs><pattern height="32" id="m31b-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <marker id="m31b-ap" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#c084fc"></path></marker></defs>
 <rect fill="url(#m31b-grid)" height="200" width="1000" x="0" y="0"></rect>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="40">400k @ 1Ã— (sin cachÃ©)</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="40">400k @ 1êâ (sin cachêÂ©)</text>
 <rect fill="#1a1230" height="34" rx="8" stroke="#c084fc" stroke-width="2" width="760" x="40" y="52"></rect>
 <text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12.5" text-anchor="middle" x="420" y="74">400.000 tokens equivalentes</text>
 <path d="M420,90 L420,120" fill="none" marker-end="url(#m31b-ap)" opacity="0.7" stroke="#c084fc" stroke-width="2"></path>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" x="434" y="110">Ã— 0,1 (cachÃ©)</text>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="146">400k @ 0,1Ã— (con cachÃ©)</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" x="434" y="110">êâ 0,1 (cachêÂ©)</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="146">400k @ 0,1êâ (con cachêÂ©)</text>
 <rect fill="#1a1230" height="30" rx="8" stroke="#c084fc" stroke-width="2" width="76" x="40" y="158"></rect>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" x="132" y="178">â‰ˆ 40.000 tokens-equiv / turno â€” todavÃ­a grande</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" x="132" y="178">ê¢â°Ë 40.000 tokens-equiv / turno ê¢â¬â todavêÂ­a grande</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: una dÃ©cima parte de <strong>mucho</strong> sigue siendo mucho. La cachÃ© reduce el precio; no achica el contexto.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: una dêÂ©cima parte de <strong>mucho</strong> sigue siendo mucho. La cachêÂ© reduce el precio; no achica el contexto.</p>
 </div>
 <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ðŸ“Š</span> Lee la suma, no el campo</h3>
-<p class="text-neutral-300 text-sm">Si <code class="font-mono text-xs">input_tokens</code> muestra poco, pero el cÃ¡lculo dio alto; la mayor parte estÃ¡ en <code class="font-mono text-xs">cache_read_input_tokens</code> a 0,1Ã—. Es barato por token, pero el total del prompt es la suma de los tres campos.</p>
+<h3 class="text-lg font-semibold text-blue-400 mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ê°Å¸âÅ </span> Lee la suma, no el campo</h3>
+<p class="text-neutral-300 text-sm">Si <code class="font-mono text-xs">input_tokens</code> muestra poco, pero el cêÂ¡lculo dio alto; la mayor parte estêÂ¡ en <code class="font-mono text-xs">cache_read_input_tokens</code> a 0,1êâ. Es barato por token, pero el total del prompt es la suma de los tres campos.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">0,1Ã—</div><p class="text-xs text-neutral-400">El factor de lectura de la cachÃ©</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">40k-equiv</div><p class="text-xs text-neutral-400">400k leÃ­dos, en cada turno</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">0,1êâ</div><p class="text-xs text-neutral-400">El factor de lectura de la cachêÂ©</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">40k-equiv</div><p class="text-xs text-neutral-400">400k leêÂ­dos, en cada turno</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Cada turno</div><p class="text-xs text-neutral-400">El costo se repite, no desaparece</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Volumen</div><p class="text-xs text-neutral-400">Barato â‰  pequeÃ±o</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Volumen</div><p class="text-xs text-neutral-400">Barato ê¢â°Â  pequeêÂ±o</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ===== TÃ“PICO 3 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-1#topico-3" id="topico-3">
+<!-- ===== TêâPICO 3 ===== -->
+<section class="mb-16" data-ARCKHê-topic="modulo-3-1#topico-3" id="topico-3">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-<h2 class="text-2xl font-bold">ðŸ§± El lÃ­mite del contexto (1M)</h2>
+<h2 class="text-2xl font-bold">ê°Å¸Â§Â± El lêÂ­mite del contexto (1M)</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-1-t3-p1">AquÃ­ el cachÃ© <strong>no ayuda</strong>. Deja 900k tokens <em>baratos</em>, pero todavÃ­a ocupan <strong class="text-purple-400">900k de 1M</strong>. En algÃºn momento no puedes continuar la conversaciÃ³n sin <strong class="text-purple-400">compactar</strong> o <code class="font-mono text-sm">/clear</code>. El lÃ­mite se refiere a la cantidad, y solo compactar/limpiar libera espacio.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-1-t3-p1">AquêÂ­ el cachêÂ© <strong>no ayuda</strong>. Deja 900k tokens <em>baratos</em>, pero todavêÂ­a ocupan <strong class="text-purple-400">900k de 1M</strong>. En algêÂºn momento no puedes continuar la conversaciêÂ³n sin <strong class="text-purple-400">compactar</strong> o <code class="font-mono text-sm">/clear</code>. El lêÂ­mite se refiere a la cantidad, y solo compactar/limpiar libera espacio.</p>
 </div>
 <!-- SVG: teto de 1M -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="La ventana de contexto tiene capacidad para 1 millÃ³n de tokens. Un contexto cacheado de 900 mil tokens cuesta poco por token, pero aun asÃ­ ocupa 900 mil de los 1 millÃ³n de espacios, por lo que queda poco espacio. Compactar a 20 mil libera casi toda la ventana." class="w-full h-auto" role="img" viewbox="0 0 1000 210">
+<svg aria-label="La ventana de contexto tiene capacidad para 1 millêÂ³n de tokens. Un contexto cacheado de 900 mil tokens cuesta poco por token, pero aun asêÂ­ ocupa 900 mil de los 1 millêÂ³n de espacios, por lo que queda poco espacio. Compactar a 20 mil libera casi toda la ventana." class="w-full h-auto" role="img" viewbox="0 0 1000 210">
 <defs><pattern height="32" id="m31c-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <filter height="180%" id="m31c-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
 <rect fill="url(#m31c-grid)" height="210" width="1000" x="0" y="0"></rect>
 <text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="36">Ventana de contexto = 1.000.000 tokens</text>
 <!-- barra 1: cache 900k -->
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" x="40" y="70">contexto en cachÃ© (barato, pero grande)</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" x="40" y="70">contexto en cachêÂ© (barato, pero grande)</text>
 <rect fill="#0e1622" height="30" rx="6" stroke="#4b5563" stroke-width="1.5" width="900" x="40" y="78"></rect>
 <rect fill="#1a1230" height="30" rx="6" stroke="#c084fc" stroke-width="2" width="810" x="40" y="78"></rect>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="445" y="98">900k ocupados @ 0,1Ã—</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="445" y="98">900k ocupados @ 0,1êâ</text>
 <text fill="#9ca3af" font-family="Inter,sans-serif" font-size="10" text-anchor="middle" x="905" y="98">100k</text>
 <!-- barra 2: compactado 20k -->
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" x="40" y="146">despuÃ©s de compactar</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" x="40" y="146">despuêÂ©s de compactar</text>
 <rect fill="#0e1622" height="30" rx="6" stroke="#4b5563" stroke-width="1.5" width="900" x="40" y="154"></rect>
 <g filter="url(#m31c-glow)"><rect fill="#1a1230" height="30" rx="6" stroke="#38bdf8" stroke-width="2" width="20" x="40" y="154"></rect></g>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12" x="120" y="174">20k Â· ventana casi toda libre</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12" x="120" y="174">20k êÂ· ventana casi toda libre</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: barato â‰  pequeÃ±o. El lÃ­mite de 1M cuenta <strong>lugares ocupados</strong>, no el precio: solo <strong class="text-sky-400">compactar</strong> abre espacio.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: barato ê¢â°Â  pequeêÂ±o. El lêÂ­mite de 1M cuenta <strong>lugares ocupados</strong>, no el precio: solo <strong class="text-sky-400">compactar</strong> abre espacio.</p>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ðŸš§</span> El error comÃºn</h3>
-<p class="text-neutral-300 text-sm">Confiar en que el cachÃ© "aguante" un contexto que solo crece. Mantiene bajo el costo, no el tamaÃ±o. Cerca del lÃ­mite, la conversaciÃ³n se traba, y entonces es <code class="font-mono text-xs">/compact</code> o <code class="font-mono text-xs">/clear</code>, ya no mÃ¡s cachÃ©.</p>
+<h3 class="text-lg font-semibold text-red-400 mb-3 flex items-center"><span aria-hidden="true" class="mr-2">ê°Å¸Å¡Â§</span> El error comêÂºn</h3>
+<p class="text-neutral-300 text-sm">Confiar en que el cachêÂ© "aguante" un contexto que solo crece. Mantiene bajo el costo, no el tamaêÂ±o. Cerca del lêÂ­mite, la conversaciêÂ³n se traba, y entonces es <code class="font-mono text-xs">/compact</code> o <code class="font-mono text-xs">/clear</code>, ya no mêÂ¡s cachêÂ©.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">1M</div><p class="text-xs text-neutral-400">LÃ­mite de lugares en la ventana</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Barato â‰  pequeÃ±o</div><p class="text-xs text-neutral-400">La cachÃ© no libera espacio</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">/compact</div><p class="text-xs text-neutral-400">Reduce la ocupaciÃ³n</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">1M</div><p class="text-xs text-neutral-400">LêÂ­mite de lugares en la ventana</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Barato ê¢â°Â  pequeêÂ±o</div><p class="text-xs text-neutral-400">La cachêÂ© no libera espacio</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">/compact</div><p class="text-xs text-neutral-400">Reduce la ocupaciêÂ³n</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">/clear</div><p class="text-xs text-neutral-400">Se reinicia cuando ya no necesitas el historial</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ===== TÃ“PICO 4 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-1#topico-4" id="topico-4">
+<!-- ===== TêâPICO 4 ===== -->
+<section class="mb-16" data-ARCKHê-topic="modulo-3-1#topico-4" id="topico-4">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-<h2 class="text-2xl font-bold">ðŸ“‰ Las cifras de la compactaciÃ³n</h2>
+<h2 class="text-2xl font-bold">ê°Å¸ââ° Las cifras de la compactaciêÂ³n</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-1-t4-p1">Compactar cambia un <strong class="text-purple-400">write frÃ­o Ãºnico</strong> por turnos mucho mÃ¡s ligeros. Sin compactar, pagas el contexto grande <strong>cada</strong> mensaje. Al compactar, pagas una sola escritura y todos los turnos siguientes salen baratos. Compara los cÃ¡lculos lado a lado.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-1-t4-p1">Compactar cambia un <strong class="text-purple-400">write frêÂ­o êÂºnico</strong> por turnos mucho mêÂ¡s ligeros. Sin compactar, pagas el contexto grande <strong>cada</strong> mensaje. Al compactar, pagas una sola escritura y todos los turnos siguientes salen baratos. Compara los cêÂ¡lculos lado a lado.</p>
 </div>
-<!-- Tabela de nÃºmeros -->
+<!-- Tabela de nêÂºmeros -->
 <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
 <table class="num-table">
 <thead>
@@ -451,14 +451,14 @@
 <tbody>
 <tr>
 <td class="font-semibold text-neutral-100">Sin compactar<br/><span class="text-xs text-neutral-400">400k en el contexto</span></td>
-<td class="text-neutral-300">â€”</td>
-<td class="text-red-400 font-semibold">400k @ 0,1Ã— â‰ˆ <strong>40k-equiv</strong> Â· para siempre</td>
+<td class="text-neutral-300">ê¢â¬â</td>
+<td class="text-red-400 font-semibold">400k @ 0,1êâ ê¢â°Ë <strong>40k-equiv</strong> êÂ· para siempre</td>
 <td class="text-neutral-400">nunca mejora</td>
 </tr>
 <tr>
 <td class="font-semibold text-neutral-100">Compactando<br/><span class="text-xs text-neutral-400">para 20k</span></td>
-<td class="text-purple-400 font-semibold">1 write en frÃ­o 20k @ 1,25Ã— â‰ˆ <strong>25k</strong></td>
-<td class="text-emerald-400 font-semibold">20k @ 0,1Ã— â‰ˆ <strong>2k-equiv</strong> Â· por turno</td>
+<td class="text-purple-400 font-semibold">1 write en frêÂ­o 20k @ 1,25êâ ê¢â°Ë <strong>25k</strong></td>
+<td class="text-emerald-400 font-semibold">20k @ 0,1êâ ê¢â°Ë <strong>2k-equiv</strong> êÂ· por turno</td>
 <td class="text-emerald-400 font-semibold">~1 turno</td>
 </tr>
 </tbody>
@@ -466,7 +466,7 @@
 </div>
 <!-- SVG: barras por turno -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="ComparaciÃ³n del costo por turno: sin compactar, cada turno cuesta cerca de 40 mil tokens equivalentes, para siempre. Al compactar, hay un costo Ãºnico de 25 mil en el turno cero y despuÃ©s cada turno cuesta cerca de 2 mil, unas veinte veces menos." class="w-full h-auto" role="img" viewbox="0 0 1000 240">
+<svg aria-label="ComparaciêÂ³n del costo por turno: sin compactar, cada turno cuesta cerca de 40 mil tokens equivalentes, para siempre. Al compactar, hay un costo êÂºnico de 25 mil en el turno cero y despuêÂ©s cada turno cuesta cerca de 2 mil, unas veinte veces menos." class="w-full h-auto" role="img" viewbox="0 0 1000 240">
 <defs><pattern height="32" id="m31d-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern></defs>
 <rect fill="url(#m31d-grid)" height="240" width="1000" x="0" y="0"></rect>
 <text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="30">Costo por turno (tokens equivalentes)</text>
@@ -481,7 +481,7 @@
 <rect height="134" rx="3" width="46" x="310" y="66"></rect>
 <rect height="134" rx="3" width="46" x="390" y="66"></rect>
 </g>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="293" y="222">Sin compactar Â· ~40k/turno para siempre</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="293" y="222">Sin compactar êÂ· ~40k/turno para siempre</text>
 <!-- compactando: 1 write frio alto + barras baixas (ciano) -->
 <rect fill="#38bdf8" height="82" opacity="0.9" rx="3" width="46" x="560" y="118"></rect>
 <text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10" text-anchor="middle" x="583" y="110">25k</text>
@@ -491,180 +491,180 @@
 <rect height="7" rx="2" width="46" x="800" y="193"></rect>
 <rect height="7" rx="2" width="46" x="880" y="193"></rect>
 </g>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="743" y="222">Compactando Â· 1 escritura en frÃ­o, luego ~2k por turno</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="743" y="222">Compactando êÂ· 1 escritura en frêÂ­o, luego ~2k por turno</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: el Ãºnico pico cian (turno 0) es la escritura en frÃ­o de la compactaciÃ³n; despuÃ©s de Ã©l, cada turno es ~20Ã— mÃ¡s ligero que la barra morada.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: el êÂºnico pico cian (turno 0) es la escritura en frêÂ­o de la compactaciêÂ³n; despuêÂ©s de êÂ©l, cada turno es ~20êâ mêÂ¡s ligero que la barra morada.</p>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ðŸ’¡</span> Consejo prÃ¡ctico</h3>
-<p class="text-neutral-300 text-sm">Piensa en los turnos que vienen: si aÃºn faltan muchos mensajes, la escritura frÃ­a de 25k se diluye y queda en nada frente a ahorrar 38k por turno. Si la conversaciÃ³n termina ahora, la escritura frÃ­a no compensa.</p>
+<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ê°Å¸âÂ¡</span> Consejo prêÂ¡ctico</h3>
+<p class="text-neutral-300 text-sm">Piensa en los turnos que vienen: si aêÂºn faltan muchos mensajes, la escritura frêÂ­a de 25k se diluye y queda en nada frente a ahorrar 38k por turno. Si la conversaciêÂ³n termina ahora, la escritura frêÂ­a no compensa.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">1 write en frÃ­o</div><p class="text-xs text-neutral-400">20k @ 1,25Ã— â‰ˆ 25k, una vez</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">~2k/turno</div><p class="text-xs text-neutral-400">DespuÃ©s de compactar</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">1 write en frêÂ­o</div><p class="text-xs text-neutral-400">20k @ 1,25êâ ê¢â°Ë 25k, una vez</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">~2k/turno</div><p class="text-xs text-neutral-400">DespuêÂ©s de compactar</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">~1 turno</div><p class="text-xs text-neutral-400">Payback</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">~20Ã—</div><p class="text-xs text-neutral-400">MÃ¡s ligero por turno</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">~20êâ</div><p class="text-xs text-neutral-400">MêÂ¡s ligero por turno</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ===== TÃ“PICO 5 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-1#topico-5" id="topico-5">
+<!-- ===== TêâPICO 5 ===== -->
+<section class="mb-16" data-ARCKHê-topic="modulo-3-1#topico-5" id="topico-5">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-<h2 class="text-2xl font-bold">ðŸ§  Calidad y latencia</h2>
+<h2 class="text-2xl font-bold">ê°Å¸Â§Â  Calidad y latencia</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-1-t5-p1">Compactar no es solo cuestiÃ³n de costo. Un contexto inflado <strong class="text-purple-400">dispersa la atenciÃ³n</strong> del modelo (el "context rot") â€” se equivoca y da mÃ¡s rodeos. E incluso leÃ­do desde el cachÃ©, <strong>400k tardan mÃ¡s</strong> que 20k para el primer token (TTFT mayor). Compactar mejora la precisiÃ³n <em>e</em> velocidad.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-1-t5-p1">Compactar no es solo cuestiêÂ³n de costo. Un contexto inflado <strong class="text-purple-400">dispersa la atenciêÂ³n</strong> del modelo (el "context rot") ê¢â¬â se equivoca y da mêÂ¡s rodeos. E incluso leêÂ­do desde el cachêÂ©, <strong>400k tardan mêÂ¡s</strong> que 20k para el primer token (TTFT mayor). Compactar mejora la precisiêÂ³n <em>e</em> velocidad.</p>
 </div>
 <!-- SVG: context rot -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="A la izquierda, un contexto amplio de 400 mil tokens con la atenciÃ³n del modelo dispersa en muchos puntos dÃ©biles. A la derecha, un contexto compacto de 20 mil tokens con la atenciÃ³n concentrada y menos tiempo hasta el primer token." class="w-full h-auto" role="img" viewbox="0 0 1000 210">
+<svg aria-label="A la izquierda, un contexto amplio de 400 mil tokens con la atenciêÂ³n del modelo dispersa en muchos puntos dêÂ©biles. A la derecha, un contexto compacto de 20 mil tokens con la atenciêÂ³n concentrada y menos tiempo hasta el primer token." class="w-full h-auto" role="img" viewbox="0 0 1000 210">
 <defs><pattern height="32" id="m31e-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <filter height="180%" id="m31e-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
 <rect fill="url(#m31e-grid)" height="210" width="1000" x="0" y="0"></rect>
 <line stroke="#4b5563" stroke-dasharray="7 7" stroke-width="1.5" x1="500" x2="500" y1="30" y2="180"></line>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="250" y="36">400k â€” atenciÃ³n dispersa</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="250" y="36">400k ê¢â¬â atenciêÂ³n dispersa</text>
 <rect fill="#1a1230" height="70" opacity="0.6" rx="10" stroke="#c084fc" stroke-width="2" width="420" x="40" y="52"></rect>
 <g fill="#c084fc" opacity="0.55"><circle cx="80" cy="87" r="4"></circle><circle cx="140" cy="72" r="3"></circle><circle cx="200" cy="100" r="3"></circle><circle cx="265" cy="78" r="4"></circle><circle cx="330" cy="95" r="3"></circle><circle cx="400" cy="82" r="3"></circle></g>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="250" y="150">se equivoca mÃ¡s Â· TTFT mayor</text>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="750" y="36">20k â€” atenciÃ³n concentrada</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="250" y="150">se equivoca mêÂ¡s êÂ· TTFT mayor</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="750" y="36">20k ê¢â¬â atenciêÂ³n concentrada</text>
 <g filter="url(#m31e-glow)"><rect fill="#0e1b26" height="54" rx="10" stroke="#38bdf8" stroke-width="2" width="200" x="640" y="60"></rect></g>
 <g fill="#38bdf8"><circle cx="720" cy="87" r="5"></circle><circle cx="760" cy="87" r="5"></circle></g>
-<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="750" y="150">acierta mÃ¡s Â· responde antes</text>
+<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="750" y="150">acierta mêÂ¡s êÂ· responde antes</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: menos tokens = atenciÃ³n concentrada + primer token mÃ¡s rÃ¡pido. Compactar es una mejora de calidad, no solo de costos.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: menos tokens = atenciêÂ³n concentrada + primer token mêÂ¡s rêÂ¡pido. Compactar es una mejora de calidad, no solo de costos.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-<h4 class="font-bold text-emerald-400 mb-4">âœ“ Contexto compacto</h4>
+<h4 class="font-bold text-emerald-400 mb-4">ê¢Åâ Contexto compacto</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>AtenciÃ³n concentrada en lo que importa</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Menos Â«context rotÂ», menos errores</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>Primer token mÃ¡s rÃ¡pido (TTFT menor)</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>AtenciêÂ³n concentrada en lo que importa</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>Menos êÂ«context rotêÂ», menos errores</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>Primer token mêÂ¡s rêÂ¡pido (TTFT menor)</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">âœ— Contexto inflado</h4>
+<h4 class="font-bold text-red-400 mb-4">ê¢Åâ Contexto inflado</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>AtenciÃ³n dispersa, respuestas que dan vueltas</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>Errores por perder el hilo de lo que importa</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>MÃ¡s lento incluso leÃ­do de la cachÃ©</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>AtenciêÂ³n dispersa, respuestas que dan vueltas</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>Errores por perder el hilo de lo que importa</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>MêÂ¡s lento incluso leêÂ­do de la cachêÂ©</span></li>
 </ul>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Context rot</div><p class="text-xs text-neutral-400">AtenciÃ³n demasiado dispersa</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Context rot</div><p class="text-xs text-neutral-400">AtenciêÂ³n demasiado dispersa</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">TTFT</div><p class="text-xs text-neutral-400">Tiempo hasta el 1.er token</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">CachÃ© â‰  rapidez</div><p class="text-xs text-neutral-400">LeÃ­do, pero todavÃ­a grande</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Dos beneficios</div><p class="text-xs text-neutral-400">PrecisiÃ³n + velocidad</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">CachêÂ© ê¢â°Â  rapidez</div><p class="text-xs text-neutral-400">LeêÂ­do, pero todavêÂ­a grande</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Dos beneficios</div><p class="text-xs text-neutral-400">PrecisiêÂ³n + velocidad</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
-<!-- ===== TÃ“PICO 6 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-1#topico-6" id="topico-6">
+<!-- ===== TêâPICO 6 ===== -->
+<section class="mb-16" data-ARCKHê-topic="modulo-3-1#topico-6" id="topico-6">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-<h2 class="text-2xl font-bold">ðŸŽ¯ CuÃ¡ndo compactar / cuÃ¡ndo NO</h2>
+<h2 class="text-2xl font-bold">ê°Å¸Å½Â¯ CuêÂ¡ndo compactar / cuêÂ¡ndo NO</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar duda en este tema" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tengo una duda</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-1-t6-p1">El criterio es simple. <strong class="text-purple-400">ConversaciÃ³n pequeÃ±a â†’ NO compactes</strong>: simplemente pierdes el cachÃ© caliente sin obtener ningÃºn beneficio (esa intuiciÃ³n es correcta). <strong class="text-purple-400">Contexto grande, cerca del lÃ­mite o con la calidad en descenso â†’ compacta</strong>: cambias 1 write en frÃ­o por turnos mucho mÃ¡s ligeros.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-1-t6-p1">El criterio es simple. <strong class="text-purple-400">ConversaciêÂ³n pequeêÂ±a ê¢â â NO compactes</strong>: simplemente pierdes el cachêÂ© caliente sin obtener ningêÂºn beneficio (esa intuiciêÂ³n es correcta). <strong class="text-purple-400">Contexto grande, cerca del lêÂ­mite o con la calidad en descenso ê¢â â compacta</strong>: cambias 1 write en frêÂ­o por turnos mucho mêÂ¡s ligeros.</p>
 </div>
-<!-- SVG: fluxo de decisÃ£o -->
+<!-- SVG: fluxo de decisêÂ£o -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Ãrbol de decisiÃ³n: segÃºn el estado del contexto, si la conversaciÃ³n es corta, no la compactes para conservar la cachÃ© caliente; si el contexto es grande, estÃ¡ cerca del lÃ­mite o la calidad estÃ¡ bajando, compacta para tener turnos mÃ¡s ligeros." class="w-full h-auto" role="img" viewbox="0 0 1000 260">
+<svg aria-label="êÂrbol de decisiêÂ³n: segêÂºn el estado del contexto, si la conversaciêÂ³n es corta, no la compactes para conservar la cachêÂ© caliente; si el contexto es grande, estêÂ¡ cerca del lêÂ­mite o la calidad estêÂ¡ bajando, compacta para tener turnos mêÂ¡s ligeros." class="w-full h-auto" role="img" viewbox="0 0 1000 260">
 <defs><pattern height="32" id="m31f-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <filter height="180%" id="m31f-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
 <marker id="m31f-ag" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"></path></marker>
 <marker id="m31f-ar" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#f87171"></path></marker></defs>
 <rect fill="url(#m31f-grid)" height="260" width="1000" x="0" y="0"></rect>
 <g filter="url(#m31f-glow)"><rect fill="#1a1230" height="56" rx="14" stroke="#c084fc" stroke-width="2.5" width="220" x="390" y="30"></rect></g>
-<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="500" y="55">Â¿CÃ³mo estÃ¡ el contexto?</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="500" y="74">tamaÃ±o Â· lÃ­mite Â· calidad</text>
-<!-- ramo NÃƒO (verde: pequeno) -->
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="500" y="55">êÂ¿CêÂ³mo estêÂ¡ el contexto?</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="500" y="74">tamaêÂ±o êÂ· lêÂ­mite êÂ· calidad</text>
+<!-- ramo NêÆO (verde: pequeno) -->
 <path d="M410,86 C300,120 240,140 200,168" fill="none" marker-end="url(#m31f-ag)" opacity="0.7" stroke="#34d399" stroke-width="2"></path>
-<text fill="#6ee7b7" font-family="Inter,sans-serif" font-size="11.5" font-weight="600" x="250" y="130">conversaciÃ³n pequeÃ±a</text>
+<text fill="#6ee7b7" font-family="Inter,sans-serif" font-size="11.5" font-weight="600" x="250" y="130">conversaciêÂ³n pequeêÂ±a</text>
 <rect fill="#0e2018" height="60" rx="12" stroke="#34d399" stroke-width="2" width="280" x="60" y="176"></rect>
 <text fill="#6ee7b7" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="200" y="200">NO compactes</text>
-<text fill="#c9f2df" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="200" y="220">conserva la cachÃ© activa</text>
+<text fill="#c9f2df" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="200" y="220">conserva la cachêÂ© activa</text>
 <!-- ramo SIM (roxo/vermelho alerta: grande) -->
 <path d="M590,86 C700,120 760,140 800,168" fill="none" marker-end="url(#m31f-ar)" opacity="0.7" stroke="#f87171" stroke-width="2"></path>
-<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="11.5" font-weight="600" x="755" y="130">grande / en el lÃ­mite / cayendo</text>
+<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="11.5" font-weight="600" x="755" y="130">grande / en el lêÂ­mite / cayendo</text>
 <rect fill="#1a1230" height="60" rx="12" stroke="#c084fc" stroke-width="2" width="280" x="660" y="176"></rect>
 <text fill="#c084fc" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="800" y="200">COMPACTA</text>
-<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="800" y="220">1 write en frÃ­o â†’ turnos ligeros</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="800" y="220">1 write en frêÂ­o ê¢â â turnos ligeros</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: la rama <strong class="text-emerald-400">verde</strong> conserva la cachÃ©; la rama <strong class="text-purple-400">morado</strong> acepta 1 write en frÃ­o para ganar en todos los turnos siguientes.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Leyenda: la rama <strong class="text-emerald-400">verde</strong> conserva la cachêÂ©; la rama <strong class="text-purple-400">morado</strong> acepta 1 write en frêÂ­o para ganar en todos los turnos siguientes.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
-<h4 class="font-bold text-emerald-400 mb-4">âœ“ Compacta cuando</h4>
+<h4 class="font-bold text-emerald-400 mb-4">ê¢Åâ Compacta cuando</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>El contexto es grande y aÃºn faltan muchos turnos</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>EstÃ¡s cerca del lÃ­mite de 1M</span></li>
-<li class="flex items-start gap-2"><span class="text-emerald-400">âœ“</span><span>La calidad bajÃ³ / el modelo estÃ¡ dando vueltas</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>El contexto es grande y aêÂºn faltan muchos turnos</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>EstêÂ¡s cerca del lêÂ­mite de 1M</span></li>
+<li class="flex items-start gap-2"><span class="text-emerald-400">ê¢Åâ</span><span>La calidad bajêÂ³ / el modelo estêÂ¡ dando vueltas</span></li>
 </ul>
 </div>
 <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6">
-<h4 class="font-bold text-red-400 mb-4">âœ— No compactes cuando</h4>
+<h4 class="font-bold text-red-400 mb-4">ê¢Åâ No compactes cuando</h4>
 <ul class="space-y-2 text-neutral-300 text-sm">
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>La conversaciÃ³n es corta y el cachÃ© ya estÃ¡ caliente</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>EstÃ¡ por terminar (no hay turnos para amortizar la escritura en frÃ­o)</span></li>
-<li class="flex items-start gap-2"><span class="text-red-400">âœ—</span><span>Por costumbre, sin revisar el tamaÃ±o ni la calidad</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>La conversaciêÂ³n es corta y el cachêÂ© ya estêÂ¡ caliente</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>EstêÂ¡ por terminar (no hay turnos para amortizar la escritura en frêÂ­o)</span></li>
+<li class="flex items-start gap-2"><span class="text-red-400">ê¢Åâ</span><span>Por costumbre, sin revisar el tamaêÂ±o ni la calidad</span></li>
 </ul>
 </div>
 </div>
 <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ðŸ’¡</span> Regla prÃ¡ctica</h3>
-<p class="text-neutral-300 text-sm">Compacta por <strong>estado</strong> (tamaÃ±o, lÃ­mite, calidad), no por reloj. Y recuerda: la cachÃ© y la compactaciÃ³n trabajan juntas; despuÃ©s de compactar, el nuevo contexto pequeÃ±o tambiÃ©n se guarda en cachÃ© y vuelve a estar activo.</p>
+<h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span aria-hidden="true" class="mr-2">ê°Å¸âÂ¡</span> Regla prêÂ¡ctica</h3>
+<p class="text-neutral-300 text-sm">Compacta por <strong>estado</strong> (tamaêÂ±o, lêÂ­mite, calidad), no por reloj. Y recuerda: la cachêÂ© y la compactaciêÂ³n trabajan juntas; despuêÂ©s de compactar, el nuevo contexto pequeêÂ±o tambiêÂ©n se guarda en cachêÂ© y vuelve a estar activo.</p>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">PequeÃ±o â†’ no</div><p class="text-xs text-neutral-400">Conserva el cachÃ© caliente</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Grande â†’ sÃ­</div><p class="text-xs text-neutral-400">Turnos mucho mÃ¡s ligeros</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">SegÃºn el estado</div><p class="text-xs text-neutral-400">No por costumbre</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Juntos</div><p class="text-xs text-neutral-400">Compacto tambiÃ©n se guarda en cachÃ©</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">PequeêÂ±o ê¢â â no</div><p class="text-xs text-neutral-400">Conserva el cachêÂ© caliente</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Grande ê¢â â sêÂ­</div><p class="text-xs text-neutral-400">Turnos mucho mêÂ¡s ligeros</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">SegêÂºn el estado</div><p class="text-xs text-neutral-400">No por costumbre</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Juntos</div><p class="text-xs text-neutral-400">Compacto tambiêÂ©n se guarda en cachêÂ©</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como leÃ­do</span><span class="ARCKHÉ-label-done">LeÃ­do âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como leêÂ­do</span><span class="ARCKHê-label-done">LeêÂ­do ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== RESUMO ===== -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ðŸ“Œ</span> Resumen del mÃ³dulo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ê°Å¸âÅ</span> Resumen del mêÂ³dulo</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Dos ejes</strong><span class="text-neutral-400"> â€” la cachÃ© afecta el precio/token; compactar, la cantidad de tokens.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Lo almacenado en cachÃ© todavÃ­a cuesta</strong><span class="text-neutral-400"> â€” 400k @ 0,1Ã— â‰ˆ 40k equiv. por turno, en cada turno.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">âœ“</span><div><strong class="text-neutral-100">El lÃ­mite de 1M es una cantidad</strong><span class="text-neutral-400"> â€” solo compactar/<code class="font-mono text-xs">/clear</code> libera espacio.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Compactar se amortiza rÃ¡pido</strong><span class="text-neutral-400"> â€” 1 escritura en frÃ­o (~25k), se recupera la inversiÃ³n en ~1 turno y luego ~2k/turno.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Mejora la calidad y la latencia</strong><span class="text-neutral-400"> â€” menos context rot, menor TTFT.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">âœ“</span><div><strong class="text-neutral-100">El criterio</strong><span class="text-neutral-400"> â€” pequeÃ±o, no; grande/al lÃ­mite/en descenso, sÃ­.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Dos ejes</strong><span class="text-neutral-400"> ê¢â¬â la cachêÂ© afecta el precio/token; compactar, la cantidad de tokens.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Lo almacenado en cachêÂ© todavêÂ­a cuesta</strong><span class="text-neutral-400"> ê¢â¬â 400k @ 0,1êâ ê¢â°Ë 40k equiv. por turno, en cada turno.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">El lêÂ­mite de 1M es una cantidad</strong><span class="text-neutral-400"> ê¢â¬â solo compactar/<code class="font-mono text-xs">/clear</code> libera espacio.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Compactar se amortiza rêÂ¡pido</strong><span class="text-neutral-400"> ê¢â¬â 1 escritura en frêÂ­o (~25k), se recupera la inversiêÂ³n en ~1 turno y luego ~2k/turno.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Mejora la calidad y la latencia</strong><span class="text-neutral-400"> ê¢â¬â menos context rot, menor TTFT.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">El criterio</strong><span class="text-neutral-400"> ê¢â¬â pequeêÂ±o, no; grande/al lêÂ­mite/en descenso, sêÂ­.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-<h3 class="font-semibold text-purple-400 mb-1">Siguiente mÃ³dulo</h3>
-<p class="text-neutral-300 text-sm">3.2 â€” Arquitectura pro cachÃ© y auditorÃ­a: diseÃ±ar el prefijo para que nunca se invalide por accidente.</p>
+<h3 class="font-semibold text-purple-400 mb-1">Siguiente mêÂ³dulo</h3>
+<p class="text-neutral-300 text-sm">3.2 ê¢â¬â Arquitectura pro cachêÂ© y auditorêÂ­a: diseêÂ±ar el prefijo para que nunca se invalide por accidente.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">â† Volver a la Ruta 3</a>
-<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-2.html">Siguiente: 3.2 â†’</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">ê¢â Â Volver a la Ruta 3</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="modulo-3-2.html">Siguiente: 3.2 ê¢â â</a>
 </div>
 </div>
 </section>
@@ -673,13 +673,13 @@
 <!-- FOOTER -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache â€” Prompt Caching en Claude Code Â· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
+<p>cccache ê¢â¬â Prompt Caching en Claude Code êÂ· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a> êÂ· 2026</p>
 </div>
 </footer>
 <script src="../../../assets/learn.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') { ARCKHÉ.init(); }
+      if (window.ARCKHê && typeof ARCKHê.init === 'function') { ARCKHê.init(); }
     });
   </script>
 </body>

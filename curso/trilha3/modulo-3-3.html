@@ -4,20 +4,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="ARCKHÉ-course"/>
-<title>MÃ³dulo 3.3 â€” Prompts prontos (copy-run) | cccache Â· ARCKHÉ AI</title>
+<meta content="cccache" name="ARCKHê-course"/>
+<title>MêÂ³dulo 3.3 ê¢â¬â Prompts prontos (copy-run) | cccache êÂ· ARCKHê AI</title>
 <!-- 1) ANTI-FOUC -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHê.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHê-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHê-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
@@ -25,36 +25,36 @@
     })();
   </script>
 <!-- 2) MANIFESTO (erro #28) -->
-<script data-ARCKHÉ-manifest="" type="application/json">
+<script data-ARCKHê-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache ê¢â¬â Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que êÂ© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "TÃ©cnico",
+      "id": "trilha2", "title": "TêÂ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaêÂ§êÂ£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
+      "id": "trilha3", "title": "Boas prêÂ¡ticas avanêÂ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaêÂ§êÂ£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prêÂ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -138,72 +138,72 @@
   </style>
 <link href="../../assets/learn.css" rel="stylesheet"/>
 <link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-3-3.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha3/modulo-3-3.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha3/modulo-3-3.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="ARCKHÉ-skip" href="#conteudo">Pular para o conteÃºdo</a>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHê-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="modulo-3-3.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="../../en/curso/trilha3/modulo-3-3.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="../../es/curso/trilha3/modulo-3-3.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="ARCKHê-skip" href="#conteudo">Pular para o conteêÂºdo</a>
 <!-- ================= NAVIGATION ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
-<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
+<span aria-hidden="true" class="text-2xl">ê°Å¸Â§Â </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a>
 </div>
 <div class="flex items-center space-x-1 sm:space-x-2">
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
-<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">TÃ©cnico</span></a>
-<a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Boas prÃ¡ticas</span></a>
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
-<span aria-hidden="true">â—·</span><span>Minha jornada</span>
-<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">TêÂ©cnico</span></a>
+<a aria-current="page" class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Boas prêÂ¡ticas</span></a>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-journey-open="" type="button">
+<span aria-hidden="true">ê¢âÂ·</span><span>Minha jornada</span>
+<span class="ARCKHê-journey-badge hidden" data-count="0" data-ARCKHê-journey-badge=""></span>
 </button>
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
-<span aria-hidden="true">â—‘</span><span class="hidden sm:inline">AparÃªncia</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" type="button">
+<span aria-hidden="true">ê¢ââ</span><span class="hidden sm:inline">AparêÂªncia</span>
 </button>
-<div aria-label="AparÃªncia e leitura" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
-<p class="ARCKHÉ-seg-label">Tema</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Escuro</button>
-<button data-ARCKHÉ-set-theme="claro" type="button">Claro</button>
-<button data-ARCKHÉ-set-theme="sepia" type="button">SÃ©pia</button>
-<button data-ARCKHÉ-set-theme="foco" type="button">Foco</button>
-<button data-ARCKHÉ-set-theme="contraste" type="button">Alto contraste</button>
+<div aria-label="AparêÂªncia e leitura" class="ARCKHê-appearance-pop" data-ARCKHê-appearance="" role="group">
+<p class="ARCKHê-seg-label">Tema</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-theme="ARCKHê-dark" type="button">Escuro</button>
+<button data-ARCKHê-set-theme="claro" type="button">Claro</button>
+<button data-ARCKHê-set-theme="sepia" type="button">SêÂ©pia</button>
+<button data-ARCKHê-set-theme="foco" type="button">Foco</button>
+<button data-ARCKHê-set-theme="contraste" type="button">Alto contraste</button>
 </div>
-<p class="ARCKHÉ-seg-label">Fonte</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
-<button data-ARCKHÉ-set-font="system" type="button">Sistema</button>
-<button data-ARCKHÉ-set-font="leitura" type="button">Leitura</button>
+<p class="ARCKHê-seg-label">Fonte</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-font="inter" type="button">Inter</button>
+<button data-ARCKHê-set-font="system" type="button">Sistema</button>
+<button data-ARCKHê-set-font="leitura" type="button">Leitura</button>
 </div>
-<p class="ARCKHÉ-seg-label">Tamanho</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
-<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
-<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHê-seg-label">Tamanho</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-fontscale="100" type="button">A</button>
+<button data-ARCKHê-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHê-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="ARCKHÉ-seg-label">Largura da linha</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-linewidth="60" type="button">Estreito</button>
-<button data-ARCKHÉ-set-linewidth="68" type="button">MÃ©dio</button>
-<button data-ARCKHÉ-set-linewidth="75" type="button">Largo</button>
+<p class="ARCKHê-seg-label">Largura da linha</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-linewidth="60" type="button">Estreito</button>
+<button data-ARCKHê-set-linewidth="68" type="button">MêÂ©dio</button>
+<button data-ARCKHê-set-linewidth="75" type="button">Largo</button>
 </div>
-<p class="ARCKHÉ-seg-label">Entrelinha</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-leading="1.45" type="button">Compacto</button>
-<button data-ARCKHÉ-set-leading="1.7" type="button">ConfortÃ¡vel</button>
+<p class="ARCKHê-seg-label">Entrelinha</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-leading="1.45" type="button">Compacto</button>
+<button data-ARCKHê-set-leading="1.7" type="button">ConfortêÂ¡vel</button>
 </div>
-<p class="ARCKHÉ-seg-label">Acento</p>
-<div aria-label="Cor de acento" class="ARCKHÉ-accent-grid" role="group">
-<button aria-label="Esmeralda" data-ARCKHÉ-set-accent="emerald" type="button"></button>
-<button aria-label="Azul" data-ARCKHÉ-set-accent="blue" type="button"></button>
-<button aria-label="Roxo" data-ARCKHÉ-set-accent="purple" type="button"></button>
-<button aria-label="Ã‚mbar" data-ARCKHÉ-set-accent="amber" type="button"></button>
-<button aria-label="Turquesa" data-ARCKHÉ-set-accent="teal" type="button"></button>
-<button aria-label="Rosa" data-ARCKHÉ-set-accent="rose" type="button"></button>
+<p class="ARCKHê-seg-label">Acento</p>
+<div aria-label="Cor de acento" class="ARCKHê-accent-grid" role="group">
+<button aria-label="Esmeralda" data-ARCKHê-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-ARCKHê-set-accent="blue" type="button"></button>
+<button aria-label="Roxo" data-ARCKHê-set-accent="purple" type="button"></button>
+<button aria-label="êâmbar" data-ARCKHê-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-ARCKHê-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-ARCKHê-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -216,385 +216,385 @@
 </div>
 </nav>
 <!-- Breadcrumb -->
-<nav aria-label="Trilha de navegaÃ§Ã£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+<nav aria-label="Trilha de navegaêÂ§êÂ£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
 <div class="flex items-center flex-wrap gap-2 text-sm text-neutral-400">
-<a class="hover:text-purple-400" href="../../index.html">InÃ­cio</a><span aria-hidden="true">/</span>
+<a class="hover:text-purple-400" href="../../index.html">InêÂ­cio</a><span aria-hidden="true">/</span>
 <a class="hover:text-purple-400" href="index.html">Trilha 3</a><span aria-hidden="true">/</span>
-<span class="text-purple-400">MÃ³dulo 3.3</span>
+<span class="text-purple-400">MêÂ³dulo 3.3</span>
 </div>
 </nav>
 <!-- Header -->
 <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 3.3</span>
-<h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ“‹ Prompts prontos (copy-run)</h1>
-<p class="text-lg text-neutral-300 max-w-3xl">Seis prompts <strong class="text-purple-400">colÃ¡veis de verdade</strong> pra usar no Claude Code hoje. Cada um vem com objetivo, o bloco pra copiar (com as partes que vocÃª troca marcadas como <code class="font-mono text-sm">&lt;assim&gt;</code>) e como verificar o resultado nos campos de <code class="font-mono text-sm">usage</code>.</p>
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MêâDULO 3.3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸ââ¹ Prompts prontos (copy-run)</h1>
+<p class="text-lg text-neutral-300 max-w-3xl">Seis prompts <strong class="text-purple-400">colêÂ¡veis de verdade</strong> pra usar no Claude Code hoje. Cada um vem com objetivo, o bloco pra copiar (com as partes que vocêÂª troca marcadas como <code class="font-mono text-sm">&lt;assim&gt;</code>) e como verificar o resultado nos campos de <code class="font-mono text-sm">usage</code>.</p>
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Prompts</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~30</div><div class="text-xs text-neutral-400">Minutos</div></div>
-<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">AvanÃ§ado</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">AvanêÂ§ado</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
 <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Copy-run</div><div class="text-xs text-neutral-400">Tipo</div></div>
 </div>
 </div>
 </header>
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:flex lg:gap-8" id="conteudo">
 <!-- TOC -->
-<nav aria-label="Ãndice da pÃ¡gina" class="hidden lg:block sticky top-20 self-start w-56 shrink-0" data-ARCKHÉ-toc="">
+<nav aria-label="êÂndice da pêÂ¡gina" class="hidden lg:block sticky top-20 self-start w-56 shrink-0" data-ARCKHê-toc="">
 <p class="text-xs uppercase tracking-wide text-neutral-500 mb-2">Os 6 prompts</p>
-<p class="text-sm text-neutral-400 mb-3"><span data-ARCKHÉ-section-counter="">SeÃ§Ã£o 1 de 6</span></p>
+<p class="text-sm text-neutral-400 mb-3"><span data-ARCKHê-section-counter="">SeêÂ§êÂ£o 1 de 6</span></p>
 <ol class="space-y-1 text-sm">
-<li><a class="ARCKHÉ-toc-link" href="#topico-1">1. Auditar cache</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-2">2. Tools determinÃ­stica</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-3">3. Compactar vs continuar</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-4">4. Diagnosticar read = 0</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-5">5. Revisar system</a></li>
-<li><a class="ARCKHÉ-toc-link" href="#topico-6">6. Breakpoints</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-1">1. Auditar cache</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-2">2. Tools determinêÂ­stica</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-3">3. Compactar vs continuar</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-4">4. Diagnosticar read = 0</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-5">5. Revisar system</a></li>
+<li><a class="ARCKHê-toc-link" href="#topico-6">6. Breakpoints</a></li>
 </ol>
 <div class="mt-5 pt-4 border-t border-dark-600">
-<div aria-label="Progresso do mÃ³dulo 3.3" class="ARCKHÉ-meter" data-ARCKHÉ-meter="modulo-3-3">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
-<span class="text-xs text-purple-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<div aria-label="Progresso do mêÂ³dulo 3.3" class="ARCKHê-meter" data-ARCKHê-meter="modulo-3-3">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
+<span class="text-xs text-purple-400 font-semibold" data-ARCKHê-meter-pct="">0%</span>
 </div>
-<p class="text-xs text-neutral-500 mt-1"><span data-ARCKHÉ-meter-frac="">0 de 6</span> lidos</p>
+<p class="text-xs text-neutral-500 mt-1"><span data-ARCKHê-meter-frac="">0 de 6</span> lidos</p>
 </div>
 </nav>
-<!-- ConteÃºdo -->
-<main class="flex-1 min-w-0" data-ARCKHÉ-module="3-3" data-ARCKHÉ-track="3" id="modulo-3-3">
+<!-- ConteêÂºdo -->
+<main class="flex-1 min-w-0" data-ARCKHê-module="3-3" data-ARCKHê-track="3" id="modulo-3-3">
 <!-- Intro / como usar -->
 <div class="mb-12">
-<div class="ARCKHÉ-prose text-neutral-300 mb-4" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-p1">Cada prompt segue o mesmo formato: <strong class="text-purple-400">Objetivo</strong> (o que ele faz), <strong class="text-purple-400">o bloco colÃ¡vel</strong> (copie e troque as partes entre <code class="font-mono text-sm">&lt;chevrons&gt;</code>) e <strong class="text-purple-400">Como verificar</strong> (o que olhar no <code class="font-mono text-sm">usage</code> pra saber que funcionou). Todos apoiam na mesma verdade: cache Ã© casamento de prefixo, e a soma de <code class="font-mono text-xs">cache_read_input_tokens</code> + <code class="font-mono text-xs">cache_creation_input_tokens</code> + <code class="font-mono text-xs">input_tokens</code> Ã© o tamanho do prompt.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-4" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-p1">Cada prompt segue o mesmo formato: <strong class="text-purple-400">Objetivo</strong> (o que ele faz), <strong class="text-purple-400">o bloco colêÂ¡vel</strong> (copie e troque as partes entre <code class="font-mono text-sm">&lt;chevrons&gt;</code>) e <strong class="text-purple-400">Como verificar</strong> (o que olhar no <code class="font-mono text-sm">usage</code> pra saber que funcionou). Todos apoiam na mesma verdade: cache êÂ© casamento de prefixo, e a soma de <code class="font-mono text-xs">cache_read_input_tokens</code> + <code class="font-mono text-xs">cache_creation_input_tokens</code> + <code class="font-mono text-xs">input_tokens</code> êÂ© o tamanho do prompt.</p>
 </div>
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 overflow-hidden">
-<svg aria-label="Fluxo de uso de cada prompt: copiar o bloco, trocar as partes variÃ¡veis, colar e rodar no Claude Code, e verificar o resultado nos campos de uso da resposta." class="w-full h-auto" role="img" viewbox="0 0 1000 130">
+<svg aria-label="Fluxo de uso de cada prompt: copiar o bloco, trocar as partes variêÂ¡veis, colar e rodar no Claude Code, e verificar o resultado nos campos de uso da resposta." class="w-full h-auto" role="img" viewbox="0 0 1000 130">
 <defs><pattern height="32" id="m33i-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <filter height="180%" id="m33i-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
 <marker id="m33i-ap" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#c084fc"></path></marker>
 <marker id="m33i-ac" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path></marker></defs>
 <rect fill="url(#m33i-grid)" height="130" width="1000" x="0" y="0"></rect>
 <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
-<rect fill="#1a1230" height="46" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="30" y="42"></rect><text fill="#c084fc" text-anchor="middle" x="120" y="70">1 Â· copiar + trocar</text>
+<rect fill="#1a1230" height="46" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="30" y="42"></rect><text fill="#c084fc" text-anchor="middle" x="120" y="70">1 êÂ· copiar + trocar</text>
 <path d="M210,65 L268,65" fill="none" marker-end="url(#m33i-ap)" opacity="0.7" stroke="#c084fc" stroke-width="2"></path>
-<rect fill="#1a1230" height="46" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="270" y="42"></rect><text fill="#c084fc" text-anchor="middle" x="360" y="70">2 Â· colar no Claude</text>
+<rect fill="#1a1230" height="46" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="270" y="42"></rect><text fill="#c084fc" text-anchor="middle" x="360" y="70">2 êÂ· colar no Claude</text>
 <path d="M450,65 L508,65" fill="none" marker-end="url(#m33i-ap)" opacity="0.7" stroke="#c084fc" stroke-width="2"></path>
-<rect fill="#1a1230" height="46" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="510" y="42"></rect><text fill="#c084fc" text-anchor="middle" x="600" y="70">3 Â· rodar</text>
+<rect fill="#1a1230" height="46" rx="12" stroke="#c084fc" stroke-width="2" width="180" x="510" y="42"></rect><text fill="#c084fc" text-anchor="middle" x="600" y="70">3 êÂ· rodar</text>
 <path d="M690,65 L748,65" fill="none" marker-end="url(#m33i-ac)" opacity="0.7" stroke="#38bdf8" stroke-width="2"></path>
 </g>
 <g filter="url(#m33i-glow)"><rect fill="#0e1b26" height="46" rx="12" stroke="#38bdf8" stroke-width="2.5" width="220" x="750" y="42"></rect></g>
-<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="860" y="63">4 Â· verificar usage</text>
+<text fill="#bfe6ff" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="860" y="63">4 êÂ· verificar usage</text>
 <text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="10.5" text-anchor="middle" x="860" y="80">cache_read sobe?</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Legenda: os trÃªs passos <strong class="text-purple-400">roxos</strong> preparam e rodam; o passo <strong class="text-sky-400">ciano</strong> confirma no <code class="font-mono text-xs">usage</code> se o cache melhorou.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Legenda: os trêÂªs passos <strong class="text-purple-400">roxos</strong> preparam e rodam; o passo <strong class="text-sky-400">ciano</strong> confirma no <code class="font-mono text-xs">usage</code> se o cache melhorou.</p>
 </div>
 </div>
 <!-- ===== PROMPT 1 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-3#topico-1" id="topico-1">
+<section class="mb-16" data-ARCKHê-topic="modulo-3-3#topico-1" id="topico-1">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span>
-<h2 class="text-2xl font-bold">ðŸ•µï¸ Auditar cache de um pipeline</h2>
+<h2 class="text-2xl font-bold">ê°Å¸â¢Âµê¯Â¸Â Auditar cache de um pipeline</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar dêÂºvida neste têÂ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dêÂºvida</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-t1-p1">Use quando o cache "nÃ£o bate" e vocÃª nÃ£o sabe por quÃª. Este prompt faz o Claude Code varrer o cÃ³digo que monta o prefixo e devolver uma <strong class="text-purple-400">lista acionÃ¡vel</strong> de silent invalidators, cada um com arquivo, linha e fix.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-t1-p1">Use quando o cache "nêÂ£o bate" e vocêÂª nêÂ£o sabe por quêÂª. Este prompt faz o Claude Code varrer o cêÂ³digo que monta o prefixo e devolver uma <strong class="text-purple-400">lista acionêÂ¡vel</strong> de silent invalidators, cada um com arquivo, linha e fix.</p>
 </div>
 <div class="prompt-box bg-dark-800 border border-purple-500/30 rounded-xl overflow-hidden mb-6">
-<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">â–¶ï¸</span><span class="font-semibold text-purple-400">Prompt 1 â€” auditoria de cache</span></div>
+<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">ê¢âÂ¶ê¯Â¸Â</span><span class="font-semibold text-purple-400">Prompt 1 ê¢â¬â auditoria de cache</span></div>
 <div class="p-5 space-y-4">
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Listar cada byte de variaÃ§Ã£o que impede o cache no seu pipeline, priorizado por impacto.</p></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;â€¦&gt;</code>)</p>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Listar cada byte de variaêÂ§êÂ£o que impede o cache no seu pipeline, priorizado por impacto.</p></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;ê¢â¬Â¦&gt;</code>)</p>
 <pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Audite o prompt caching do meu pipeline em &lt;caminho/do/projeto&gt;.
 Varra TUDO que alimenta o prefixo (a lista de `tools`, o `system` e o
-comeÃ§o estÃ¡vel das `messages`) e liste cada silent invalidator:
-- datetime.now() / Date.now() / uuid / id aleatÃ³rio no prefixo;
+comeêÂ§o estêÂ¡vel das `messages`) e liste cada silent invalidator:
+- datetime.now() / Date.now() / uuid / id aleatêÂ³rio no prefixo;
 - json.dumps sem sort_keys=True;
-- iteraÃ§Ã£o de set (ordem nÃ£o garantida);
-- tools montadas por usuÃ¡rio/modo;
-- seÃ§Ã£o condicional no system (if flag: system += ...).
-Para cada achado, dÃª: arquivo, linha, por que quebra o cache e o fix mÃ­nimo.
-Ordene por impacto â€” o que fica mais na FRENTE do prefixo primeiro.</pre></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Aplique os fixes e rode duas requisiÃ§Ãµes iguais. No <code class="font-mono text-xs">usage</code>, <code class="font-mono text-xs">cache_read_input_tokens</code> deve deixar de ser 0 a partir da 2Âª. Se ainda vier 0, sobrou um invalidator â€” use o Prompt 4.</p></div>
+- iteraêÂ§êÂ£o de set (ordem nêÂ£o garantida);
+- tools montadas por usuêÂ¡rio/modo;
+- seêÂ§êÂ£o condicional no system (if flag: system += ...).
+Para cada achado, dêÂª: arquivo, linha, por que quebra o cache e o fix mêÂ­nimo.
+Ordene por impacto ê¢â¬â o que fica mais na FRENTE do prefixo primeiro.</pre></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Aplique os fixes e rode duas requisiêÂ§êÂµes iguais. No <code class="font-mono text-xs">usage</code>, <code class="font-mono text-xs">cache_read_input_tokens</code> deve deixar de ser 0 a partir da 2êÂª. Se ainda vier 0, sobrou um invalidator ê¢â¬â use o Prompt 4.</p></div>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Varredura</div><p class="text-xs text-neutral-400">Tools + system + messages</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Arquivo+linha</div><p class="text-xs text-neutral-400">Achado acionÃ¡vel</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Arquivo+linha</div><p class="text-xs text-neutral-400">Achado acionêÂ¡vel</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Por impacto</div><p class="text-xs text-neutral-400">Frente do prefixo antes</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Verifica</div><p class="text-xs text-neutral-400">read &gt; 0 no 2Âº request</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Verifica</div><p class="text-xs text-neutral-400">read &gt; 0 no 2êÂº request</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como lido</span><span class="ARCKHê-label-done">Lido ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== PROMPT 2 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-3#topico-2" id="topico-2">
+<section class="mb-16" data-ARCKHê-topic="modulo-3-3#topico-2" id="topico-2">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span>
-<h2 class="text-2xl font-bold">ðŸ”¤ Tornar a lista de tools determinÃ­stica</h2>
+<h2 class="text-2xl font-bold">ê°Å¸âÂ¤ Tornar a lista de tools determinêÂ­stica</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar dêÂºvida neste têÂ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dêÂºvida</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-t2-p1">Use quando as <code class="font-mono text-sm">tools</code> saem de um <code class="font-mono text-sm">set</code>/<code class="font-mono text-sm">dict</code> e a ordem pode variar. Como as tools ficam na <strong class="text-purple-400">posiÃ§Ã£o 0</strong>, qualquer troca de ordem invalida o prefixo inteiro.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-t2-p1">Use quando as <code class="font-mono text-sm">tools</code> saem de um <code class="font-mono text-sm">set</code>/<code class="font-mono text-sm">dict</code> e a ordem pode variar. Como as tools ficam na <strong class="text-purple-400">posiêÂ§êÂ£o 0</strong>, qualquer troca de ordem invalida o prefixo inteiro.</p>
 </div>
 <div class="prompt-box bg-dark-800 border border-purple-500/30 rounded-xl overflow-hidden mb-6">
-<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">â–¶ï¸</span><span class="font-semibold text-purple-400">Prompt 2 â€” serializaÃ§Ã£o estÃ¡vel de tools</span></div>
+<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">ê¢âÂ¶ê¯Â¸Â</span><span class="font-semibold text-purple-400">Prompt 2 ê¢â¬â serializaêÂ§êÂ£o estêÂ¡vel de tools</span></div>
 <div class="p-5 space-y-4">
 <div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Garantir que a lista de <code class="font-mono text-xs">tools</code> saia sempre na mesma ordem entre requests.</p></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;â€¦&gt;</code>)</p>
-<pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Em &lt;caminho/do/arquivo&gt;, a lista de `tools` Ã© montada assim:
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;ê¢â¬Â¦&gt;</code>)</p>
+<pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Em &lt;caminho/do/arquivo&gt;, a lista de `tools` êÂ© montada assim:
 &lt;cole aqui o trecho que monta as tools&gt;
-Reescreva pra serializaÃ§Ã£o ficar DETERMINÃSTICA:
+Reescreva pra serializaêÂ§êÂ£o ficar DETERMINêÂSTICA:
 1) ordene as tools por nome antes de enviar
    (ex.: sorted(tools, key=lambda t: t["name"]));
 2) garanta que cada objeto interno saia ordenado
    (json.dumps(..., sort_keys=True));
-3) confirme que a ordem Ã© IDÃŠNTICA entre dois requests.
-Mostre o diff e explique por que isso preserva o prefixo (posiÃ§Ã£o 0).</pre></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Dispare dois requests iguais: <code class="font-mono text-xs">cache_read_input_tokens</code> passa a ser &gt; 0 no 2Âº. Antes da correÃ§Ã£o, ele ficava 0 mesmo repetindo o mesmo prompt.</p></div>
+3) confirme que a ordem êÂ© IDêÅ NTICA entre dois requests.
+Mostre o diff e explique por que isso preserva o prefixo (posiêÂ§êÂ£o 0).</pre></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Dispare dois requests iguais: <code class="font-mono text-xs">cache_read_input_tokens</code> passa a ser &gt; 0 no 2êÂº. Antes da correêÂ§êÂ£o, ele ficava 0 mesmo repetindo o mesmo prompt.</p></div>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">PosiÃ§Ã£o 0</div><p class="text-xs text-neutral-400">Tools antes de tudo</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">PosiêÂ§êÂ£o 0</div><p class="text-xs text-neutral-400">Tools antes de tudo</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">sorted()</div><p class="text-xs text-neutral-400">Ordene por nome</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">sort_keys</div><p class="text-xs text-neutral-400">Objetos internos tambÃ©m</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">IdÃªntico</div><p class="text-xs text-neutral-400">Entre requests</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">sort_keys</div><p class="text-xs text-neutral-400">Objetos internos tambêÂ©m</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">IdêÂªntico</div><p class="text-xs text-neutral-400">Entre requests</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como lido</span><span class="ARCKHê-label-done">Lido ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== PROMPT 3 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-3#topico-3" id="topico-3">
+<section class="mb-16" data-ARCKHê-topic="modulo-3-3#topico-3" id="topico-3">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span>
-<h2 class="text-2xl font-bold">ðŸ¤” Decidir compactar vs continuar</h2>
+<h2 class="text-2xl font-bold">ê°Å¸Â¤â Decidir compactar vs continuar</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar dêÂºvida neste têÂ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dêÂºvida</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-t3-p1">Use quando o contexto cresceu e vocÃª nÃ£o sabe se vale <code class="font-mono text-sm">/compact</code>. Este prompt pÃµe <strong class="text-purple-400">nÃºmeros</strong> na decisÃ£o: custo por turno de continuar vs custo Ãºnico de compactar, com o payback.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-t3-p1">Use quando o contexto cresceu e vocêÂª nêÂ£o sabe se vale <code class="font-mono text-sm">/compact</code>. Este prompt pêÂµe <strong class="text-purple-400">nêÂºmeros</strong> na decisêÂ£o: custo por turno de continuar vs custo êÂºnico de compactar, com o payback.</p>
 </div>
 <div class="prompt-box bg-dark-800 border border-purple-500/30 rounded-xl overflow-hidden mb-6">
-<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">â–¶ï¸</span><span class="font-semibold text-purple-400">Prompt 3 â€” compactar ou continuar</span></div>
+<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">ê¢âÂ¶ê¯Â¸Â</span><span class="font-semibold text-purple-400">Prompt 3 ê¢â¬â compactar ou continuar</span></div>
 <div class="p-5 space-y-4">
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Comparar o custo por turno de carregar o contexto atual com o custo Ãºnico de compactar, e recomendar.</p></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;â€¦&gt;</code>)</p>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Comparar o custo por turno de carregar o contexto atual com o custo êÂºnico de compactar, e recomendar.</p></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;ê¢â¬Â¦&gt;</code>)</p>
 <pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Estou com um contexto de ~&lt;N&gt; tokens e ainda faltam ~&lt;M&gt; turnos.
-Compare os dois caminhos (use readâ‰ˆ0,1Ã— Â· write 5minâ‰ˆ1,25Ã—):
-(a) CONTINUAR sem compactar: custo por turno = N @ 0,1Ã— â‰ˆ N/10-equiv,
+Compare os dois caminhos (use readê¢â°Ë0,1êâ êÂ· write 5minê¢â°Ë1,25êâ):
+(a) CONTINUAR sem compactar: custo por turno = N @ 0,1êâ ê¢â°Ë N/10-equiv,
     repetido em todos os &lt;M&gt; turnos;
-(b) COMPACTAR pra ~&lt;K&gt; tokens: 1 write frio K @ 1,25Ã— (uma vez) e
-    depois K @ 0,1Ã— por turno.
-Diga o payback (em quantos turnos a compactaÃ§Ã£o se paga) e recomende
-compactar OU continuar â€” considerando tambÃ©m o teto de 1M e a qualidade
+(b) COMPACTAR pra ~&lt;K&gt; tokens: 1 write frio K @ 1,25êâ (uma vez) e
+    depois K @ 0,1êâ por turno.
+Diga o payback (em quantos turnos a compactaêÂ§êÂ£o se paga) e recomende
+compactar OU continuar ê¢â¬â considerando tambêÂ©m o teto de 1M e a qualidade
 (context rot). Se a conversa for curta, avise que continuar pode ser melhor.</pre></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">A recomendaÃ§Ã£o deve seguir a rÃ©gua do mÃ³dulo 3.1: contexto pequeno / poucos turnos â†’ continuar (preserva o cache quente); contexto grande, perto do teto ou qualidade caindo â†’ compactar (payback em ~1 turno).</p></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">A recomendaêÂ§êÂ£o deve seguir a rêÂ©gua do mêÂ³dulo 3.1: contexto pequeno / poucos turnos ê¢â â continuar (preserva o cache quente); contexto grande, perto do teto ou qualidade caindo ê¢â â compactar (payback em ~1 turno).</p></div>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Custo/turno</div><p class="text-xs text-neutral-400">N @ 0,1Ã—</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Write frio</div><p class="text-xs text-neutral-400">K @ 1,25Ã—, uma vez</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Custo/turno</div><p class="text-xs text-neutral-400">N @ 0,1êâ</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Write frio</div><p class="text-xs text-neutral-400">K @ 1,25êâ, uma vez</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Payback</div><p class="text-xs text-neutral-400">Em quantos turnos paga</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">RÃ©gua</div><p class="text-xs text-neutral-400">Pequenoâ†’continuar</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">RêÂ©gua</div><p class="text-xs text-neutral-400">Pequenoê¢â âcontinuar</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como lido</span><span class="ARCKHê-label-done">Lido ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== PROMPT 4 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-3#topico-4" id="topico-4">
+<section class="mb-16" data-ARCKHê-topic="modulo-3-3#topico-4" id="topico-4">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span>
-<h2 class="text-2xl font-bold">ðŸ©º Diagnosticar <code class="font-mono">cache_read = 0</code></h2>
+<h2 class="text-2xl font-bold">ê°Å¸Â©Âº Diagnosticar <code class="font-mono">cache_read = 0</code></h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar dêÂºvida neste têÂ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dêÂºvida</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-t4-p1">Use quando <code class="font-mono text-sm">cache_read_input_tokens</code> vem <strong class="text-purple-400">sempre 0</strong> mesmo repetindo o mesmo prompt. Ã‰ a prova de que existe um silent invalidator; este prompt faz o <strong class="text-purple-400">diff dos bytes</strong> pra achar o culpado.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-t4-p1">Use quando <code class="font-mono text-sm">cache_read_input_tokens</code> vem <strong class="text-purple-400">sempre 0</strong> mesmo repetindo o mesmo prompt. êâ° a prova de que existe um silent invalidator; este prompt faz o <strong class="text-purple-400">diff dos bytes</strong> pra achar o culpado.</p>
 </div>
 <!-- SVG: diff de dois requests -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Dois requests iguais tÃªm o prefixo comparado byte a byte; o diff aponta o Ãºnico trecho que muda, por exemplo um carimbo de data e hora, que Ã© a causa do cache nÃ£o bater." class="w-full h-auto" role="img" viewbox="0 0 1000 180">
+<svg aria-label="Dois requests iguais têÂªm o prefixo comparado byte a byte; o diff aponta o êÂºnico trecho que muda, por exemplo um carimbo de data e hora, que êÂ© a causa do cache nêÂ£o bater." class="w-full h-auto" role="img" viewbox="0 0 1000 180">
 <defs><pattern height="32" id="m33d-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <filter height="180%" id="m33d-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
 <rect fill="url(#m33d-grid)" height="180" width="1000" x="0" y="0"></rect>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="200" y="34">request A Â· prefixo</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="200" y="34">request A êÂ· prefixo</text>
 <rect fill="#1a1230" height="34" rx="8" stroke="#c084fc" stroke-width="2" width="320" x="40" y="46"></rect>
 <text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="160" y="68">system... 14:03:07 ...tools</text>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="200" y="110">request B Â· prefixo</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="12.5" font-weight="600" text-anchor="middle" x="200" y="110">request B êÂ· prefixo</text>
 <rect fill="#1a1230" height="34" rx="8" stroke="#c084fc" stroke-width="2" width="320" x="40" y="120"></rect>
 <text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="160" y="142">system... 14:03:09 ...tools</text>
 <!-- diff -->
 <g filter="url(#m33d-glow)"><rect fill="#2a0f16" height="66" rx="14" stroke="#f87171" stroke-width="2.5" width="480" x="470" y="60"></rect></g>
-<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="710" y="88">diff: sÃ³ o timestamp muda</text>
-<text fill="#fecaca" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="710" y="110">â†’ datetime.now() no system = o invalidator</text>
+<text fill="#fca5a5" font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle" x="710" y="88">diff: sêÂ³ o timestamp muda</text>
+<text fill="#fecaca" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="710" y="110">ê¢â â datetime.now() no system = o invalidator</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Legenda: dois prefixos "iguais", um Ãºnico trecho diferente. Esse byte Ã© o motivo de <code class="font-mono text-xs">cache_read</code> ficar 0.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Legenda: dois prefixos "iguais", um êÂºnico trecho diferente. Esse byte êÂ© o motivo de <code class="font-mono text-xs">cache_read</code> ficar 0.</p>
 </div>
 <div class="prompt-box bg-dark-800 border border-purple-500/30 rounded-xl overflow-hidden mb-6">
-<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">â–¶ï¸</span><span class="font-semibold text-purple-400">Prompt 4 â€” diff do prefixo</span></div>
+<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">ê¢âÂ¶ê¯Â¸Â</span><span class="font-semibold text-purple-400">Prompt 4 ê¢â¬â diff do prefixo</span></div>
 <div class="p-5 space-y-4">
 <div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Achar o primeiro byte que muda entre dois requests iguais e a sua origem.</p></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;â€¦&gt;</code>)</p>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;ê¢â¬Â¦&gt;</code>)</p>
 <pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Meu cache_read_input_tokens vem SEMPRE 0 repetindo o MESMO prompt.
-Capture os bytes exatos do prefixo (tools + system + comeÃ§o das messages)
-de DOIS requests consecutivos e faÃ§a o diff entre eles.
+Capture os bytes exatos do prefixo (tools + system + comeêÂ§o das messages)
+de DOIS requests consecutivos e faêÂ§a o diff entre eles.
 Aponte o PRIMEIRO ponto que difere e explique a origem
-(relÃ³gio/datetime.now(), uuid, ordem de set/dict, json.dumps sem sort_keys,
-seÃ§Ã£o condicional no system). Proponha o fix determinÃ­stico.
+(relêÂ³gio/datetime.now(), uuid, ordem de set/dict, json.dumps sem sort_keys,
+seêÂ§êÂ£o condicional no system). Proponha o fix determinêÂ­stico.
 Arquivos que montam o prefixo: &lt;cole os caminhos&gt;.</pre></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Depois do fix, refaÃ§a o diff dos dois prefixos: ele deve ficar <strong>vazio</strong>. AÃ­ <code class="font-mono text-xs">cache_read_input_tokens</code> passa a subir a cada turno repetido.</p></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Depois do fix, refaêÂ§a o diff dos dois prefixos: ele deve ficar <strong>vazio</strong>. AêÂ­ <code class="font-mono text-xs">cache_read_input_tokens</code> passa a subir a cada turno repetido.</p></div>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">read = 0</div><p class="text-xs text-neutral-400">O sintoma</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">2 requests</div><p class="text-xs text-neutral-400">Iguais, consecutivos</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Diff</div><p class="text-xs text-neutral-400">1Âº byte que muda</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Diff</div><p class="text-xs text-neutral-400">1êÂº byte que muda</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Vazio</div><p class="text-xs text-neutral-400">Diff limpo = resolvido</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como lido</span><span class="ARCKHê-label-done">Lido ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== PROMPT 5 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-3#topico-5" id="topico-5">
+<section class="mb-16" data-ARCKHê-topic="modulo-3-3#topico-5" id="topico-5">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span>
-<h2 class="text-2xl font-bold">ðŸ§Š Revisar system prompt prÃ³-cache</h2>
+<h2 class="text-2xl font-bold">ê°Å¸Â§Å  Revisar system prompt prêÂ³-cache</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar dêÂºvida neste têÂ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dêÂºvida</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-t5-p1">Use quando o system tem data, nome do usuÃ¡rio ou modo interpolados. Este prompt <strong class="text-purple-400">congela o system</strong> e move o contexto dinÃ¢mico pro fim das <code class="font-mono text-sm">messages</code>, sem perder informaÃ§Ã£o.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-t5-p1">Use quando o system tem data, nome do usuêÂ¡rio ou modo interpolados. Este prompt <strong class="text-purple-400">congela o system</strong> e move o contexto dinêÂ¢mico pro fim das <code class="font-mono text-sm">messages</code>, sem perder informaêÂ§êÂ£o.</p>
 </div>
 <div class="prompt-box bg-dark-800 border border-purple-500/30 rounded-xl overflow-hidden mb-6">
-<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">â–¶ï¸</span><span class="font-semibold text-purple-400">Prompt 5 â€” congelar o system</span></div>
+<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">ê¢âÂ¶ê¯Â¸Â</span><span class="font-semibold text-purple-400">Prompt 5 ê¢â¬â congelar o system</span></div>
 <div class="p-5 space-y-4">
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Tirar toda interpolaÃ§Ã£o dinÃ¢mica do system e devolvÃª-la como bloco pronto pro fim das messages.</p></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;â€¦&gt;</code>)</p>
-<pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Aqui estÃ¡ meu system prompt:
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Tirar toda interpolaêÂ§êÂ£o dinêÂ¢mica do system e devolvêÂª-la como bloco pronto pro fim das messages.</p></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;ê¢â¬Â¦&gt;</code>)</p>
+<pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Aqui estêÂ¡ meu system prompt:
 &lt;cole o system prompt inteiro&gt;
-Remova TODA interpolaÃ§Ã£o dinÃ¢mica dele (data/hora, nome do usuÃ¡rio, modo,
+Remova TODA interpolaêÂ§êÂ£o dinêÂ¢mica dele (data/hora, nome do usuêÂ¡rio, modo,
 e qualquer valor que muda entre requests) e mova esse contexto pro FIM
-das messages â€” nunca no system. Devolva:
-1) o system CONGELADO (fixo, sem variÃ¡veis);
-2) o bloco de contexto dinÃ¢mico pronto pra ir nas messages;
-3) o diff comentado, explicando por que cada mudanÃ§a preserva o prefixo.</pre></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Depois da troca, o system fica idÃªntico byte a byte entre requests. O cache de <code class="font-mono text-xs">tools</code> + <code class="font-mono text-xs">system</code> para de invalidar e <code class="font-mono text-xs">cache_read_input_tokens</code> cobre esse trecho.</p></div>
+das messages ê¢â¬â nunca no system. Devolva:
+1) o system CONGELADO (fixo, sem variêÂ¡veis);
+2) o bloco de contexto dinêÂ¢mico pronto pra ir nas messages;
+3) o diff comentado, explicando por que cada mudanêÂ§a preserva o prefixo.</pre></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300">Depois da troca, o system fica idêÂªntico byte a byte entre requests. O cache de <code class="font-mono text-xs">tools</code> + <code class="font-mono text-xs">system</code> para de invalidar e <code class="font-mono text-xs">cache_read_input_tokens</code> cobre esse trecho.</p></div>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Congela</div><p class="text-xs text-neutral-400">System sem variÃ¡veis</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Move</div><p class="text-xs text-neutral-400">DinÃ¢mico â†’ fim das messages</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">NÃ£o perde</div><p class="text-xs text-neutral-400">Contexto continua lÃ¡</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">EstÃ¡vel</div><p class="text-xs text-neutral-400">Prefixo idÃªntico</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Congela</div><p class="text-xs text-neutral-400">System sem variêÂ¡veis</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Move</div><p class="text-xs text-neutral-400">DinêÂ¢mico ê¢â â fim das messages</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">NêÂ£o perde</div><p class="text-xs text-neutral-400">Contexto continua lêÂ¡</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">EstêÂ¡vel</div><p class="text-xs text-neutral-400">Prefixo idêÂªntico</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como lido</span><span class="ARCKHê-label-done">Lido ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== PROMPT 6 ===== -->
-<section class="mb-16" data-ARCKHÉ-topic="modulo-3-3#topico-6" id="topico-6">
+<section class="mb-16" data-ARCKHê-topic="modulo-3-3#topico-6" id="topico-6">
 <div class="flex items-start justify-between gap-4 mb-6">
 <div class="flex items-center space-x-4">
 <span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span>
-<h2 class="text-2xl font-bold">ðŸ“ EstratÃ©gia de breakpoints</h2>
+<h2 class="text-2xl font-bold">ê°Å¸âÂ EstratêÂ©gia de breakpoints</h2>
 </div>
-<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHÉ-doubt-toggle="" title="Marcar dÃºvida neste tÃ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dÃºvida</span></button>
+<button aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm shrink-0" data-ARCKHê-doubt-toggle="" title="Marcar dêÂºvida neste têÂ³pico" type="button"><span aria-hidden="true">?</span><span class="hidden sm:inline">Tenho dêÂºvida</span></button>
 </div>
-<div class="ARCKHÉ-prose text-neutral-300 mb-6" style="margin-inline:0">
-<p data-ARCKHÉ-block="m3-3-t6-p1">Use quando vocÃª controla os <code class="font-mono text-sm">cache_control</code> Ã  mÃ£o (fora do Claude Code, na API). SÃ£o <strong class="text-purple-400">no mÃ¡ximo 4 por request</strong>; este prompt sugere onde colocÃ¡-los e alerta sobre o <strong class="text-purple-400">20-block lookback</strong>.</p>
+<div class="ARCKHê-prose text-neutral-300 mb-6" style="margin-inline:0">
+<p data-ARCKHê-block="m3-3-t6-p1">Use quando vocêÂª controla os <code class="font-mono text-sm">cache_control</code> êÂ  mêÂ£o (fora do Claude Code, na API). SêÂ£o <strong class="text-purple-400">no mêÂ¡ximo 4 por request</strong>; este prompt sugere onde colocêÂ¡-los e alerta sobre o <strong class="text-purple-400">20-block lookback</strong>.</p>
 </div>
 <!-- SVG: onde colocar breakpoints -->
 <div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-6 overflow-hidden">
-<svg aria-label="Ao longo do prefixo formado por tools, system e um trecho compartilhado, os breakpoints sÃ£o colocados no fim do system estÃ¡vel e no fim do trecho compartilhado, antes da parte variÃ¡vel." class="w-full h-auto" role="img" viewbox="0 0 1000 170">
+<svg aria-label="Ao longo do prefixo formado por tools, system e um trecho compartilhado, os breakpoints sêÂ£o colocados no fim do system estêÂ¡vel e no fim do trecho compartilhado, antes da parte variêÂ¡vel." class="w-full h-auto" role="img" viewbox="0 0 1000 170">
 <defs><pattern height="32" id="m33f-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
 <filter height="180%" id="m33f-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs>
 <rect fill="url(#m33f-grid)" height="170" width="1000" x="0" y="0"></rect>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="34">Onde marcar cache_control (mÃ¡x. 4)</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="34">Onde marcar cache_control (mêÂ¡x. 4)</text>
 <g font-family="Inter,sans-serif" font-size="12">
 <rect fill="#1a1230" height="46" rx="10" stroke="#c084fc" stroke-width="2" width="150" x="40" y="60"></rect><text fill="#c084fc" font-weight="600" text-anchor="middle" x="115" y="88">tools</text>
-<rect fill="#1a1230" height="46" rx="10" stroke="#c084fc" stroke-width="2" width="200" x="200" y="60"></rect><text fill="#c084fc" font-weight="600" text-anchor="middle" x="300" y="88">system estÃ¡vel</text>
+<rect fill="#1a1230" height="46" rx="10" stroke="#c084fc" stroke-width="2" width="200" x="200" y="60"></rect><text fill="#c084fc" font-weight="600" text-anchor="middle" x="300" y="88">system estêÂ¡vel</text>
 <rect fill="#1a1230" height="46" rx="10" stroke="#c084fc" stroke-width="2" width="240" x="410" y="60"></rect><text fill="#c084fc" font-weight="600" text-anchor="middle" x="530" y="88">trecho compartilhado</text>
-<rect fill="#0e1b26" height="46" rx="10" stroke="#38bdf8" stroke-dasharray="6 5" stroke-width="2" width="290" x="660" y="60"></rect><text fill="#9ad6ff" font-weight="600" text-anchor="middle" x="805" y="88">parte variÃ¡vel (nÃ£o cacheia)</text>
+<rect fill="#0e1b26" height="46" rx="10" stroke="#38bdf8" stroke-dasharray="6 5" stroke-width="2" width="290" x="660" y="60"></rect><text fill="#9ad6ff" font-weight="600" text-anchor="middle" x="805" y="88">parte variêÂ¡vel (nêÂ£o cacheia)</text>
 </g>
 <!-- breakpoints -->
 <g filter="url(#m33f-glow)"><circle cx="400" cy="83" fill="#1a1230" r="10" stroke="#c084fc" stroke-width="3"></circle></g>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="400" y="130">â–² fim do system</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="400" y="130">ê¢âÂ² fim do system</text>
 <g filter="url(#m33f-glow)"><circle cx="650" cy="83" fill="#1a1230" r="10" stroke="#c084fc" stroke-width="3"></circle></g>
-<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="650" y="130">â–² fim do compartilhado</text>
+<text fill="#d8b4fe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="650" y="130">ê¢âÂ² fim do compartilhado</text>
 </svg>
-<p class="text-xs text-neutral-400 mt-3 px-1">Legenda: dois breakpoints bem postos (fim do system, fim do trecho compartilhado) cobrem quase tudo; a <strong class="text-sky-400">parte variÃ¡vel</strong> fica de fora de propÃ³sito.</p>
+<p class="text-xs text-neutral-400 mt-3 px-1">Legenda: dois breakpoints bem postos (fim do system, fim do trecho compartilhado) cobrem quase tudo; a <strong class="text-sky-400">parte variêÂ¡vel</strong> fica de fora de propêÂ³sito.</p>
 </div>
 <div class="prompt-box bg-dark-800 border border-purple-500/30 rounded-xl overflow-hidden mb-6">
-<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">â–¶ï¸</span><span class="font-semibold text-purple-400">Prompt 6 â€” plano de breakpoints</span></div>
+<div class="px-5 py-3 bg-purple-500/10 border-b border-purple-500/30 flex items-center gap-2"><span aria-hidden="true">ê¢âÂ¶ê¯Â¸Â</span><span class="font-semibold text-purple-400">Prompt 6 ê¢â¬â plano de breakpoints</span></div>
 <div class="p-5 space-y-4">
 <div><p class="text-sm font-semibold text-purple-400 mb-1">Objetivo</p><p class="text-sm text-neutral-300">Decidir onde posicionar os <code class="font-mono text-xs">cache_control</code> e evitar o furo do 20-block lookback.</p></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;â€¦&gt;</code>)</p>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Prompt (copie e troque <code class="font-mono text-xs">&lt;ê¢â¬Â¦&gt;</code>)</p>
 <pre class="font-mono text-xs sm:text-sm bg-dark-900/70 border border-dark-600 rounded-lg p-4 overflow-x-auto whitespace-pre-wrap text-neutral-200">Meu prompt tem esta estrutura:
-&lt;descreva: tamanho do system; se as tools mudam; se hÃ¡ um trecho
+&lt;descreva: tamanho do system; se as tools mudam; se hêÂ¡ um trecho
  compartilhado seguido de um sufixo que varia por request&gt;
-Sugira onde colocar os cache_control (MÃX. 4 por request). Tipicamente:
-- no fim do `system` estÃ¡vel;
-- no fim do maior trecho COMPARTILHADO, antes da parte variÃ¡vel.
+Sugira onde colocar os cache_control (MêÂX. 4 por request). Tipicamente:
+- no fim do `system` estêÂ¡vel;
+- no fim do maior trecho COMPARTILHADO, antes da parte variêÂ¡vel.
 Alerte sobre o 20-block lookback: se um turno adiciona &gt;20 blocos
 (loops com muitos tool_use/tool_result), proponha um breakpoint
-intermediÃ¡rio (~a cada 15 blocos). Explique cada escolha.</pre></div>
-<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300"><code class="font-mono text-xs">cache_read_input_tokens</code> fica alto e estÃ¡vel turno a turno. Se algum turno com muitos blocos derruba o read pra 0, faltou o breakpoint intermediÃ¡rio do lookback.</p></div>
+intermediêÂ¡rio (~a cada 15 blocos). Explique cada escolha.</pre></div>
+<div><p class="text-sm font-semibold text-purple-400 mb-1">Como verificar</p><p class="text-sm text-neutral-300"><code class="font-mono text-xs">cache_read_input_tokens</code> fica alto e estêÂ¡vel turno a turno. Se algum turno com muitos blocos derruba o read pra 0, faltou o breakpoint intermediêÂ¡rio do lookback.</p></div>
 </div>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">MÃ¡x. 4</div><p class="text-xs text-neutral-400">Breakpoints por request</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">MêÂ¡x. 4</div><p class="text-xs text-neutral-400">Breakpoints por request</p></div>
 <div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Fim do system</div><p class="text-xs text-neutral-400">Cacheia tools+system</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Compartilhado</div><p class="text-xs text-neutral-400">Antes da parte variÃ¡vel</p></div>
-<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">20 blocos</div><p class="text-xs text-neutral-400">Lookback: pt. intermediÃ¡rio</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">Compartilhado</div><p class="text-xs text-neutral-400">Antes da parte variêÂ¡vel</p></div>
+<div class="bg-dark-800 border border-dark-600 rounded-lg p-4"><div class="text-purple-400 font-bold text-sm mb-1">20 blocos</div><p class="text-xs text-neutral-400">Lookback: pt. intermediêÂ¡rio</p></div>
 </div>
 <div class="flex justify-start mt-6">
-<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHÉ-read-toggle="" type="button">
-<span aria-hidden="true" class="ARCKHÉ-ico-todo">â—‹</span><span aria-hidden="true" class="ARCKHÉ-ico-done">â—</span>
-<span class="ARCKHÉ-label-todo">Marcar como lido</span><span class="ARCKHÉ-label-done">Lido âœ“</span>
+<button aria-pressed="false" class="inline-flex items-center gap-2 justify-start px-4 py-2 rounded-lg bg-purple-500/20 border border-purple-500/30 text-purple-400 hover:bg-purple-500/30 transition-colors" data-ARCKHê-read-toggle="" type="button">
+<span aria-hidden="true" class="ARCKHê-ico-todo">ê¢ââ¹</span><span aria-hidden="true" class="ARCKHê-ico-done">ê¢âÂ</span>
+<span class="ARCKHê-label-todo">Marcar como lido</span><span class="ARCKHê-label-done">Lido ê¢Åâ</span>
 </button>
 </div>
 </section>
 <!-- ===== RESUMO ===== -->
 <section class="mb-12">
 <div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
-<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ðŸ“Œ</span> O kit completo</h2>
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span aria-hidden="true" class="mr-3">ê°Å¸âÅ</span> O kit completo</h2>
 <div class="space-y-4 mb-8">
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">1</span><div><strong class="text-neutral-100">Auditar cache</strong><span class="text-neutral-400"> â€” varre o pipeline e lista os silent invalidators com fix.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">2</span><div><strong class="text-neutral-100">Tools determinÃ­stica</strong><span class="text-neutral-400"> â€” ordena a serializaÃ§Ã£o e confirma ordem estÃ¡vel.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">3</span><div><strong class="text-neutral-100">Compactar vs continuar</strong><span class="text-neutral-400"> â€” estima custo por turno vs write frio e recomenda.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">4</span><div><strong class="text-neutral-100">Diagnosticar read = 0</strong><span class="text-neutral-400"> â€” diff dos bytes do prefixo entre dois requests.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">5</span><div><strong class="text-neutral-100">Revisar system</strong><span class="text-neutral-400"> â€” congela o system e move o dinÃ¢mico pro fim das messages.</span></div></div>
-<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">6</span><div><strong class="text-neutral-100">Breakpoints</strong><span class="text-neutral-400"> â€” onde marcar <code class="font-mono text-xs">cache_control</code> e o alerta do 20-block lookback.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">1</span><div><strong class="text-neutral-100">Auditar cache</strong><span class="text-neutral-400"> ê¢â¬â varre o pipeline e lista os silent invalidators com fix.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">2</span><div><strong class="text-neutral-100">Tools determinêÂ­stica</strong><span class="text-neutral-400"> ê¢â¬â ordena a serializaêÂ§êÂ£o e confirma ordem estêÂ¡vel.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">3</span><div><strong class="text-neutral-100">Compactar vs continuar</strong><span class="text-neutral-400"> ê¢â¬â estima custo por turno vs write frio e recomenda.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">4</span><div><strong class="text-neutral-100">Diagnosticar read = 0</strong><span class="text-neutral-400"> ê¢â¬â diff dos bytes do prefixo entre dois requests.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">5</span><div><strong class="text-neutral-100">Revisar system</strong><span class="text-neutral-400"> ê¢â¬â congela o system e move o dinêÂ¢mico pro fim das messages.</span></div></div>
+<div class="flex items-start gap-3"><span class="text-purple-400 mt-1">6</span><div><strong class="text-neutral-100">Breakpoints</strong><span class="text-neutral-400"> ê¢â¬â onde marcar <code class="font-mono text-xs">cache_control</code> e o alerta do 20-block lookback.</span></div></div>
 </div>
 <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
 <h3 class="font-semibold text-purple-400 mb-1">Fim da Trilha 3</h3>
-<p class="text-neutral-300 text-sm">VocÃª fechou as boas prÃ¡ticas avanÃ§adas: decidir cache vs compactaÃ§Ã£o, montar uma arquitetura prÃ³-cache e ter os prompts na mÃ£o. Marque os tÃ³picos como lidos e acompanhe o progresso em "Minha jornada".</p>
+<p class="text-neutral-300 text-sm">VocêÂª fechou as boas prêÂ¡ticas avanêÂ§adas: decidir cache vs compactaêÂ§êÂ£o, montar uma arquitetura prêÂ³-cache e ter os prompts na mêÂ£o. Marque os têÂ³picos como lidos e acompanhe o progresso em "Minha jornada".</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-2.html">â† Anterior: 3.2</a>
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-2.html">ê¢â Â Anterior: 3.2</a>
 <a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="index.html">Voltar para a Trilha 3</a>
 </div>
 </div>
@@ -604,13 +604,13 @@ intermediÃ¡rio (~a cada 15 blocos). Explique cada escolha.</pre></div>
 <!-- FOOTER -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache â€” Prompt Caching no Claude Code Â· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
+<p>cccache ê¢â¬â Prompt Caching no Claude Code êÂ· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a> êÂ· 2026</p>
 </div>
 </footer>
 <script src="../../assets/learn.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') { ARCKHÉ.init(); }
+      if (window.ARCKHê && typeof ARCKHê.init === 'function') { ARCKHê.init(); }
     });
   </script>
 </body>

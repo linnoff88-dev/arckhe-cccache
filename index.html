@@ -4,62 +4,62 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="cccache" name="ARCKHÉ-course"/>
-<title>cccache â€” Prompt Caching no Claude Code | ARCKHÉ AI</title>
+<meta content="cccache" name="ARCKHê-course"/>
+<title>cccache ê¢â¬â Prompt Caching no Claude Code | ARCKHê AI</title>
 <!-- ============================================================
-       1) ANTI-FOUC â€” script BLOQUEANTE, PRIMEIRO no <head>, ACIMA do Tailwind.
+       1) ANTI-FOUC ê¢â¬â script BLOQUEANTE, PRIMEIRO no <head>, ACIMA do Tailwind.
        Aplica .dark + data-theme + prefs de leitura ANTES do 1o paint.
        try/catch total: qualquer erro => default dark (marca preservada).
        ============================================================ -->
 <script>
     (function () {
       try {
-        var p = JSON.parse(localStorage.getItem('ARCKHÉ.prefs') || '{}');
+        var p = JSON.parse(localStorage.getItem('ARCKHê.prefs') || '{}');
         var d = document.documentElement;
         var dark = p.theme ? p.theme !== 'claro' : (localStorage.getItem('theme') !== 'light');
         if (dark) { d.classList.add('dark'); } else { d.classList.remove('dark'); }
-        if (p.theme && p.theme !== 'ARCKHÉ-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
+        if (p.theme && p.theme !== 'ARCKHê-dark' && p.theme !== 'claro') { d.setAttribute('data-theme', p.theme); }
         if (p.font) { d.setAttribute('data-font', p.font); }
         if (p.accent) { d.setAttribute('data-accent', p.accent); }
-        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHÉ-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
+        if (p.fontScale) { d.style.setProperty('--fs-root', p.fontScale + '%'); d.style.setProperty('--ARCKHê-font-scale', p.fontScale); d.style.fontSize = p.fontScale + '%'; }
         if (p.lineWidth) { d.style.setProperty('--measure', p.lineWidth + 'ch'); }
         if (p.leading) { d.style.setProperty('--lh-body', p.leading); }
         d.style.colorScheme = (p.theme === 'claro' || p.theme === 'sepia') ? 'light' : 'dark';
       } catch (e) { document.documentElement.classList.add('dark'); }
     })();
   </script>
-<!-- 2) MANIFESTO do curso (erro #28) â€” DADO, colar IDENTICO no <head> de TODA pagina.
-        (course/tracks/modules/id/title/topics/href â€” forma que o learn.js consome). -->
-<script data-ARCKHÉ-manifest="" type="application/json">
+<!-- 2) MANIFESTO do curso (erro #28) ê¢â¬â DADO, colar IDENTICO no <head> de TODA pagina.
+        (course/tracks/modules/id/title/topics/href ê¢â¬â forma que o learn.js consome). -->
+<script data-ARCKHê-manifest="" type="application/json">
 {
-  "course": { "id": "cccache", "title": "cccache â€” Prompt Caching no Claude Code" },
+  "course": { "id": "cccache", "title": "cccache ê¢â¬â Prompt Caching no Claude Code" },
   "tracks": [
     {
       "id": "trilha1", "title": "Fundamentos e termos",
       "modules": [
-        { "id": "modulo-1-1", "title": "O que Ã© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
+        { "id": "modulo-1-1", "title": "O que êÂ© prompt caching", "href": "curso/trilha1/modulo-1-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-1-2", "title": "Termos e economia", "href": "curso/trilha1/modulo-1-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha2", "title": "TÃ©cnico",
+      "id": "trilha2", "title": "TêÂ©cnico",
       "modules": [
         { "id": "modulo-2-1", "title": "O cache numa conversa", "href": "curso/trilha2/modulo-2-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-2-2", "title": "Skills e ferramentas: anexar vs quebrar", "href": "curso/trilha2/modulo-2-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-2-3", "title": "InvalidaÃ§Ã£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
+        { "id": "modulo-2-3", "title": "InvalidaêÂ§êÂ£o a fundo", "href": "curso/trilha2/modulo-2-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
       ]
     },
     {
-      "id": "trilha3", "title": "Boas prÃ¡ticas avanÃ§adas",
+      "id": "trilha3", "title": "Boas prêÂ¡ticas avanêÂ§adas",
       "modules": [
-        { "id": "modulo-3-1", "title": "Cache vs CompactaÃ§Ã£o", "href": "curso/trilha3/modulo-3-1.html",
+        { "id": "modulo-3-1", "title": "Cache vs CompactaêÂ§êÂ£o", "href": "curso/trilha3/modulo-3-1.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
-        { "id": "modulo-3-2", "title": "Arquitetura prÃ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
+        { "id": "modulo-3-2", "title": "Arquitetura prêÂ³-cache e auditoria", "href": "curso/trilha3/modulo-3-2.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] },
         { "id": "modulo-3-3", "title": "Prompts prontos (copy-run)", "href": "curso/trilha3/modulo-3-3.html",
           "topics": ["topico-1","topico-2","topico-3","topico-4","topico-5","topico-6"] }
@@ -68,7 +68,7 @@
   ]
 }
   </script>
-<!-- 3) Tailwind via CDN (unico externo â€” offline-first no resto) -->
+<!-- 3) Tailwind via CDN (unico externo ê¢â¬â offline-first no resto) -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config = {
@@ -103,7 +103,7 @@
     html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
     html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
 
-    /* ------ Light mode â€” cores de acento das 3 trilhas + amber do curso ------ */
+    /* ------ Light mode ê¢â¬â cores de acento das 3 trilhas + amber do curso ------ */
     /* T1 Emerald */
     html:not(.dark) .text-emerald-400 { color: #059669; }
     html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5, 150, 105, 0.12); }
@@ -131,13 +131,13 @@
     html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
     html:not(.dark) .group:hover .group-hover\:text-purple-400 { color: #7c3aed; }
     html:not(.dark) .hover\:border-purple-500\/30:hover { border-color: rgba(124, 58, 237, 0.25); }
-    /* Amber (tema do curso) â€” texto de acento cai para amber-700 no claro (#23) */
+    /* Amber (tema do curso) ê¢â¬â texto de acento cai para amber-700 no claro (#23) */
     html:not(.dark) .text-amber-400 { color: #b45309; }
     html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217, 119, 6, 0.14); }
     html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217, 119, 6, 0.08); }
     html:not(.dark) .border-amber-500\/30 { border-color: rgba(217, 119, 6, 0.28); }
 
-    /* ------ Light mode â€” remove gradientes + cores especiais ------ */
+    /* ------ Light mode ê¢â¬â remove gradientes + cores especiais ------ */
     html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
     html:not(.dark) .text-primary { color: #a16207; }
     html:not(.dark) .bg-primary\/10 { background-color: rgba(161, 98, 7, 0.08); }
@@ -147,17 +147,17 @@
     html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
     html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
 
-    /* ------ Light mode â€” navbar ------ */
+    /* ------ Light mode ê¢â¬â navbar ------ */
     html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255, 255, 255, 0.95); }
 
-    /* ------ Dark mode â€” bordas e divisorias mais suaves ------ */
+    /* ------ Dark mode ê¢â¬â bordas e divisorias mais suaves ------ */
     .dark .border-dark-600 { border-color: #374151; }
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
-    /* ------ Diagramas SVG â€” suavizar neon fora do dark saturado ------ */
+    /* ------ Diagramas SVG ê¢â¬â suavizar neon fora do dark saturado ------ */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
 
-    /* ------ Hero SVG â€” pulso dos "reads" (so sem reduced-motion) ------ */
+    /* ------ Hero SVG ê¢â¬â pulso dos "reads" (so sem reduced-motion) ------ */
     @keyframes ccp-pulse { 0%, 100% { opacity: .5 } 50% { opacity: 1 } }
     @media (prefers-reduced-motion: no-preference) {
       .ccp-a { animation: ccp-pulse 2.6s ease-in-out infinite; }
@@ -172,20 +172,20 @@
 <!-- 5) learn.css (depois do CSS base) -->
 <link href="assets/learn.css" rel="stylesheet"/>
 <link href="https://linnoff88-dev.github.io/ hreflang="pt-BR" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="en" rel="alternate"/><link href="https://linnoff88-dev.github.io/ hreflang="es" rel="alternate"/></head>
-<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHÉ-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="./" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
-<a class="ARCKHÉ-skip" href="#conteudo">Pular para o conteÃºdo</a>
-<!-- ================= NAVIGATION (erro #13 â€” completo) ================= -->
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="ARCKHê-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="./" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">PT</a><a href="en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="es/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<a class="ARCKHê-skip" href="#conteudo">Pular para o conteêÂºdo</a>
+<!-- ================= NAVIGATION (erro #13 ê¢â¬â completo) ================= -->
 <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-14">
-<!-- Logo + ARCKHÉ AI -->
+<!-- Logo + ARCKHê AI -->
 <div class="flex items-center space-x-3 sm:space-x-4">
 <a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="index.html">
-<span aria-hidden="true" class="text-2xl">ðŸ§ </span>
+<span aria-hidden="true" class="text-2xl">ê°Å¸Â§Â </span>
 <span class="font-bold text-lg hidden sm:inline">cccache</span>
 </a>
 <span aria-hidden="true" class="text-neutral-600">|</span>
-<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a>
 </div>
 <!-- Trilhas + controles v2 + theme toggle -->
 <div class="flex items-center space-x-1 sm:space-x-2">
@@ -193,63 +193,63 @@
 <span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="curso/trilha2/index.html">
-<span class="sm:hidden">T2</span><span class="hidden sm:inline">TÃ©cnico</span>
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">TêÂ©cnico</span>
 </a>
 <a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="curso/trilha3/index.html">
-<span class="sm:hidden">T3</span><span class="hidden sm:inline">Boas prÃ¡ticas</span>
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">Boas prêÂ¡ticas</span>
 </a>
 <!-- Minha jornada -->
-<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-journey-open="" type="button">
-<span aria-hidden="true">â—·</span>
+<button class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-journey-open="" type="button">
+<span aria-hidden="true">ê¢âÂ·</span>
 <span>Minha jornada</span>
-<span class="ARCKHÉ-journey-badge hidden" data-count="0" data-ARCKHÉ-journey-badge=""></span>
+<span class="ARCKHê-journey-badge hidden" data-count="0" data-ARCKHê-journey-badge=""></span>
 </button>
 <!-- Seletor de aparencia -->
 <div class="nav-appearance-wrap">
-<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHÉ-appearance-toggle="[data-ARCKHÉ-appearance]" type="button">
-<span aria-hidden="true">â—‘</span>
-<span class="hidden sm:inline">AparÃªncia</span>
+<button aria-expanded="false" aria-haspopup="true" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-neutral-300 hover:text-neutral-100 hover:bg-dark-700 transition-colors text-sm" data-ARCKHê-appearance-toggle="[data-ARCKHê-appearance]" type="button">
+<span aria-hidden="true">ê¢ââ</span>
+<span class="hidden sm:inline">AparêÂªncia</span>
 </button>
-<div aria-label="AparÃªncia e leitura" class="ARCKHÉ-appearance-pop" data-ARCKHÉ-appearance="" role="group">
-<p class="ARCKHÉ-seg-label">Tema</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-theme="ARCKHÉ-dark" type="button">Escuro</button>
-<button data-ARCKHÉ-set-theme="claro" type="button">Claro</button>
-<button data-ARCKHÉ-set-theme="sepia" type="button">SÃ©pia</button>
-<button data-ARCKHÉ-set-theme="foco" type="button">Foco</button>
-<button data-ARCKHÉ-set-theme="contraste" type="button">Alto contraste</button>
+<div aria-label="AparêÂªncia e leitura" class="ARCKHê-appearance-pop" data-ARCKHê-appearance="" role="group">
+<p class="ARCKHê-seg-label">Tema</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-theme="ARCKHê-dark" type="button">Escuro</button>
+<button data-ARCKHê-set-theme="claro" type="button">Claro</button>
+<button data-ARCKHê-set-theme="sepia" type="button">SêÂ©pia</button>
+<button data-ARCKHê-set-theme="foco" type="button">Foco</button>
+<button data-ARCKHê-set-theme="contraste" type="button">Alto contraste</button>
 </div>
-<p class="ARCKHÉ-seg-label">Fonte</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-font="inter" type="button">Inter</button>
-<button data-ARCKHÉ-set-font="system" type="button">Sistema</button>
-<button data-ARCKHÉ-set-font="leitura" type="button">Leitura</button>
+<p class="ARCKHê-seg-label">Fonte</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-font="inter" type="button">Inter</button>
+<button data-ARCKHê-set-font="system" type="button">Sistema</button>
+<button data-ARCKHê-set-font="leitura" type="button">Leitura</button>
 </div>
-<p class="ARCKHÉ-seg-label">Tamanho</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-fontscale="100" type="button">A</button>
-<button data-ARCKHÉ-set-fontscale="112" type="button">A+</button>
-<button data-ARCKHÉ-set-fontscale="125" type="button">A++</button>
+<p class="ARCKHê-seg-label">Tamanho</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-fontscale="100" type="button">A</button>
+<button data-ARCKHê-set-fontscale="112" type="button">A+</button>
+<button data-ARCKHê-set-fontscale="125" type="button">A++</button>
 </div>
-<p class="ARCKHÉ-seg-label">Largura da linha</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-linewidth="60" type="button">Estreito</button>
-<button data-ARCKHÉ-set-linewidth="68" type="button">MÃ©dio</button>
-<button data-ARCKHÉ-set-linewidth="75" type="button">Largo</button>
+<p class="ARCKHê-seg-label">Largura da linha</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-linewidth="60" type="button">Estreito</button>
+<button data-ARCKHê-set-linewidth="68" type="button">MêÂ©dio</button>
+<button data-ARCKHê-set-linewidth="75" type="button">Largo</button>
 </div>
-<p class="ARCKHÉ-seg-label">Entrelinha</p>
-<div class="ARCKHÉ-segment">
-<button data-ARCKHÉ-set-leading="1.45" type="button">Compacto</button>
-<button data-ARCKHÉ-set-leading="1.7" type="button">ConfortÃ¡vel</button>
+<p class="ARCKHê-seg-label">Entrelinha</p>
+<div class="ARCKHê-segment">
+<button data-ARCKHê-set-leading="1.45" type="button">Compacto</button>
+<button data-ARCKHê-set-leading="1.7" type="button">ConfortêÂ¡vel</button>
 </div>
-<p class="ARCKHÉ-seg-label">Acento</p>
-<div aria-label="Cor de acento" class="ARCKHÉ-accent-grid" role="group">
-<button aria-label="Esmeralda" data-ARCKHÉ-set-accent="emerald" type="button"></button>
-<button aria-label="Azul" data-ARCKHÉ-set-accent="blue" type="button"></button>
-<button aria-label="Roxo" data-ARCKHÉ-set-accent="purple" type="button"></button>
-<button aria-label="Ã‚mbar" data-ARCKHÉ-set-accent="amber" type="button"></button>
-<button aria-label="Turquesa" data-ARCKHÉ-set-accent="teal" type="button"></button>
-<button aria-label="Rosa" data-ARCKHÉ-set-accent="rose" type="button"></button>
+<p class="ARCKHê-seg-label">Acento</p>
+<div aria-label="Cor de acento" class="ARCKHê-accent-grid" role="group">
+<button aria-label="Esmeralda" data-ARCKHê-set-accent="emerald" type="button"></button>
+<button aria-label="Azul" data-ARCKHê-set-accent="blue" type="button"></button>
+<button aria-label="Roxo" data-ARCKHê-set-accent="purple" type="button"></button>
+<button aria-label="êâmbar" data-ARCKHê-set-accent="amber" type="button"></button>
+<button aria-label="Turquesa" data-ARCKHê-set-accent="teal" type="button"></button>
+<button aria-label="Rosa" data-ARCKHê-set-accent="rose" type="button"></button>
 </div>
 </div>
 </div>
@@ -271,19 +271,19 @@
 <header class="bg-gradient-to-br from-amber-900/30 via-dark-900 to-dark-900 border-b border-dark-600">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 <span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-5">
-          CURSO ARCKHÉ Â· PROMPT CACHING
+          CURSO ARCKHê êÂ· PROMPT CACHING
         </span>
 <h1 class="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
-          ðŸ§  cccache â€” Prompt Caching no Claude Code
+          ê°Å¸Â§Â  cccache ê¢â¬â Prompt Caching no Claude Code
         </h1>
 <p class="text-lg text-neutral-300 max-w-3xl mb-8">
-          Entenda de verdade o cache que roda por baixo quando vocÃª conversa com o Claude Code â€”
+          Entenda de verdade o cache que roda por baixo quando vocêÂª conversa com o Claude Code ê¢â¬â
           o que reaproveita, o que quebra, e como pagar
           <strong class="text-amber-400">10% em vez de 100%</strong> pelo contexto.
         </p>
 <!-- Hero SVG futurista: reaproveitamento de prefixo (amber) + reads baratos (ciano) -->
 <div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-5 mb-8 overflow-hidden">
-<svg aria-label="O prefixo estÃ¡vel (ferramentas, sistema e histÃ³rico) Ã© processado uma vez e guardado no cache; a cada novo turno o Claude Code relÃª esse prefixo do cache por cerca de um dÃ©cimo do preÃ§o e grava sÃ³ a parte nova." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
+<svg aria-label="O prefixo estêÂ¡vel (ferramentas, sistema e histêÂ³rico) êÂ© processado uma vez e guardado no cache; a cada novo turno o Claude Code relêÂª esse prefixo do cache por cerca de um dêÂ©cimo do preêÂ§o e grava sêÂ³ a parte nova." class="w-full h-auto" role="img" viewbox="0 0 1000 300">
 <defs>
 <lineargradient id="ccp-grad" x1="0" x2="1" y1="0" y2="1">
 <stop offset="0" stop-color="#fbbf24"></stop><stop offset="1" stop-color="#f59e0b"></stop>
@@ -304,18 +304,18 @@
 </defs>
 <rect fill="url(#ccp-grid)" height="300" width="1000" x="0" y="0"></rect>
 <!-- Prefixo estavel: tools -> system -> messages (ordem de montagem) -->
-<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="40">Prefixo estÃ¡vel (tools â†’ system â†’ histÃ³rico)</text>
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="13" font-weight="600" x="40" y="40">Prefixo estêÂ¡vel (tools ê¢â â system ê¢â â histêÂ³rico)</text>
 <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
 <rect fill="#1f1604" height="40" rx="10" stroke="#fbbf24" stroke-width="2" width="210" x="40" y="56"></rect>
 <text fill="#fbbf24" text-anchor="middle" x="145" y="81">tools</text>
 <rect fill="#1f1604" height="40" rx="10" stroke="#fbbf24" stroke-width="2" width="210" x="40" y="104"></rect>
 <text fill="#fbbf24" text-anchor="middle" x="145" y="129">system</text>
 <rect fill="#1f1604" height="40" rx="10" stroke="#fbbf24" stroke-width="2" width="210" x="40" y="152"></rect>
-<text fill="#fbbf24" text-anchor="middle" x="145" y="177">histÃ³rico</text>
+<text fill="#fbbf24" text-anchor="middle" x="145" y="177">histêÂ³rico</text>
 </g>
 <!-- Seta grava (1a vez) para o cache -->
 <path d="M250,124 L392,124" fill="none" marker-end="url(#ccp-ah)" opacity="0.7" stroke="#fbbf24" stroke-width="2"></path>
-<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="320" y="114">grava 1Ã—</text>
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="320" y="114">grava 1êâ</text>
 <!-- Cache (caixa-foco com glow) -->
 <g filter="url(#ccp-glow)">
 <rect fill="#1f1604" height="80" rx="16" stroke="url(#ccp-grad)" stroke-width="2.5" width="168" x="396" y="84"></rect>
@@ -330,60 +330,60 @@
 <path class="ccp-a" d="M564,142 C680,142 700,220 800,220" marker-end="url(#ccp-ahc)"></path>
 </g>
 <g font-family="Inter,sans-serif" font-size="13" font-weight="600">
-<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="40"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="62">turno 1 Â· lÃª</text>
-<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="95"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="117">turno 2 Â· lÃª</text>
-<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="150"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="172">turno 3 Â· lÃª</text>
-<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="205"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="227">turno N Â· lÃª</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="40"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="62">turno 1 êÂ· lêÂª</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="95"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="117">turno 2 êÂ· lêÂª</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="150"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="172">turno 3 êÂ· lêÂª</text>
+<rect fill="#0e1b26" height="34" rx="9" stroke="#38bdf8" stroke-width="2" width="150" x="800" y="205"></rect><text fill="#bfe6ff" text-anchor="middle" x="875" y="227">turno N êÂ· lêÂª</text>
 </g>
-<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="700" y="272">cada leitura â‰ˆ 0,1Ã— do preÃ§o de input</text>
+<text fill="#9ad6ff" font-family="Inter,sans-serif" font-size="13" font-weight="600" text-anchor="middle" x="700" y="272">cada leitura ê¢â°Ë 0,1êâ do preêÂ§o de input</text>
 </svg>
 </div>
 <!-- CTA + Continuar de onde parei + medidor de curso -->
 <div class="flex flex-col sm:flex-row sm:items-center gap-4">
 <a class="inline-flex justify-center items-center px-6 py-3 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-semibold transition-colors" href="curso/trilha1/index.html">
-            ComeÃ§ar pela Trilha 1 â†’
+            ComeêÂ§ar pela Trilha 1 ê¢â â
           </a>
-<button class="hidden justify-center items-center px-6 py-3 rounded-lg bg-dark-700 hover:bg-dark-600 text-neutral-200 font-semibold transition-colors" data-ARCKHÉ-resume="" id="continuar-btn" type="button">
-            â± Continuar de onde parei
+<button class="hidden justify-center items-center px-6 py-3 rounded-lg bg-dark-700 hover:bg-dark-600 text-neutral-200 font-semibold transition-colors" data-ARCKHê-resume="" id="continuar-btn" type="button">
+            ê¢ÂÂ± Continuar de onde parei
           </button>
-<div aria-label="Progresso do curso" class="ARCKHÉ-meter sm:ml-auto w-full sm:w-72" data-ARCKHÉ-meter="curso">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
+<div aria-label="Progresso do curso" class="ARCKHê-meter sm:ml-auto w-full sm:w-72" data-ARCKHê-meter="curso">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
 <div class="text-right leading-tight">
-<div class="text-amber-400 font-bold" data-ARCKHÉ-meter-pct="">0%</div>
-<div class="text-xs text-neutral-400" data-ARCKHÉ-meter-frac="">0 de 0</div>
+<div class="text-amber-400 font-bold" data-ARCKHê-meter-pct="">0%</div>
+<div class="text-xs text-neutral-400" data-ARCKHê-meter-frac="">0 de 0</div>
 </div>
 </div>
 </div>
 </div>
 </header>
-<!-- ======================= O QUE Ã‰ ======================= -->
+<!-- ======================= O QUE êâ° ======================= -->
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-<h2 class="text-2xl font-bold mb-6">O que vocÃª vai entender aqui</h2>
-<div class="ARCKHÉ-prose text-neutral-300 mb-8" style="margin-inline:0">
-<p data-ARCKHÉ-block="landing-oque-p1">
-          A API do Claude Ã© <strong class="text-amber-400">stateless</strong>: a cada mensagem, a
-          conversa inteira (ferramentas + prompt de sistema + histÃ³rico) Ã© reenviada. O
-          <strong class="text-amber-400">prompt caching</strong> guarda esse comeÃ§o jÃ¡ processado e o
-          reaproveita â€” em vez de reprocessar tudo do zero a cada turno. Ã‰ um
-          <strong class="text-amber-400">casamento de prefixo</strong>: a chave do cache sÃ£o os bytes
-          exatos atÃ© um ponto de corte; um Ãºnico byte diferente no meio invalida tudo dali pra frente.
+<h2 class="text-2xl font-bold mb-6">O que vocêÂª vai entender aqui</h2>
+<div class="ARCKHê-prose text-neutral-300 mb-8" style="margin-inline:0">
+<p data-ARCKHê-block="landing-oque-p1">
+          A API do Claude êÂ© <strong class="text-amber-400">stateless</strong>: a cada mensagem, a
+          conversa inteira (ferramentas + prompt de sistema + histêÂ³rico) êÂ© reenviada. O
+          <strong class="text-amber-400">prompt caching</strong> guarda esse comeêÂ§o jêÂ¡ processado e o
+          reaproveita ê¢â¬â em vez de reprocessar tudo do zero a cada turno. êâ° um
+          <strong class="text-amber-400">casamento de prefixo</strong>: a chave do cache sêÂ£o os bytes
+          exatos atêÂ© um ponto de corte; um êÂºnico byte diferente no meio invalida tudo dali pra frente.
         </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-<div aria-hidden="true" class="text-3xl mb-3">ðŸ“–</div>
-<h3 class="text-lg font-semibold mb-2 text-amber-400">Os termos, sem mistÃ©rio</h3>
-<p class="text-sm text-neutral-400">Hit, miss, write, TTL, breakpoint, <code class="font-mono text-xs">cache_read_input_tokens</code> â€” cada um definido na 1Âª apariÃ§Ã£o.</p>
+<div aria-hidden="true" class="text-3xl mb-3">ê°Å¸ââ</div>
+<h3 class="text-lg font-semibold mb-2 text-amber-400">Os termos, sem mistêÂ©rio</h3>
+<p class="text-sm text-neutral-400">Hit, miss, write, TTL, breakpoint, <code class="font-mono text-xs">cache_read_input_tokens</code> ê¢â¬â cada um definido na 1êÂª apariêÂ§êÂ£o.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-<div aria-hidden="true" class="text-3xl mb-3">ðŸ”§</div>
+<div aria-hidden="true" class="text-3xl mb-3">ê°Å¸âÂ§</div>
 <h3 class="text-lg font-semibold mb-2 text-amber-400">O que quebra o cache</h3>
-<p class="text-sm text-neutral-400">Mudar a lista de <code class="font-mono text-xs">tools</code>, datas no system, ordem nÃ£o-determinÃ­stica â€” os silent invalidators e como achÃ¡-los.</p>
+<p class="text-sm text-neutral-400">Mudar a lista de <code class="font-mono text-xs">tools</code>, datas no system, ordem nêÂ£o-determinêÂ­stica ê¢â¬â os silent invalidators e como achêÂ¡-los.</p>
 </div>
 <div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
-<div aria-hidden="true" class="text-3xl mb-3">ðŸ’¸</div>
+<div aria-hidden="true" class="text-3xl mb-3">ê°Å¸âÂ¸</div>
 <h3 class="text-lg font-semibold mb-2 text-amber-400">A economia real</h3>
-<p class="text-sm text-neutral-400">Read ~0,1Ã— Â· write ~1,25Ã— Â· nÃ£o-cacheado 1Ã—. Quando o cache paga, e quando compactar vale mais.</p>
+<p class="text-sm text-neutral-400">Read ~0,1êâ êÂ· write ~1,25êâ êÂ· nêÂ£o-cacheado 1êâ. Quando o cache paga, e quando compactar vale mais.</p>
 </div>
 </div>
 </section>
@@ -391,47 +391,47 @@
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-14">
 <h2 class="text-2xl font-bold mb-6">As 3 trilhas</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Trilha 1 â€” Emerald -->
+<!-- Trilha 1 ê¢â¬â Emerald -->
 <a class="group bg-gradient-to-br from-emerald-900/30 to-dark-800 rounded-2xl border border-emerald-500/30 hover:border-emerald-500/30 p-6 transition-all" href="curso/trilha1/index.html">
 <div class="flex items-center justify-between mb-3">
 <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">TRILHA 1</span>
-<span class="text-xs text-neutral-500">2 mÃ³dulos</span>
+<span class="text-xs text-neutral-500">2 mêÂ³dulos</span>
 </div>
 <h3 class="text-xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">Fundamentos e termos</h3>
-<p class="text-sm text-neutral-400 mb-4">O problema do reprocessamento, a ideia do prefixo, hit/miss/write, breakpoint e os campos de verificaÃ§Ã£o. Cada termo definido na 1Âª apariÃ§Ã£o.</p>
-<div aria-label="Progresso da trilha 1" class="ARCKHÉ-meter" data-ARCKHÉ-meter="trilha:1">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
-<span class="text-xs text-emerald-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<p class="text-sm text-neutral-400 mb-4">O problema do reprocessamento, a ideia do prefixo, hit/miss/write, breakpoint e os campos de verificaêÂ§êÂ£o. Cada termo definido na 1êÂª apariêÂ§êÂ£o.</p>
+<div aria-label="Progresso da trilha 1" class="ARCKHê-meter" data-ARCKHê-meter="trilha:1">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
+<span class="text-xs text-emerald-400 font-semibold" data-ARCKHê-meter-pct="">0%</span>
 </div>
-<span class="inline-flex items-center mt-4 text-emerald-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir trilha â†’</span>
+<span class="inline-flex items-center mt-4 text-emerald-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir trilha ê¢â â</span>
 </a>
-<!-- Trilha 2 â€” Blue -->
+<!-- Trilha 2 ê¢â¬â Blue -->
 <a class="group bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-2xl border border-blue-500/30 hover:border-blue-500/30 p-6 transition-all" href="curso/trilha2/index.html">
 <div class="flex items-center justify-between mb-3">
 <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">TRILHA 2</span>
-<span class="text-xs text-neutral-500">3 mÃ³dulos</span>
+<span class="text-xs text-neutral-500">3 mêÂ³dulos</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">TÃ©cnico</h3>
-<p class="text-sm text-neutral-400 mb-4">O cache dentro de uma conversa que cresce, skills e ferramentas (anexar vs quebrar), e a invalidaÃ§Ã£o a fundo â€” com exemplos copy-run.</p>
-<div aria-label="Progresso da trilha 2" class="ARCKHÉ-meter" data-ARCKHÉ-meter="trilha:2">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
-<span class="text-xs text-blue-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">TêÂ©cnico</h3>
+<p class="text-sm text-neutral-400 mb-4">O cache dentro de uma conversa que cresce, skills e ferramentas (anexar vs quebrar), e a invalidaêÂ§êÂ£o a fundo ê¢â¬â com exemplos copy-run.</p>
+<div aria-label="Progresso da trilha 2" class="ARCKHê-meter" data-ARCKHê-meter="trilha:2">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
+<span class="text-xs text-blue-400 font-semibold" data-ARCKHê-meter-pct="">0%</span>
 </div>
-<span class="inline-flex items-center mt-4 text-blue-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir trilha â†’</span>
+<span class="inline-flex items-center mt-4 text-blue-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir trilha ê¢â â</span>
 </a>
-<!-- Trilha 3 â€” Purple -->
+<!-- Trilha 3 ê¢â¬â Purple -->
 <a class="group bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-2xl border border-purple-500/30 hover:border-purple-500/30 p-6 transition-all" href="curso/trilha3/index.html">
 <div class="flex items-center justify-between mb-3">
 <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full">TRILHA 3</span>
-<span class="text-xs text-neutral-500">3 mÃ³dulos</span>
+<span class="text-xs text-neutral-500">3 mêÂ³dulos</span>
 </div>
-<h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Boas prÃ¡ticas avanÃ§adas</h3>
-<p class="text-sm text-neutral-400 mb-4">Cache vs compactaÃ§Ã£o, arquitetura prÃ³-cache e auditoria, e um mÃ³dulo de prompts prontos copy-run pra usar no Claude Code hoje.</p>
-<div aria-label="Progresso da trilha 3" class="ARCKHÉ-meter" data-ARCKHÉ-meter="trilha:3">
-<div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill=""></div></div>
-<span class="text-xs text-purple-400 font-semibold" data-ARCKHÉ-meter-pct="">0%</span>
+<h3 class="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Boas prêÂ¡ticas avanêÂ§adas</h3>
+<p class="text-sm text-neutral-400 mb-4">Cache vs compactaêÂ§êÂ£o, arquitetura prêÂ³-cache e auditoria, e um mêÂ³dulo de prompts prontos copy-run pra usar no Claude Code hoje.</p>
+<div aria-label="Progresso da trilha 3" class="ARCKHê-meter" data-ARCKHê-meter="trilha:3">
+<div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill=""></div></div>
+<span class="text-xs text-purple-400 font-semibold" data-ARCKHê-meter-pct="">0%</span>
 </div>
-<span class="inline-flex items-center mt-4 text-purple-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir trilha â†’</span>
+<span class="inline-flex items-center mt-4 text-purple-400 text-sm font-semibold group-hover:gap-1 transition-all">Abrir trilha ê¢â â</span>
 </a>
 </div>
 </section>
@@ -441,19 +441,19 @@
 <h2 class="text-2xl font-bold mb-6">Como usar este curso</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 <ul class="space-y-3 text-neutral-300">
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">âœ“</span><span><strong>Marque cada tÃ³pico como lido</strong> â€” as barras de progresso do mÃ³dulo, da trilha e do curso sobem juntas.</span></li>
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">âœ“</span><span><strong>Grife e anote no prÃ³prio texto</strong> â€” selecione um trecho para grifar, anotar ou marcar como dÃºvida.</span></li>
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">âœ“</span><span><strong>Abra "Minha jornada"</strong> â€” veja progresso, dÃºvidas e notas, e continue de onde parou.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">ê¢Åâ</span><span><strong>Marque cada têÂ³pico como lido</strong> ê¢â¬â as barras de progresso do mêÂ³dulo, da trilha e do curso sobem juntas.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">ê¢Åâ</span><span><strong>Grife e anote no prêÂ³prio texto</strong> ê¢â¬â selecione um trecho para grifar, anotar ou marcar como dêÂºvida.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">ê¢Åâ</span><span><strong>Abra "Minha jornada"</strong> ê¢â¬â veja progresso, dêÂºvidas e notas, e continue de onde parou.</span></li>
 </ul>
 <ul class="space-y-3 text-neutral-300">
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">âœ“</span><span><strong>Ajuste a aparÃªncia</strong> â€” tema (escuro/claro/sÃ©pia/foco/alto contraste), fonte, tamanho, largura e entrelinha.</span></li>
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">âœ“</span><span><strong>Exporte sua jornada</strong> â€” baixe um <code class="font-mono text-xs">.json</code> com seu progresso e importe em outro dispositivo.</span></li>
-<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">âœ“</span><span><strong>100% offline</strong> â€” abre direto do arquivo, sem servidor. Seu progresso fica sÃ³ no seu navegador.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">ê¢Åâ</span><span><strong>Ajuste a aparêÂªncia</strong> ê¢â¬â tema (escuro/claro/sêÂ©pia/foco/alto contraste), fonte, tamanho, largura e entrelinha.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">ê¢Åâ</span><span><strong>Exporte sua jornada</strong> ê¢â¬â baixe um <code class="font-mono text-xs">.json</code> com seu progresso e importe em outro dispositivo.</span></li>
+<li class="flex items-start gap-2"><span aria-hidden="true" class="text-amber-400 mt-0.5">ê¢Åâ</span><span><strong>100% offline</strong> ê¢â¬â abre direto do arquivo, sem servidor. Seu progresso fica sêÂ³ no seu navegador.</span></li>
 </ul>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="flex-1 text-center px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-semibold transition-colors" href="curso/trilha1/index.html">ComeÃ§ar agora â†’</a>
-<button class="flex-1 text-center px-6 py-3 bg-dark-700 hover:bg-dark-600 text-neutral-200 rounded-lg font-semibold transition-colors" data-ARCKHÉ-journey-open="" type="button">Abrir minha jornada</button>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-semibold transition-colors" href="curso/trilha1/index.html">ComeêÂ§ar agora ê¢â â</a>
+<button class="flex-1 text-center px-6 py-3 bg-dark-700 hover:bg-dark-600 text-neutral-200 rounded-lg font-semibold transition-colors" data-ARCKHê-journey-open="" type="button">Abrir minha jornada</button>
 </div>
 </div>
 </section>
@@ -461,18 +461,18 @@
 <!-- ======================= FOOTER ======================= -->
 <footer class="border-t border-dark-600 py-8">
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-<p>cccache â€” Prompt Caching no Claude Code Â· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHÉ AI" rel="noopener" target="_blank">ARCKHÉ AI</a> Â· 2026</p>
+<p>cccache ê¢â¬â Prompt Caching no Claude Code êÂ· Curso <a class="text-sky-400 hover:text-sky-300" href="https://ARCKHê AI" rel="noopener" target="_blank">ARCKHê AI</a> êÂ· 2026</p>
 </div>
 </footer>
 <!-- ======================= SCRIPTS ======================= -->
 <script src="assets/learn.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && typeof ARCKHÉ.init === 'function') {
-        ARCKHÉ.init();
+      if (window.ARCKHê && typeof ARCKHê.init === 'function') {
+        ARCKHê.init();
         // "Continuar de onde parei": so aparece se ha uma ultima pagina de modulo.
         try {
-          var meta = ARCKHÉ._internal.storageGet('ARCKHÉ.' + ARCKHÉ._internal.courseId() + '.meta', {});
+          var meta = ARCKHê._internal.storageGet('ARCKHê.' + ARCKHê._internal.courseId() + '.meta', {});
           var btn = document.getElementById('continuar-btn');
           if (btn && meta && meta.lastModuleHref && /modulo-/.test(meta.lastModuleHref)) {
             var href = 'curso/';
@@ -482,7 +482,7 @@
             if (m) { href = 'curso/trilha' + m[1] + '/' + file.split('/').pop(); }
             btn.classList.remove('hidden');
             btn.classList.add('inline-flex');
-            btn.removeAttribute('data-ARCKHÉ-resume');
+            btn.removeAttribute('data-ARCKHê-resume');
             btn.addEventListener('click', function () { window.location.href = href; });
           }
         } catch (e) { /* no-op */ }
